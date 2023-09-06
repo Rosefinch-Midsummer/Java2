@@ -919,7 +919,322 @@ public static int binarySearch(int[] data, int target, int beginIndex, int endIn
 
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="文件理论"><a class="header" href="#文件理论">文件理论</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="java文件读写"><a class="header" href="#java文件读写">java文件读写</a></h1>
+<ul>
+<li><a href="%E6%96%87%E4%BB%B6%E7%90%86%E8%AE%BA.html#%E7%BC%96%E7%A8%8B%E9%A2%98">编程题</a></li>
+</ul>
+<p>1.FileWriter类的某个构造方法声明如下：</p>
+<p>public FileWriter(String name, boolean append) throws FileNotFoundException</p>
+<p>其中参数append的值为true时表示在原文件的尾部添加数据。</p>
+<p>2.下列程序实现的功能是往文件Alphabets.dat中写入从a开始的10个字母，下列代码执行后，文件Alphabets.dat的大小是20字节。</p>
+<pre><code class="language-java">import java.io.*;
+
+public class FileSize{
+	
+	 public static void main(String[] args) {
+		 
+		 File file = new File(&quot;Alphabets.dat&quot;);
+		 
+		 try(DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)))){
+			 for(int i=0;i&lt;10;i++){
+				 dos.writeChar((char)('a'+i));//写入一个char类型数据，占2字节
+			 }
+			 
+		 }catch(IOException e){
+			
+			 e.printStackTrace();
+		 }
+		 
+	 }
+	
+	
+}
+	
+</code></pre>
+<h3 id="编程题"><a class="header" href="#编程题">编程题</a></h3>
+<p>1.抄写并修改课堂案例（写入文本文件（方式2）），完成以下功能：将歌词内容保存到当前目录下的文本文件jinglebells.txt；读取jinglebells.txt中的内容，将前三行输出到控制台。 </p>
+<pre><code class="language-java">import java.io.*;
+
+
+public class SaveSong {
+
+public static void main(String[] args) {
+
+String[] contents = { 
+
+&quot;jingle bells, jingle bells,&quot;,
+
+&quot;jingle all the way!&quot;,
+
+&quot;oh what fun it is to ride&quot;,
+
+&quot;in a one-horse open sleigh.&quot;
+
+};
+
+File file = new File(&quot;jinglebells.txt&quot;);
+
+try(PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
+	for(int i = 0; i &lt; contents.length; i++) {
+	pw.println(contents[i]);//向文件中写入一行
+
+}
+
+}catch(IOException e) {
+
+e.printStackTrace();
+
+}
+
+
+try(BufferedReader bufferedfr = new BufferedReader(new FileReader(file))) {
+
+String s = null;//用于存储一行内容
+
+int i=0;
+
+while((s=bufferedfr.readLine())!=null &amp;&amp; i++&lt;3) {// 逐行读取，最多读3次
+
+System.out.println(s);//输出当前行的内容
+
+}
+
+}catch(IOException e) {
+
+e.printStackTrace();
+
+}
+}
+
+
+}
+
+</code></pre>
+<p>2.（程序填空题）下面程序的功能是从键盘输入一个小于100的数字，计算并输出从该整数到100之间能被7整除的整数的累加和。</p>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class Sum {
+
+ public static void main(String[] args) {
+
+ System.out.println(&quot;请输入一个小于100的整数：&quot;);
+
+ Scanner input = new Scanner(System.in);
+
+ int num = input.nextInt();
+
+ if (num &gt;= 100) {
+
+ System.out.println(&quot;输入的数已超出范围&quot;);
+
+ } else {
+
+int sum=0;
+
+ for (int i = num; i &lt;= 100; i++) {
+
+ if (i%7==0) {
+
+ sum += i;
+
+ }
+
+ }
+
+ System.out.println(&quot;和是&quot; + sum);
+
+ }
+
+ }
+
+}
+
+</code></pre>
+<p>3.（程序填空题）以下程序将热点新闻写入文本文件news.txt中，每行写一条新闻。格式如下图所示。</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/57995e0b9959592cba9c8f4c3c9c9b18.png" alt="r" /></p>
+<pre><code class="language-java">import java.io.*;
+
+
+public class FileOperation {
+
+ public static void main(String[] args) {
+
+ String[] news = { &quot;香港将禁止所有英国载客航班抵港&quot;, &quot;朴槿惠所在拘留所发生疫情&quot;, &quot;中国新冠疫苗首针将于1月15日接种&quot; };
+
+ File file = new File(&quot;news.txt&quot;);
+
+try(PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
+
+ for (int i = 0; i &lt; news.length; i++) {
+
+ pw.println(i+1+&quot;:&quot;+news[i]);
+
+ }
+
+ } catch (Exception e) {
+
+ e.printStackTrace();
+
+ }
+
+ }
+
+}
+</code></pre>
+<p>4.（编程题）下列程序完成计算加权成绩并保存成绩到文件的功能，请把下面的程序补充完整。</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/d639f2b19f8ce14cb85e1d491ec37122.png" alt="i" /></p>
+<pre><code class="language-java">import java.io.BufferedOutputStream;
+
+import java.io.BufferedWriter;
+
+import java.io.DataOutputStream;
+
+import java.io.File;
+
+import java.io.FileOutputStream;
+
+import java.io.FileWriter;
+
+import java.io.IOException;
+
+import java.io.PrintWriter;
+
+
+
+public class SaveData {
+
+
+
+public static void main(String[] args) {
+
+// 数组scores记录学生成绩，每行表示一名学生，每列表示一名学生各门课程的成绩
+
+double[][] scores = { { 80, 90, 60 }, { 99, 86.5, 93 }, { 80, 76, 79 } };
+
+
+
+// 每门成绩的权重
+
+double[] w = { 0.6, 0.2, 0.2 };
+
+
+
+// 数组weightedScores记录学生成绩，每行表示一名学生，除最后一列表示一名学生各门课程的成绩，最后一列表示该学生的加权成绩。
+
+double[][] weightedScores = computeWeightedScores(scores, w);
+
+
+
+// 将数组数据按照写入文本文件，每行写入一名同学的成绩，数值之间用逗号隔开。
+
+writeToTextFile(weightedScores, &quot;scores.txt&quot;);
+
+
+
+// 将数组数据按照写入二进制文件，数值之间无需分割，无需换行。
+
+writeToTextFile(weightedScores, &quot;scores.dat&quot;);
+
+}
+
+
+
+static double[][] computeWeightedScores(double[][] scores, double[] w) {
+
+                    //请将方法体补充完整，填入第1空
+   //        for(int i=0;i&lt;3;i++){
+			 
+		//	   for(int j=0;j&lt;3;j++){
+				 
+			//	   weightedScores[i][j]=scores[i][j]+w[i];
+			  // }
+			   
+		   //}
+		   double[][] weightedScores = new double[scores.length][scores[0].length + 1];
+
+		   for (int i = 0; i &lt; scores.length; i++) {
+
+		   double s = 0;
+
+ 		   for (int j = 0; j &lt; scores[i].length; j++) {
+
+		  weightedScores[i][j] = scores[i][j];
+
+   		  s += scores[i][j] * w[j]; // 计算加权成绩
+
+}
+
+		  weightedScores[i][scores[i].length] = s;
+
+}
+
+          return weightedScores;
+
+
+
+
+
+}
+
+
+
+static void writeToTextFile(double[][] data, String fname) {
+
+         File file = new File(fname);
+
+		try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
+
+		for (int i = 0; i &lt; data.length; i++) {
+
+		String str = &quot;&quot; + data[i][0];
+
+		for (int j = 1; j &lt; data[i].length; j++) {
+
+		str += &quot;,&quot; + data[i][j]; // 使用逗号分隔数据
+
+}
+
+	pw.println(str);
+
+}
+
+} catch (IOException e) {
+
+	e.printStackTrace();
+
+}
+
+}
+
+
+
+static void writeToBinaryFile(double[][] data, String fname) {
+
+         File file = new File(fname);
+
+		try (DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)))) {
+
+		for (int i = 0; i &lt; data.length; i++) {
+
+		for (int j = 0; j &lt; data[i].length; j++) {
+
+		dos.writeDouble(data[i][j]);
+
+}
+
+}
+
+} catch (IOException e) {
+
+		e.printStackTrace();
+
+}
+
+}
+
+}
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="面向对象理论"><a class="header" href="#面向对象理论">面向对象理论</a></h1>
 <pre><code>* [区分类和对象](#区分类和对象)
 </code></pre>
