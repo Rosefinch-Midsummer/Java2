@@ -176,6 +176,2518 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="函数理论"><a class="header" href="#函数理论">函数理论</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="文件理论"><a class="header" href="#文件理论">文件理论</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="面向对象理论"><a class="header" href="#面向对象理论">面向对象理论</a></h1>
+<pre><code>* [区分类和对象](#区分类和对象)
+</code></pre>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8">方法调用</a>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%B0%83%E7%94%A8">静态方法可以直接调用</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E9%9D%9E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E9%9C%80%E8%A6%81%E5%85%88%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%AF%B9%E8%B1%A1">非静态方法需要先实例化对象</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E5%80%BC%E4%BC%A0%E9%80%92">值传递</a></li>
+</ul>
+</li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA">类与对象的创建</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E6%9E%84%E9%80%A0%E5%99%A8%E8%AF%A6%E8%A7%A3">构造器详解</a>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0">无参构造</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E6%9C%89%E5%8F%82%E6%9E%84%E9%80%A0">有参构造</a></li>
+</ul>
+</li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7">三大属性</a>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E5%B0%81%E8%A3%85">封装</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E7%BB%A7%E6%89%BF">继承</a>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#super%E8%AF%A6%E8%A7%A3">Super详解</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99">方法重写</a></li>
+</ul>
+</li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E5%A4%9A%E6%80%81">多态</a>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#instanceof%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">Instanceof和类型转换</a>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">类型转换</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#static%E5%85%B3%E9%94%AE%E5%AD%97">Static关键字</a>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E9%9D%99%E6%80%81%E5%AF%BC%E5%85%A5%E5%8C%85">静态导入包</a></li>
+</ul>
+</li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E6%8A%BD%E8%B1%A1%E7%B1%BB">抽象类</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E6%8E%A5%E5%8F%A3">接口</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#n%E7%A7%8D%E5%86%85%E9%83%A8%E7%B1%BB">N种内部类</a>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E7%89%B9%E6%AE%8A%E5%86%85%E9%83%A8%E7%B1%BB">特殊内部类</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E6%88%90%E5%91%98%E5%86%85%E9%83%A8%E7%B1%BB">成员内部类</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB">静态内部类</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E5%B1%80%E9%83%A8%E5%86%85%E9%83%A8%E7%B1%BB">局部内部类</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB">匿名内部类</a></li>
+</ul>
+</li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#java%E5%A4%9A%E6%80%81%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB">java多态和抽象类</a>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E5%8C%85%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BA%92%E7%9B%B8%E8%B0%83%E7%94%A8ide%E5%8F%AF%E8%A1%8C%E4%BD%86terminal%E4%B8%8D%E8%A1%8C%E4%B8%8D%E7%9F%A5%E5%8E%9F%E5%9B%A0">包之间的互相调用（ide可行但terminal不行，不知原因）</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E7%B1%BB%E7%9A%84%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B">类的应用实例</a>
+<ul>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E6%B3%A8super%E7%9A%84%E4%B8%89%E7%A7%8D%E7%94%A8%E6%B3%95">注：super的三种用法</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E6%B3%A8this%E7%9A%84%E4%B8%89%E7%A7%8D%E7%94%A8%E6%B3%95">注：this的三种用法</a></li>
+<li><a href="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%90%86%E8%AE%BA.html#%E4%B8%89%E7%A7%8D%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB">三种变量的区别</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>面向对象Object-Oriented Programming</p>
+<p>本质：<strong>以类的方式组织代码，以对象的组织（封装）数据</strong></p>
+<p>抽象</p>
+<p>三大特性：封装、继承、多态</p>
+<h3 id="区分类和对象"><a class="header" href="#区分类和对象">区分类和对象</a></h3>
+<p>1.对象是实体，需要被创建，可以为我们做事情</p>
+<p>如这只猫</p>
+<ul>
+<li>表达东西或事件</li>
+<li>运行时响应消息（提供服务）</li>
+</ul>
+<p>对象=属性+服务</p>
+<p>数据：属性或状态</p>
+<p>操作：函数</p>
+<p>封装：内数据外操作</p>
+<p>2.类是规范，根据类的定义来创建对象</p>
+<p>如猫</p>
+<ul>
+<li>定义所有猫的属性</li>
+<li>就是java中的类型</li>
+<li>可以用来定义变量</li>
+</ul>
+<p>例子：自动售货机</p>
+<pre><code class="language-java">public class VendingMachine {
+	
+	
+	int price=80;
+	int balance;
+	int total;
+	//3个属性即类定义的对象中所具有的成员变量
+	int f(){
+		return 10;	
+	}
+	
+	VendingMachine(){  //构造函数：成员函数名字和类的名字完全相同，在创建这个类的每一个对象的时候会自动调用这个函数，这个函数不能有返回类型
+		total = 0;	
+	}
+	VendingMachine(int price){ 
+        this();//调用另一个构造函数，只能在开头用一次
+		this.price = price;	
+	}
+	
+	void setPrice(int price){
+		this.price = price;
+		this.getFood();//在成员函数内部直接调用自己(this)的其他函数
+	}
+	
+    
+    void showPrompt(){
+	      System.out.println(&quot;Welcome&quot;);	
+	}
+	
+	void insertMoney(int amount){
+		balance = balance+amount;
+	}
+	
+	void showBalance(){
+	      System.out.println(balance);	
+	}
+	void getFood(){
+		if(balance&gt;=price){
+			 System.out.println(&quot;Here you are.&quot;);	
+			balance = balance-price;
+			total=total+price;
+		}
+	}
+	
+	//四个动作
+	
+	
+	public static void main(String[] args) {
+		VendingMachine vm = new VendingMachine();//创建对象，对象变量是对象的管理者，不是所有者
+		vm.showPrompt();
+		vm.showBalance();
+		vm.insertMoney(100);
+		vm.getFood();
+		vm.showBalance();
+        
+        VendingMachine vm1 = new VendingMachine(100);
+		vm1.insertMoney(200);
+		vm1.showBalance();
+		vm1.getFood();
+		vm1.showBalance();
+	}
+}
+
+</code></pre>
+<p>一个类可以有多个构造函数，只要它们的参数表不同。创造对象的时候给出不同的参数值，就会调用不同的构造函数，通过this()还可以调用其他构造函数，一个类里同名但参数表不同的函数构成<code>重载</code>关系。</p>
+<pre><code class="language-java">Welcome
+10
+Here you are.
+30
+210
+Here you are.
+110
+</code></pre>
+<p>本地变量：定义在函数内部的变量，生存期与作用域都是函数内部</p>
+<p>成员变量：类中定义的变量，成员变量的生存期是对象的生存期，作用域是类内部的成员函数</p>
+<p>成员变量在定义的地方就可以给出初始值，没有给出初始值的成员变量会自动获得零值，对象变量的0值表示没有任何管理对象，也可以主动给null值</p>
+<p>定义初始化可以调用函数，甚至可以使用已经定义的成员变量</p>
+<h1 id="方法调用"><a class="header" href="#方法调用">方法调用</a></h1>
+<p>带static的方法和类一起加载,而不带static的方法需要类实例化後才能加载</p>
+<h2 id="静态方法可以直接调用"><a class="header" href="#静态方法可以直接调用">静态方法可以直接调用</a></h2>
+<p>类名.方法()</p>
+<pre><code class="language-java">package oop;
+
+public class Student {
+    public static void say() {
+        System.out.println(&quot;学生说话了!!&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Demo2 {
+    public static void main(String[] args) {
+        Student.say();
+    }
+}
+</code></pre>
+<p>输出结果:</p>
+<pre><code class="language-txt">学生说话了!!
+</code></pre>
+<h2 id="非静态方法需要先实例化对象"><a class="header" href="#非静态方法需要先实例化对象">非静态方法需要先实例化对象</a></h2>
+<p>用new实例化这个类</p>
+<pre><code class="language-java">package oop;
+
+public class Student {
+    public void say() {
+        System.out.println(&quot;学生说话了!!&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Demo2 {
+    public static void main(String[] args) {
+        //对象类型 对象名 = 对象值
+        Student student = new Student();
+        student.say();
+    }
+}
+</code></pre>
+<p>输出结果:</p>
+<pre><code class="language-txt">学生说话了!!
+</code></pre>
+<h2 id="值传递"><a class="header" href="#值传递">值传递</a></h2>
+<pre><code class="language-java">package oop;
+
+public class Demo3 {
+    public static void main(String[] args) {
+        int a = 1;
+        System.out.println(a);
+        Demo3.change(a);
+        System.out.println(a);
+    }
+    //返回值为空
+    public static void change(int a ){
+        a = 10;
+    }
+}
+</code></pre>
+<p>输出结果为</p>
+<pre><code class="language-txt">1
+1
+</code></pre>
+<h1 id="类与对象的创建"><a class="header" href="#类与对象的创建">类与对象的创建</a></h1>
+<p>面向对象Object-Oriented Programming</p>
+<p>本质：<strong>以类的方式组织代码，以对象的组织（封装）数据</strong></p>
+<pre><code class="language-java">package oop;
+
+public class Student {
+    //属性：字段
+    String name;//模板，不能直接赋值
+    int age;
+
+    //方法
+    public void study() {
+        System.out.println(this.name+&quot;在学习!!&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+//一个项目应该只存在一个main方法
+public class Application {
+    public static void main(String[] args) {
+        //类是抽象的，需要实例化
+        //类实例化後会返回一个自己的对象
+        //student对象是Student类的一个具体实例
+        Student student = new Student();
+        System.out.println(student.name);
+        student.name = &quot;小豹子&quot;;//需要用&quot;&quot;
+        System.out.println(student.name);
+    }
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code class="language-txt">null
+小豹子
+</code></pre>
+<h1 id="构造器详解"><a class="header" href="#构造器详解">构造器详解</a></h1>
+<p>使用new关键字创建和初始化对象，除了分配内存空间之外，还会给创建好的对象进行默认的初始化以及对类中构造器的调用。</p>
+<p>类中的构造器也被成为构造方法，是在进行创建对象时侯必须要调用的，并且构造器具有以下两个特点：</p>
+<ul>
+<li>必须和类的名字相同</li>
+<li>必须没有返回类型，也不能写void</li>
+</ul>
+<h3 id="无参构造"><a class="header" href="#无参构造">无参构造</a></h3>
+<pre><code class="language-java">package oop;
+
+public class Person {
+    //一个类即使什么都不写，它也会存在一个方法
+    //显式定义构造器
+    String name;
+
+    //实例化初始值
+    //1.使用new关键字，本质上是调用构造器
+    //2.用来初始化值
+    public Person(){
+        this.name = &quot;RM&quot;;
+
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+//一个项目应该只存在一个main方法
+public class Application {
+    public static void main(String[] args) {
+        //new 实例化了一个对象
+        Person person = new Person();
+        System.out.println(person.name);
+    }
+}
+</code></pre>
+<p>输出RM</p>
+<h3 id="有参构造"><a class="header" href="#有参构造">有参构造</a></h3>
+<pre><code class="language-java">package oop;
+
+public class Person {
+    //一个类即使什么都不写，它也会存在一个方法
+    //显式定义构造器
+    String name;
+
+    //实例化初始值
+    //1.使用new关键字，本质上是调用构造器
+    //2.用来初始化值
+    public Person(){
+
+    }
+    //有参构造：一旦定义了有参构造，无参构造必须显式定义
+    public Person(String name){
+        this.name = name;//和上面的不同
+    }
+}
+
+</code></pre>
+<pre><code class="language-java">package oop;
+//一个项目应该只存在一个main方法
+public class Application {
+    public static void main(String[] args) {
+        //new 实例化了一个对象
+        Person person = new Person(&quot;kuangshen&quot;);
+        System.out.println(person.name);
+    }
+}
+</code></pre>
+<p>输出kuangshen</p>
+<p>只有有参构造，而无无参构造，将会报错，要默认无参构造为空</p>
+<p>快捷键Alt+Insert</p>
+<pre><code class="language-txt">java: 无法将类 oop.Person中的构造器 Person应用到给定类型;
+  需要: java.lang.String
+  找到: 没有参数
+  原因: 实际参数列表和形式参数列表长度不同
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Person {
+    //一个类即使什么都不写，它也会存在一个方法
+    //显式定义构造器
+    String name;
+
+    //实例化初始值
+    //1.使用new关键字，本质上是调用构造器
+    //2.用来初始化值
+    
+    //有参构造：一旦定义了有参构造，如果想使用无参构造，无参构造必须显式定义
+    public Person(String name){
+        this.name = name;
+    }
+
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+//一个项目应该只存在一个main方法
+public class Application {
+    public static void main(String[] args) {
+        //new 实例化了一个对象
+        Person person = new Person();
+        System.out.println(person.name);
+    }
+}
+</code></pre>
+<h1 id="三大属性"><a class="header" href="#三大属性">三大属性</a></h1>
+<h2 id="封装"><a class="header" href="#封装">封装</a></h2>
+<p>追求高内聚，低耦合</p>
+<p><strong>属性私有，get/set</strong></p>
+<p>好处：</p>
+<ul>
+<li>提高程序的安全性，保护数据</li>
+<li>隐藏代码的实现细节</li>
+<li>提高系统的可维护性</li>
+<li>统一接口</li>
+</ul>
+<p>IDEA中按右键选择generator，选中setter/getter，自动生成</p>
+<pre><code class="language-java">package oop;
+
+public class Student {
+    //属性私有
+    private String name;
+    private int id;
+    private char gender;
+    //提供一些可以操作这个属性的方法
+    //如提供一些get/set方法
+    //get获得这个数据
+    public String getName(){
+        return this.name;
+    }
+    //set给这个属性设置值
+    public void setName(String name){
+        this.name=name;
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+//一个项目应该只存在一个main方法
+public class Application {
+    public static void main(String[] args) {
+
+        Student student = new Student();
+        student.setName(&quot;RM&quot;);
+        System.out.println(student.getName());
+    }
+}
+</code></pre>
+<p>输出结果：RM</p>
+<pre><code class="language-java">package oop;
+
+public class Student {
+    //属性私有
+    private String name;
+    private int id;
+    private char gender;
+    private int age;
+    //提供一些可以操作这个属性的方法
+    //如提供一些get/set方法
+    //get获得这个数据
+    public String getName(){
+        return this.name;
+    }
+    //set给这个属性设置值
+    public void setName(String name){
+        this.name=name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        //检查输入格式
+        if(age&gt;120||age&lt;0){
+            this.age = 3;
+        }else{
+            this.age = age;
+        }
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+//一个项目应该只存在一个main方法
+public class Application {
+    public static void main(String[] args) {
+
+        Student student = new Student();
+        student.setName(&quot;RM&quot;);
+        System.out.println(student.getName());
+        student.setAge(999);
+        System.out.println(student.getAge());
+    }
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code class="language-txt">RM
+3
+</code></pre>
+<h2 id="继承"><a class="header" href="#继承">继承</a></h2>
+<p>本质是对某一批类的抽象，Java中类只有单继承，单继承意思是只有一个直接父类，ctrl+H查看继承关系</p>
+<p>关键字extends</p>
+<p>父类</p>
+<pre><code class="language-java">package oop;
+
+public class Person {
+    public void say(){
+        System.out.println(&quot;川普说话了！&quot;);
+    }
+}
+
+</code></pre>
+<p>子类：子类继承父类所有的public方法，在java中都默认直接或间接继承Object类</p>
+<pre><code class="language-java">package oop;
+
+public class Student extends Person {
+
+}
+
+</code></pre>
+<pre><code class="language-java">package oop;
+
+import oop.Student;
+
+//一个项目应该只存在一个main方法
+public class Application {
+    public static void main(String[] args) {
+
+        Student student = new Student();
+
+        student.say();
+
+    }
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code class="language-txt">川普说话了！
+</code></pre>
+<h3 id="super详解"><a class="header" href="#super详解">Super详解</a></h3>
+<p>super注意点：</p>
+<ul>
+<li>super调用父类的构造方法，必须在构造方法的第一个</li>
+<li>super必须只能出现在子类的方法或构造方法中</li>
+<li>super和this不能同时调用构造方法</li>
+</ul>
+<p>super VS this：</p>
+<ul>
+<li>代表对象不同：this代表本身调用者这个对象，super代表父类对象的应用</li>
+<li>使用前提不同：this没有继承也可以调用，super只有在继承条件下调用</li>
+<li>构造方法不同：this()是本类的构造，而super()是父类的构造</li>
+</ul>
+<pre><code class="language-java">package oop;
+
+public class Person {
+    protected String name = &quot;kuangshen&quot;;
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Student extends Person {
+    private  String name = &quot;RM&quot;;
+
+    public void test(String name){
+        System.out.println(name);//传入的参数如孔夫子
+        System.out.println(this.name);//RM，Student类
+        System.out.println(super.name);//kuangshen，父类Person
+    }
+
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+import oop.Student;
+
+//一个项目应该只存在一个main方法
+public class Application {
+    public static void main(String[] args) {
+
+        Student student = new Student();
+
+        student.test(&quot;孔夫子&quot;);
+
+    }
+}
+</code></pre>
+<p>输出结果</p>
+<pre><code class="language-txt">孔夫子
+RM
+kuangshen
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Person {
+    protected String name = &quot;kuangshen&quot;;
+
+    public void print(){
+        System.out.println(&quot;Person&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Student extends Person {
+    private  String name = &quot;RM&quot;;
+
+    public void print(){
+        System.out.println(&quot;Student&quot;);
+    }
+
+    public void test(){
+        print();//Student
+        this.print();//Student
+        super.print();//Person
+    }
+
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+import oop.Student;
+
+//一个项目应该只存在一个main方法
+public class Application {
+    public static void main(String[] args) {
+
+        Student student = new Student();
+
+        student.test();
+
+    }
+}
+</code></pre>
+<p>输出结果</p>
+<pre><code class="language-txt">Student
+Student
+Person
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Person {
+
+    public Person() {
+        System.out.println(&quot;Person无参执行了！&quot;);
+    }
+
+    protected String name = &quot;kuangshen&quot;;
+
+    public void print(){
+        System.out.println(&quot;Person&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Student extends Person {
+
+    public Student() {
+        //这里存在隐藏代码super();，调用了父类的无参构造
+        //super();//Call to 'super()' must be first statement in constructor body
+        System.out.println(&quot;Student无参执行了！&quot;);
+    }
+
+    private  String name = &quot;RM&quot;;
+
+    public void print(){
+        System.out.println(&quot;Student&quot;);
+    }
+
+    public void test(){
+        print();//Student
+        this.print();//Student
+        super.print();//Person
+    }
+
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+import oop.Student;
+
+//一个项目应该只存在一个main方法
+public class Application {
+    public static void main(String[] args) {
+
+        Student student = new Student();
+    }
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code class="language-txt">Person无参执行了！
+Student无参执行了！
+</code></pre>
+<h3 id="方法重写"><a class="header" href="#方法重写">方法重写</a></h3>
+<p>快捷键ctrl+O</p>
+<p>重写都是方法的重写，与属性无关。</p>
+<p>重写：需要有继承关系，子类重写父类的<code>非静态</code>方法体，执行子类自己的方法！</p>
+<ul>
+<li>方法名必须相同</li>
+<li>参数列表必须相同</li>
+<li>修饰符：范围可以扩大，但不能缩小public&gt;protected&gt;default&gt;private</li>
+<li>抛出的异常范围可以被缩小，但不能扩大：ClassNotFoundException - &gt; Exception（大）</li>
+</ul>
+<p>重写原因：父类的方法不一定满足子类的要求</p>
+<p>静态方法</p>
+<pre><code class="language-java">package oop;
+
+public class B {
+    public  static void test(){
+        System.out.println(&quot;B=&gt;test&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class A extends B{
+    public static void test() {
+        System.out.println(&quot;A=&gt;test&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Application {
+    public static void main(String[] args) {
+
+        //静态方法的调用只和左边即定义的数据类型有关
+        A a = new A();
+        a.test();//A
+
+        //父类的引用指向了子类
+        B b = new A();
+        b.test();//B
+    }
+}
+</code></pre>
+<pre><code class="language-txt">A=&gt;test
+B=&gt;test
+</code></pre>
+<p>非静态方法：重写Override</p>
+<pre><code class="language-java">package oop;
+
+public class B {
+    public  void test(){
+        System.out.println(&quot;B=&gt;test&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class A extends B{
+    @Override//重写@代表有功能的注释
+    public void test() {
+        //super.test();
+        System.out.println(&quot;A=&gt;test&quot;);
+
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Application {
+    public static void main(String[] args) {
+
+        A a = new A();
+        a.test();//A
+
+        B b = new A();
+        b.test();//重写：需要有继承关系，子类重写父类的方法体，执行子类自己的方法！
+    }
+}
+</code></pre>
+<p>输出结果</p>
+<pre><code class="language-txt">A=&gt;test
+A=&gt;test//重写：需要有继承关系，子类重写父类的方法体，执行子类自己的方法！
+</code></pre>
+<p>静态属于类，含static、final、private的不能重写；非静态属于对象，可以重写（有static看左边，没有static看右边）</p>
+<h2 id="多态"><a class="header" href="#多态">多态</a></h2>
+<p>含义：同一个方法可以根据发送对象的不同而采用不同的行为方式</p>
+<p>一个对象的实际类型是确定的，但能指向对象的引用类型可以不确定，父类的调用指向子类</p>
+<p>要点：</p>
+<ul>
+<li>多态是方法的多态，不是属性的多态</li>
+<li>父类和子类必须有联系</li>
+<li>存在继承关系，方法需要重写（重写：需要有继承关系，子类重写父类、子类相同的方法的方法体，执行子类自己的方法，否则还执行父类的方法！），父类引用指向字类对象（如Father f1 = new Son();）</li>
+</ul>
+<p>父类类型的引用可以调用父类中定义的所有属性和方法，而对于子类中定义而父类中没有的方法，父类的引用是不能调用的。</p>
+<p>同时，父类中的一个方法只有在在父类中定义而在子类中没有重写的情况下，才可以被父类类型的引用调用父类的方法。</p>
+<p>对于父类中定义的方法，如果子类中重写了该方法，那么父类类型的引用将会调用子类中的这个方法，这就是动态连接。</p>
+<pre><code class="language-java">//一个对象的实际类型是确定的
+//但指向的引用类型可以不确定，父类的调用指向子类
+Student s1 = new Student();
+Person s2 = new Student();
+Object s3 = new Student();
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Person {
+
+    public void run(){
+        System.out.println(&quot;Run&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Student extends Person {
+
+    @Override
+    public void run() {
+        System.out.println(&quot;Son&quot;);
+    }
+    public void eat(){
+        System.out.println(&quot;Eat&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Application {
+    public static void main(String[] args) {
+
+        //一个对象的实际类型是确定的，但能指向对象的引用类型可以不确定，父类的引用可以指向子类
+        //子类Student能调用的方法都是自己的或是继承自父类Person的
+        Student s1 = new Student();
+        //Person是父类，可以指向子类，但不能调用子类独有的方法
+        Person s2 = new Student();
+        Object s3 = new Student();
+
+        s1.run();//son原因：子类重写父类的方法体，执行子类自己的方法！
+        s2.run();//son原因：子类重写父类的方法体，执行子类自己的方法！
+
+        //对象能执行哪些方法，主要看对象左边类型，和右边的关系不大
+        s1.eat();//s2.eat()报错
+        }
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code class="language-txt">Son
+Son
+Eat
+</code></pre>
+<h3 id="instanceof和类型转换"><a class="header" href="#instanceof和类型转换">Instanceof和类型转换</a></h3>
+<pre><code class="language-java">package oop;
+
+public class Person {
+
+    public void run(){
+        System.out.println(&quot;Run&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Student extends Person {
+
+    @Override
+    public void run() {
+        System.out.println(&quot;Son&quot;);
+    }
+    public void eat(){
+        System.out.println(&quot;Eat&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+
+public class Teacher extends Person{
+    public static void main(String[] args) {
+
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Application {
+    public static void main(String[] args) {
+
+        //Object&gt;Person&gt;Student
+        //Object&gt;Person&gt;Teacher
+        //Object&gt;String
+        Object object = new Student();
+
+        System.out.println(object instanceof Student);//true
+        System.out.println(object instanceof Person);//true
+        System.out.println(object instanceof Object);//true
+        System.out.println(object instanceof Teacher);//false
+        System.out.println(object instanceof String);//false
+
+        System.out.println(&quot;=====================&quot;);
+
+        Person person = new Student();
+
+        System.out.println(person instanceof Student);//true
+        System.out.println(person instanceof Person);//true
+        System.out.println(person instanceof Object);//true
+        System.out.println(person instanceof Teacher);//false
+        //System.out.println(person instanceof String);//编译报错
+
+        System.out.println(&quot;=====================&quot;);
+
+
+        Student student = new Student();
+
+        System.out.println(student instanceof Student);//true
+        System.out.println(student instanceof Person);//true
+        System.out.println(student instanceof Object);//true
+        //System.out.println(student instanceof Teacher);//编译报错
+        //System.out.println(student instanceof String);//编译报错
+
+        }
+}
+</code></pre>
+<h4 id="类型转换"><a class="header" href="#类型转换">类型转换</a></h4>
+<p>要点：</p>
+<ul>
+<li>父类引用可以指向子类的对象</li>
+<li>把子类转换为父类，向上转换</li>
+<li>把父类转换为子类，向下转换：需强制</li>
+<li>好处：方便调用方法，减少重复代码</li>
+</ul>
+<pre><code class="language-java">package oop;
+
+public class Person {
+
+    public void run(){
+        System.out.println(&quot;run&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Student extends Person {
+
+    public void go() {
+        System.out.println(&quot;go&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Application {
+    public static void main(String[] args) {
+
+        //类型之间相互转化：父类（高类型）---&gt;子类（低类型）
+        //高 ---&gt;低
+        Person object = new Student();
+        //object.go();//编译报错
+
+        //student将这个对象转换为Student类型後才可以使用Student类型的方法
+        Student student = (Student)object;
+        student.go();
+        //子类转换为父类，可能丢失一些固有的方法
+        Student student1 = new Student();
+        student1.go();
+        Person person = student1;
+        //person.go();//编译报错
+
+
+        }
+}
+</code></pre>
+<h1 id="static关键字"><a class="header" href="#static关键字">Static关键字</a></h1>
+<pre><code class="language-java">package oop;
+
+public class Student  {
+
+    private static  int age;//静态变量或称为类变量，可以被所有实例共享
+    private double score;//非静态变量
+    
+    public void go() {
+        
+        System.out.println(&quot;go&quot;);
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+
+        //类
+        System.out.println(Student.age);
+        //System.out.println(Student.score);//编译报错
+        //对象
+        System.out.println(s1.age);
+        System.out.println(s1.score);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Student  {
+
+    private static  int age;//静态变量或称为类变量，可以被所有实例共享
+    private double score;//非静态变量
+    
+    public void run(){
+        
+    }
+
+    public static void go() {
+
+        System.out.println(&quot;go&quot;);
+    }
+
+    public static void main(String[] args) {
+        go();
+        //run();//Non-static method 'run()' cannot be referenced from a static context
+    }
+}
+</code></pre>
+<p><strong>静态方法只能调用静态方法，而非静态方法既可以调用非静态方法，也可以调用静态方法</strong></p>
+<pre><code class="language-java">package oop;
+
+public class Person {
+
+    {
+        System.out.println(&quot;匿名代码块&quot;);
+    }
+    
+    static{
+        System.out.println(&quot;静态代码块&quot;);
+    }
+    public Person(){
+        System.out.println(&quot;构造方法&quot;);
+    }
+
+    public static void main(String[] args) {
+        Person person = new Person();
+
+    }
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code class="language-txt">静态代码块
+匿名代码块
+构造方法
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Person {
+
+    {
+        System.out.println(&quot;匿名代码块&quot;);//可以用来赋初值
+    }
+    static{
+        System.out.println(&quot;静态代码块&quot;);//和类一起加载，第一个执行，且只执行一次
+    }
+    public Person(){
+        System.out.println(&quot;构造方法&quot;);
+    }
+
+    public static void main(String[] args) {
+        Person person1 = new Person();
+        System.out.println(&quot;=====================&quot;);
+        Person person2 = new Person();
+
+    }
+}
+</code></pre>
+<pre><code class="language-txt">静态代码块
+匿名代码块
+构造方法
+=====================
+匿名代码块
+构造方法
+</code></pre>
+<h3 id="静态导入包"><a class="header" href="#静态导入包">静态导入包</a></h3>
+<pre><code class="language-java">package method;
+
+public class Calculator {
+    public static void main(String[] args) {
+
+        System.out.println(Math.random());
+    }
+}
+</code></pre>
+<pre><code class="language-java">package method;
+
+import static  java.lang.Math.random;
+
+public class Calculator {
+    public static void main(String[] args) {
+
+        System.out.println(random());
+    }
+}
+</code></pre>
+<h1 id="抽象类"><a class="header" href="#抽象类">抽象类</a></h1>
+<p>Action.java</p>
+<pre><code class="language-java">package oop;
+
+//abstract 抽象类：类 extends只能单继承， 但接口可以多继承
+public abstract class Action {
+    //abstract，抽象方法，只有方法名字，没有方法的实现！
+    public abstract void doSomething();
+
+    //特点1：不能new抽象类，只能靠子类去实现它：约束！
+    //特点2：抽象类中可以写普通的方法
+    //特点3：抽象方法必须在抽象类中
+    //抽象的抽象：约束～
+    public static void main(String[] args) {
+        System.out.println(&quot;有构造器吗？&quot;);
+    }
+}
+</code></pre>
+<p>Action.class</p>
+<pre><code class="language-java">//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package oop;
+
+public abstract class Action {
+    public Action() {
+    }
+
+    public abstract void doSomething();
+
+    public static void main(String[] args) {
+        System.out.println(&quot;有构造器吗？&quot;);
+    }
+}
+</code></pre>
+<h1 id="接口"><a class="header" href="#接口">接口</a></h1>
+<p>声明类的关键字是class，声明接口的关键字是interface</p>
+<p>对比：</p>
+<ul>
+<li>普通类：只有具体实现</li>
+<li>抽象类：具体实现和规范（抽象方法）都有</li>
+<li>接口：只有规范，自己无法写方法</li>
+</ul>
+<p>接口就是规范。作用：</p>
+<ul>
+<li>约束</li>
+<li>定义一些方法，让不同的人实现</li>
+<li>public abstract 方法</li>
+<li>public static final 变量=&gt;常量</li>
+<li>接口不能被实例化，接口中没有构造方法</li>
+<li>implements可以实现多个接口</li>
+<li>必须重写接口中的方法</li>
+</ul>
+<pre><code class="language-java">package oop;
+
+public interface UserService {
+
+    //接口中所有定义都是抽象的，接口都要有实现类
+
+    public abstract void add(String name);
+    //编译报错Interface abstract methods cannot have body
+    //Modifier 'public' is redundant for interface methods
+    //Modifier 'abstract' is redundant for interface methods
+    void delete(String name);
+    void update(String name);
+    void query(String name);
+
+
+    public static final int age = 99;
+    //Modifier 'public' is redundant for interface fields
+    //Modifier 'static' is redundant for interface fields
+    //Modifier 'final' is redundant for interface fields
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public interface TimeService {
+    void timer();
+}
+
+</code></pre>
+<pre><code class="language-java">package oop;
+
+//抽象类：单继承
+//类可以是实现接口，implements 接口
+//实现了接口的类就需要重写接口中方法
+//利用接口实现多继承
+public class UserServiceImpl implements UserService,TimeService{
+    @Override
+    public void add(String name) {
+
+    }
+
+    @Override
+    public void delete(String name) {
+
+    }
+
+    @Override
+    public void update(String name) {
+
+    }
+
+    @Override
+    public void query(String name) {
+
+    }
+
+    @Override
+    public void timer() {
+
+    }
+}
+
+</code></pre>
+<h1 id="n种内部类"><a class="header" href="#n种内部类">N种内部类</a></h1>
+<p>内部类就是在一个类的内部再定义一个类，比如A类中定义一个B类，则B类相对A类来说就是内部类，而A类相对B类来说就是外部类。</p>
+<p>分类：</p>
+<ul>
+<li>成员内部类</li>
+<li>静态内部类</li>
+<li>局部内部类</li>
+<li>匿名内部类</li>
+</ul>
+<h2 id="特殊内部类"><a class="header" href="#特殊内部类">特殊内部类</a></h2>
+<p>双类</p>
+<pre><code class="language-java">package oop;
+
+public class Outer {
+
+    }
+}
+//一个java类中可以有多个class类，但是只能有一个public class
+class A{
+
+    public static void main(String[] args) {
+        
+    }
+}
+</code></pre>
+<h2 id="成员内部类"><a class="header" href="#成员内部类">成员内部类</a></h2>
+<p>类中类，通过外部类调用内部类</p>
+<pre><code class="language-java">package oop;
+
+public class Outer {
+    private int id;
+    public void out(){
+        System.out.println(&quot;这是外部类的方法&quot;);
+    }
+    public class Inner{
+        public void in(){
+            System.out.println(&quot;这是内部类的方法&quot;);
+        }
+    }
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Application{
+    public static void main(String[] args) {
+        Outer outer = new Outer();
+        //通过这个外部类来实例化内部类
+        Outer.Inner inner = outer.new Inner();
+        inner.in();
+    }
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code class="language-txt">这是内部类的方法
+</code></pre>
+<p>获得外部类的属性</p>
+<pre><code class="language-java">package oop;
+
+public class Outer {
+    private int id = 10;
+    public void out(){
+        System.out.println(&quot;这是外部类的方法&quot;);
+    }
+    public class Inner{
+        public void in(){
+            System.out.println(&quot;这是内部类的方法&quot;);
+        }
+        //获得外部类的私有属性
+        public void getID(){
+            System.out.println(id);
+        }
+    }
+    
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Application{
+    public static void main(String[] args) {
+        Outer outer = new Outer();
+        //通过这个外部类来实例化内部类
+        Outer.Inner inner = outer.new Inner();
+        inner.getID();
+    }
+}
+</code></pre>
+<p>输出结果：10</p>
+<h2 id="静态内部类"><a class="header" href="#静态内部类">静态内部类</a></h2>
+<p>静态内部类无法调用外部非静态类属性</p>
+<pre><code class="language-java">package oop;
+
+public class Outer {
+    private  int id = 10;
+    public void out(){
+        System.out.println(&quot;这是外部类的方法&quot;);
+    }
+    public static class Inner{
+        public void in(){
+            System.out.println(&quot;这是内部类的方法&quot;);
+        }
+        //获得外部类的私有属性
+        public void getID(){
+            System.out.println(id);//Non-static field 'id' cannot be referenced from a static context
+        }
+    }
+
+}
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Outer {
+    private static int id = 10;
+    public void out(){
+        System.out.println(&quot;这是外部类的方法&quot;);
+    }
+    public static class Inner{
+        public void in(){
+            System.out.println(&quot;这是内部类的方法&quot;);
+        }
+        //获得外部类的私有属性
+        public void getID(){
+            System.out.println(id);
+        }
+    }
+
+}
+</code></pre>
+<h2 id="局部内部类"><a class="header" href="#局部内部类">局部内部类</a></h2>
+<p>类中方法中类</p>
+<pre><code class="language-java">package oop;
+
+public class Outer {
+    
+    //局部内部类
+    public void method(){
+        class Inner{
+            public void in(){
+                
+            }
+        }
+
+    }
+}
+</code></pre>
+<h2 id="匿名内部类"><a class="header" href="#匿名内部类">匿名内部类</a></h2>
+<pre><code class="language-java">package oop;
+
+public class Test {
+    public static void main(String[] args) {
+        //没有名字初始化类
+        new Apple().eat();
+    }
+    
+}
+
+class Apple{
+    public void eat(){
+        System.out.println(&quot;1&quot;);
+    }
+}
+
+</code></pre>
+<pre><code class="language-java">package oop;
+
+public class Test {
+    public static void main(String[] args) {
+        //没有名字初始化类
+        new Apple().eat();
+    }
+    UserService1 userservice1 = new UserService1(){
+        @Override
+        public void hello() {
+
+        }
+    } ;
+}
+
+class Apple{
+    public void eat(){
+        System.out.println(&quot;1&quot;);
+    }
+}
+interface UserService1{
+    void hello();
+}
+</code></pre>
+<h1 id="java多态和抽象类"><a class="header" href="#java多态和抽象类">java多态和抽象类</a></h1>
+<p>1.(填空题) （程序改错题）GC1.java文件中的程序有4个错误，请修改错误使程序能够正确运行，在错误行的末尾添加注释//******。
+该文件中定义了一个接口Area，其中包含一个计算面积的方法CalculateArea(), MyCircle和MyRectangle类分别实现了这个接口，在GC1的main方法中创建了相应的对象并输出面积。</p>
+<p>程序正确运行结果如下图所示：</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/7b9c9e09d2953c9b3743f94c8f32cb7f.png" alt="r" /></p>
+<pre><code class="language-java">public class GC1 {
+	public static void main(String[] args) {
+		MyCircle c = new MyCircle(2.0);
+		System.out.println(&quot;圆面积:&quot; + c.CalculateArea());
+		MyRectangle r = new MyRectangle(2.0, 3.0);
+		System.out.println(&quot;矩形面积:&quot; + r.CalculateArea());//*******
+	}
+}
+
+interface Area {
+	public double CalculateArea();//错误写法public double CalculateArea(){};不知为何
+}
+
+class MyCircle implements Area {//******
+	double r;
+
+	public MyCircle(double r) {
+		this.r = r;
+	}
+
+	public double CalculateArea() {
+		return Math.PI * r * r;
+	}
+}
+
+class MyRectangle implements Area {
+	double width, height;
+
+	public MyRectangle(double w, double h) {
+		width = w;
+		height = h;
+	}
+
+	public double CalculateArea() {
+		return width * height;//******
+	}
+}
+</code></pre>
+<h3 id="包之间的互相调用ide可行但terminal不行不知原因"><a class="header" href="#包之间的互相调用ide可行但terminal不行不知原因">包之间的互相调用（ide可行但terminal不行，不知原因）</a></h3>
+<p>2.（程序填空题）某同学编写的应用程序中包含两个类Person和Employee，分别属于两个包Firstpackage和Secondpackage。Employee继承Person类。创建两个包来组织源程序代码，包结构截图如下。请将下面的程序补充完整，依次粘贴缺失的代码。</p>
+<p>Person.java</p>
+<pre><code class="language-java">package Firstpackage;
+
+public class Person {
+
+ public String name;
+
+ public Person(String name){
+
+ this.name=name;
+
+ }
+	
+public  void printInfo() {
+
+ System.out.println(&quot;姓名：&quot;+this.name);
+
+ } 
+
+}
+</code></pre>
+<p>EmployeeManagement.java</p>
+<pre><code class="language-java">package Secondpackage;
+
+import Firstpackage.Person;
+
+
+
+class EmployeeManagement {
+
+ public static void main(String[] args) {
+
+ Employee e=new Employee(&quot;Jack&quot;,6134.78);
+
+ e.printInfo();
+
+ }
+
+
+
+}
+
+
+
+class Employee extends Person{
+
+ double salary;
+
+ Employee(String name,double salary){
+
+ super(name);
+
+ this.salary=salary;
+
+ }
+
+ 
+
+public void printInfo() {
+
+ System.out.println(&quot;姓名：&quot;+this.name+&quot; 工资：&quot;+this.salary);
+
+ }
+
+}
+</code></pre>
+<p>3.（程序填空题）下列程序中定义了抽象类Person和它的两个子类Worker和Student，分别创建Worker和Person的对象，显示两个对象的描述信息，程序的运行结果如下图所示。 </p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/07fd49c2e7f5f0ff7cfe9a51ab6c0c7e.png" alt="img" /></p>
+<pre><code class="language-java">public class PersonManagement {
+
+public static void main(String[] args) {
+
+Person[] people=new Person[2];
+
+people[0]= new Worker(&quot;老张&quot;,30000.0);
+
+people[1]=new Student(&quot;小王&quot;,&quot;计算机&quot;);
+
+for(int i=0;i&lt;people.length;i++) {
+
+Person p=people[i];
+
+System.out.println(p.getName()+&quot;,&quot;+p.getDescription());
+
+}
+
+}
+
+}
+
+
+
+
+
+abstract class Person{
+
+private String name;
+
+public Person(String n) {
+
+name=n;
+
+}
+
+
+public  abstract String getDescription(); //抽象方法getDescription
+
+
+public String getName() {
+
+return name;
+
+}
+
+}
+
+class Worker extends Person{
+
+private double salary;
+
+public Worker(String n, double s) {
+
+super(n); //调用父类的构造方法给name赋值
+
+salary=s;
+
+}
+
+
+public String getDescription() {
+
+return &quot;工人，年薪是 &quot;+salary+&quot;元&quot;;
+
+}
+
+}
+
+
+
+class Student extends Person{
+
+private String major;
+
+public Student(String n,String m) {
+
+super(n);//不知到为什么这么写，为什么不写成name=super(n);
+
+major=m;
+
+}
+
+
+public String getDescription() {
+
+return &quot;学生，专业是&quot;+major;
+
+}
+
+}
+</code></pre>
+<p>4.（编程题）志愿者信息系统管理参与某大型博览会的志愿者的评分情况，并根据评分情况颁发相应的志愿者荣誉证书。每名志愿者的评分情况和线上、线下两部分工作时长有关。Volunteer类定义了四个成员变量（见程序中的注解），评价总分的计算方法如下：       线上工作时长*0.8+线下工作时长。总分20分（含）以上者获得“优秀志愿者”称号。各方法的功能见程序的注解。程序的某次运行结果如下图所示。</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/857a1dd0164c5f4532cb1b41e76df40d.png" alt="r" /></p>
+<pre><code class="language-java">import java.util.*;
+
+class Volunteer
+
+{
+
+        private String name;    //志愿者姓名
+
+        private int offlineHours;    //线下工作时长
+
+        private int onlineHours;     //线上工作时长
+
+        private double score;   //总分
+
+        public Volunteer(String name,int offline,int online){//姓名，线下工作时长，线上工作时长
+
+                 this.name=name;
+
+                 this.onlineHours=online;         
+
+                 this.offlineHours=offline;
+
+                 this.score=0;//总分初始为0
+
+        }
+
+        public void calScore() {//没有返回值
+
+          //在此处定义方法体（填入第1空）
+          this.score =this.offlineHours+this.onlineHours*0.8;
+
+          //计算线上与线下服务的综合得分（线上工作时长计分系数是0.8，线下工作时长计分系数是1.0），即评分=线上工作时长×0.8+线下工作时长,并写入成员变量score。
+
+                
+
+        }
+
+        public void addScore(){//加上应急工作时长后的得分，应急工作时长随机产生，为0~9的整数，应急工作时长积分系数是1.2
+
+         //在此处定义方法体（填入第2空）
+		this.score+= 1.2*(int)(Math.random()*9);
+                
+
+        }
+
+       
+
+        public String toString() { //获取对象的相关信息
+
+         //在此处定义方法体（填入第3空）
+
+                return this.name+&quot;\t线上工作时长：&quot;+this.onlineHours+&quot;\t线下工作时长&quot;+this.offlineHours+&quot;总评分：&quot;+this.score;
+
+        }
+
+ 
+
+        public void Comare(Volunteer v1) {
+
+                 if (this.score&gt;v1.score){
+
+                         System.out.println(this.name+&quot;的评分较高&quot;);
+
+                 }
+
+                 else if (this.score&lt;v1.score) {
+
+                         System.out.println(this.name+&quot;的评分较高&quot;);
+
+                 }
+
+                 else {
+
+                         System.out.println(this.name+&quot;和&quot;+v1.name+&quot;的评分相同&quot;);
+
+                 }
+
+        }
+
+       
+
+        public void isExcellentVolunteer() {
+
+         //在此处定义方法体（填入第4空）
+		if(this.score&gt;=20){
+		
+			System.out.println(this.name+&quot;获得优秀志愿者称号&quot;);
+		}else{
+			
+			System.out.println(this.name+&quot;暂未入选优秀志愿者称号&quot;);
+			
+		}
+ 
+
+        }
+
+}
+
+ 
+
+public class BC2 {
+
+ 
+
+        public static void main(String[] args) {
+
+                 Volunteer v1=new Volunteer(&quot;小白鹭1号&quot;,10,15);
+
+                 v1.calScore();
+
+                 v1.addScore();
+
+                 System.out.println(v1.toString());
+
+                 v1.isExcellentVolunteer();
+
+                 Volunteer v2=new Volunteer(&quot;小白鹭6号&quot;,5,5);
+
+                 v2.calScore();
+
+                 v2.addScore();
+
+                 System.out.println(v2.toString());
+
+                 v2.isExcellentVolunteer();
+
+                 v1.Comare(v2);
+
+        }
+
+}
+</code></pre>
+<p>5.（程序填空题）星爸爸咖啡馆有一个订单管理应用程序，其中包含Order类，输出信息如图所示。将Order类补充完整，将完整代码依次填入相应的空中。</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/3fc26dd1708b72b68fe6bb8d3bcd39d8.png" alt="r" /></p>
+<pre><code class="language-java">public class TK2 {
+
+ public static void main(String[] args) {
+
+ Order o1, o2;
+
+ o1 = new Order(2, 2);
+
+ o2 = new Order(2, 1);
+
+ o1.addCoffees(1);
+
+ o2.addCakes(3);
+
+ o1.addCoffees(1);
+
+ o1.setIsPaid(true);
+
+ o2.setIsPaid(false);
+
+ System.out.println(o1.toString());
+
+ System.out.println(o2.toString());
+
+ }
+
+}
+
+
+
+class Order {
+
+ private int numCoffees;
+
+ private int numCakes; 
+
+ private boolean isPaid;
+
+
+
+ public Order(int nCoff, int nCakes) {
+
+ numCoffees = nCoff;//传变量的方法，为什么这么传呢？？？
+
+ numCakes = nCakes;
+
+ }
+
+
+
+ public void addCoffees(int numToAdd) {
+
+numCoffees+=numToAdd;
+
+ }
+
+
+
+ public void addCakes(int numToAdd) {
+
+ numCakes += numToAdd;
+
+ }
+
+
+
+ public void setIsPaid(boolean paid) {
+
+isPaid=paid;//这点不会知道补啥
+
+ }
+
+
+
+ public int getTotal() {
+
+ return numCoffees * 3 + numCakes * 4;
+
+ }
+
+
+
+ public String toString() {//这个通常有什么用呢？，好像是个函数
+
+ String orderInfo = &quot;New Order: \n&quot;;
+
+ orderInfo += numCoffees + &quot; Coffees $&quot; + numCoffees * 3 + &quot;\n&quot;;
+
+ orderInfo += numCakes + &quot; Cakes $&quot; + numCakes * 4 + &quot;\n&quot;;
+
+ orderInfo += &quot; Total $&quot; + getTotal() + &quot; &quot;;
+
+ if (isPaid)
+
+ orderInfo += &quot; has been paid \n&quot;;
+
+ else
+
+ orderInfo += &quot; not paid \n&quot;;
+ return orderInfo;
+
+
+ }
+
+}
+</code></pre>
+<p>6.（编程题）声明抽象类Shape，有抽象成员方法area()和girth()。声明类Rectangle为Shape的子类，有两个成员变量width和height分别表示矩形的宽和高，实现继承自Shape的两个抽象方法，分别计算矩形的面积和周长。请编写Shape和Rectangle这两个类。周长计算公式：周长=2x(宽+高)。面积计算公式：面积=宽x高。</p>
+<pre><code class="language-java">public class BC1 {
+
+public static void main(String[] args) {
+
+Rectangle r=new Rectangle(3.0,5.0);
+
+System.out.println(&quot;周长是&quot;+r.girth());
+
+}
+
+}
+
+abstract class Shape{
+	
+	abstract double area();
+	abstract double girth();//抽象方法不能有主体,不能有{}
+		
+	}
+	
+class Rectangle extends Shape{
+	
+	double width;
+	double height;
+	
+	//用构造方法传值
+	Rectangle(double width, double height){
+		
+		this.width=width;
+		this.height=height;
+	}
+	
+	double area(){
+		
+		return width*height;
+	}
+	double girth(){//如果添加形式参数double width, double height会报错错误: Rectangle不是抽象的, 并且未覆盖Shape中的抽象方法girth()
+		
+		return 2*(width+height);
+	}
+	
+}	
+
+</code></pre>
+<p>7.（程序填空题）以下是为新冠肺炎疫苗接种开发的一段程序，其中定义了一个抽象类Vaccine，包含成员变量和抽象成员方法vaccinate()；另外分别定义了Vaccine类的子类InactivatedVaccine和AdenovirusVectorVaccine，在主程序中生成对象并使用成员方法，程序正常运行时的输出界面如下图所示，请将程序补充完整。</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/93e2321a638944fd76c8c7e09251cc58.png" alt="r" /></p>
+<pre><code class="language-java">abstract class Vaccine{
+
+    String manufacturer; //生产厂商
+
+    int n=1; //接种次数
+
+    abstract void vaccinate(); //定义vaccinate()成员方法
+	//不能添加public，否则报错“正在尝试分配更低的访问权限; 以前为public”
+
+
+}
+
+ 
+
+class InactivatedVaccine extends Vaccine{//灭活疫苗
+
+    public InactivatedVaccine(String name, int n) {//构造方法
+
+        manufacturer=name;
+
+        this.n=n;
+
+    }
+
+   
+
+    public InactivatedVaccine(String name) {//构造方法
+
+        this(name,2);
+
+    }
+
+ 
+
+    void vaccinate() {
+
+        System.out.println(&quot;该灭活疫苗的生产厂商是&quot;+manufacturer+&quot;，接种剂次：&quot;+n);
+
+    }
+
+}
+
+ 
+
+class AdenovirusVectorVaccine extends Vaccine{//腺病毒载体疫苗
+
+    public AdenovirusVectorVaccine(String name) {//构造方法
+
+        manufacturer=name;
+
+    }
+
+ 
+
+    void vaccinate() {
+
+        System.out.println(&quot;该腺病毒载体疫苗的生产厂商是&quot;+manufacturer+&quot;，只需接种1剂。&quot;);
+
+    }
+
+}
+
+ 
+
+public class TK2 {
+
+    public static void main(String[] args) {
+
+        InactivatedVaccine v1=new InactivatedVaccine(&quot;北京生物&quot;,2);
+
+        v1.vaccinate();
+
+        InactivatedVaccine v2=new InactivatedVaccine(&quot;科兴&quot;,2);
+
+        v2.vaccinate();
+
+        AdenovirusVectorVaccine v3=new AdenovirusVectorVaccine(&quot;康希诺&quot;);
+
+        v3.vaccinate();
+
+    }
+
+}
+</code></pre>
+<h2 id="类的应用实例"><a class="header" href="#类的应用实例">类的应用实例</a></h2>
+<p>1.（程序填空题）根据已知的程序段和已知的输出结果，将下列程序补充完整。请分别在第一、二、三个空中填写缺失的代码，在第四个空粘贴运行结果截图。输出结果：</p>
+<p>Name: John Age: 2 ID: 445</p>
+<p>Name: Fred Age: 4 ID: 447</p>
+<p>Name: Elma Age: 6 ID: 449</p>
+<p>完整代码：</p>
+<pre><code class="language-java">public class UsePerson {
+
+ public static void main(String[] args) {
+
+ Person p1, p2, p3;
+
+ //请将下面缺失的一行代码填入第一个空
+
+Person.setID(444);
+// 用setID方法给nextID赋初值，根据输出的p1的nextID分析出初值是多少。
+
+
+
+ p1 = new Person(&quot;John&quot;); // p1赋初值
+
+ p1.changeAge(2); // p1调用changeAge方法
+
+ System.out.println(p1.toString()); // 输出p1的信息
+
+
+
+ //请将下面缺失的三行代码填入第二个空
+ p2 = new Person(&quot;Fred&quot;); // p1赋初值
+
+ p2.changeAge(2); // p1调用changeAge方法
+
+ System.out.println(p2.toString()); // 输出p1的信息
+
+
+
+ //请将下面缺失的三行代码填入第三个空
+ p3 = new Person(&quot;Elma&quot;); // p1赋初值
+
+ p3.changeAge(2); // p1调用changeAge方法
+
+ System.out.println(p3.toString()); // 输出p1的信息
+
+
+ }
+
+}
+
+
+
+class Person {
+
+ private static int age; // 注意age是static变量
+
+ private String name;
+
+ private static int nextID; // 注意nextID是static变量
+
+ private int id;
+
+
+
+ public Person(String s) {
+
+ name = s;
+
+ id = nextID;
+
+ nextID++;
+
+ }
+
+
+
+ public void changeAge(int i) {
+
+ age += i;
+
+ id = nextID;
+
+  nextID++;//第一个john的nextID没调用这块？？？？？？暂时还不知道原因
+
+ }
+
+
+
+ public static void setID(int i) {
+
+ nextID = i;
+
+ }
+
+
+
+ public String toString() {
+
+ return &quot;Name: &quot; + name + &quot; Age: &quot; + age + &quot; ID: &quot; + id;
+
+ }
+
+}
+</code></pre>
+<p>2.（程序填空题）程序中定义了一个类BikeSharing（共享单车），成员变量的说明详见程序中的注释，成员方法getDisPerday用于计算日均行驶里程（日均行驶里程=行驶里程/投放天数）；定义了BikeSharing类的子类Haluo，成员方法getDailyFee用于计算产生的骑行费用(骑行费用=骑行单价*行驶里程)。在TC2的main方法中创建了Haluo单车对象，调用成员方法输出它的日均骑行里程和日均骑行费用。程序正确运行结果如下图所示，请将程序补充完整。</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/1159f70554e473724deb633c58ab6c9b.png" alt="img" /></p>
+<pre><code class="language-java">class BikeSharing{
+
+    String id;        //单车的序列号
+
+    double distance;  //行驶里程(公里)
+
+    int days;         //投放天数
+
+    BikeSharing(String id,double dis,int d){
+
+             this.id= id; //给成员变量id赋值
+
+             distance=dis;     
+
+             days=d;
+
+    }
+
+    public double getDisPerday() { //计算日均骑行里程
+
+       return  distance/days;
+
+    }
+
+}
+
+class Haluo extends BikeSharing{           
+
+    double price;                  //每公里骑行单价
+
+    Haluo(String id,double dis,int d){               
+
+          super(id,dis,d);       
+
+    }
+
+public void setPrice(double price){ 
+
+       this.price=price;
+
+    }
+
+    public double getDailyFee() {  //计算日均骑行费用
+
+       return price*getDisPerday();       
+
+    }
+
+}
+
+public class TC2 {
+
+    public static void main(String[] args) {
+
+       Haluo h=new Haluo(&quot;20210001&quot;,2251.2,402);    
+
+       System.out.println(&quot;平均每天行驶里程:&quot;+ h.getDisPerday() +&quot;公里&quot;);
+
+       h.setPrice(1.8);
+
+       System.out.println(&quot;平均每天骑行费用:&quot;+h.getDailyFee()+&quot;元&quot;);
+
+    }
+
+}
+</code></pre>
+<p>super关键字用来访问父类内容，而this关键字用来访问本类内容</p>
+<h4 id="注super的三种用法"><a class="header" href="#注super的三种用法">注：super的三种用法</a></h4>
+<p>1.在子类的成员方法中访问父类的成员变量num如super.num</p>
+<p>2.在子类的成员方法中访问父类的成员方法method如super.method();</p>
+<p>3.在子类的构造方法中，访问父类的构造方法如super();</p>
+<h4 id="注this的三种用法"><a class="header" href="#注this的三种用法">注：this的三种用法</a></h4>
+<p>1.在本类的成员方法中访问本类的成员变量</p>
+<p>2.在本类的成员方法中访问本类的另一个成员方法</p>
+<p>3.在本类的构造方法中访问本类的另一个构造方法</p>
+<ul>
+<li>this(...)调用也必须是构造方法的第一个语句，唯一一个</li>
+<li>super和this两种构造调用不能同时使用</li>
+</ul>
+<h4 id="三种变量的区别"><a class="header" href="#三种变量的区别">三种变量的区别</a></h4>
+<pre><code class="language-java">class Father{
+	int num = 30;
+	
+}
+
+
+
+public class Son extends Father{
+	
+	int num = 20;
+	
+	public  Son(){
+		this(123);//本类的无参构造调用本类的有参构造
+		//this(n:123));错误写法报错需要)
+		//this(n:1, m:2);这是错误用法call to this() must be first statement in constructor body
+	}
+	public Son(int n){
+		
+	}
+	
+	public Son(int n, int m){
+		
+	}
+	
+	public void showNum(){
+		int num = 10;
+		System.out.println(num);//局部变量
+		System.out.println(this.num);//本类中的成员变量
+		System.out.println(super.num);//父类中的成员变量
+		
+	}
+	
+	public void methodA(){
+		System.out.println(&quot;AAA&quot;);
+	}
+	
+	public void methodB(){
+		this.methodA();//methodA();
+		System.out.println(&quot;BBB&quot;);
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+
+       Son son=new Son();    
+
+      son.showNum()
+  //System.out.println(son.showNum());错误: 此处不允许使用 '空' 类型
+     
+      son.methodB();
+
+    }
+	
+}
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code class="language-txt">10
+20
+30
+AAA
+BBB
+
+</code></pre>
+<p>3.(填空题, 20分)（编程题）根据鸢尾花的花瓣长度和宽度来判断它的类别。Iris类的成员变量和成员方法的说明见程序中的注释。已知两朵鸢尾花，第一朵花瓣长1.6cm，花瓣宽0.6cm，类别为&quot;山鸢尾&quot;，第二朵花瓣长5.8cm，花瓣宽3.1cm，类别为&quot;变色鸢尾&quot;；现要判断一朵新的鸢尾花类别，其方法如下：若它距离第一朵鸢尾花更近，则它的类别为&quot;山鸢尾&quot;，如果它距离第二朵鸢尾花更近，其类别就是&quot;变色鸢尾&quot;（如果距离相等，类别设置为&quot;山鸢尾&quot;）。两朵鸢尾花之间的距离计算公式如下：</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/6912459a56fd6a8718e674cf97cc4cbd.png" alt="r" /></p>
+<p>其中：plen1，pwid1分别为其中一朵鸢尾花的花瓣长度和花瓣宽度，plen2，pwid2为另一朵鸢尾花的花瓣长度和花瓣宽度。程序的运行结果如下图所示：</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/bbf40b814edfc712fa791bc75e791638.png" alt="r" /></p>
+<p>请将下面的代码补充完整。将缺少的代码依次填入每个空。（缺少的代码可能不止一行）</p>
+<p>完整代码：</p>
+<pre><code class="language-java">class Iris{
+
+               private  double plen;  //花瓣长度
+
+               private  double pwid;   //花瓣宽度
+
+               private  String target;//鸢尾花的种类     
+
+   
+
+               public Iris(double plen,double pwid,String  target) {
+
+                   this.plen=plen;
+	           this.pwid=pwid;
+		   this.target=target;
+
+               }
+
+               public Iris(double pl,double pw) {
+
+                               this.plen=pl;
+
+                               this.pwid=pw;
+
+               }   
+
+               public void setTarget(String t) {  //设置鸢尾花的类别
+
+                             target=t;
+
+               }
+
+               public String  toString() {          //生成并返回对象的相关信息
+
+                              String s=&quot;花瓣长：&quot;+plen+&quot; 花瓣宽：&quot;+pwid+&quot; &quot;+&quot; 类别是：&quot;+target;
+                               return s; 
+
+               }
+
+               public double distance(Iris another) {//计算2朵鸢尾花之间的距离                                             
+
+                 double distance=Math.sqrt(Math.pow((plen-another.plen),2)+Math.pow((pwid-another.pwid),2));
+				   
+                 return distance; 
+
+               }
+
+}
+
+public class TC2 {
+
+               static Iris iris1=new Iris(1.6,0.6,&quot;山鸢尾&quot;);
+
+               static Iris iris2=new Iris(5.8,3.1,&quot;变色鸢尾&quot;);
+
+              
+
+               public  static String classify(Iris irisnew) {//判断irisnew的类别
+
+                    if(irisnew.distance(iris1&lt;=irisnew.distance(iris2)){
+								   return &quot;山鸢尾&quot;;
+				    }else{
+								   return  &quot;变色鸢尾&quot;;
+							   }
+
+               }
+
+               public static void main(String args[]) {
+
+                               Iris testSample1=new Iris(2.2,1.5);
+
+                               testSample1.setTarget(classify(testSample1));
+
+                               System.out.println(testSample1.toString());
+
+                              
+
+                               Iris testSample2=new Iris(6.0,2.9);
+
+                               testSample2.setTarget(classify(testSample2));     
+
+                               System.out.println(testSample2.toString());
+
+               }
+
+}
+</code></pre>
+<p>生成并返回对象的信息：</p>
+<pre><code class="language-java">//类中
+public String  toString() {          //生成并返回对象的相关信息
+
+                              String s=&quot;花瓣长：&quot;+plen+&quot; 花瓣宽：&quot;+pwid+&quot; &quot;+&quot; 类别是：&quot;+target;
+                               return s; 
+
+               }
+//主方法中
+System.out.println(testSample2.toString());
+</code></pre>
+<p>4.(填空题, 15分)（程序改错题）下列程序完成学生成绩管理功能。请修改程序中出现的三处错误。Student类中定义了学生的姓名（name）、测验分数（testMark）和考试分数（examMark）。程序产生的正确输出如下图所示：</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/b5cf899d7e95dd1e7d020c0438675187.png" alt="r" /></p>
+<p>请在第一、二、三个空中填写错误代码的行号、修改后的代码、错误原因。格式：第n行，改为...(正确代码)，错误原因。</p>
+<p>请在第四个空中上传修改后的源程序文件。</p>
+<p>完整代码：</p>
+<pre><code class="language-java">public class TestStudent {
+
+ public static void main(String[] args) {
+
+ // TODO 自动生成的方法存根
+
+ Student student1;
+
+ Student student2;
+
+ student1 = new Student(&quot;张楠&quot;, 70, 85);
+
+ student2 = new Student(&quot;李浩&quot;, 80, 90);
+
+ student1.displayInfo();
+
+ student2.displayInfo();
+
+ student2.setExamMark(40);
+
+ student2.compareTo(student1);
+
+ }
+
+}
+
+
+
+class Student {
+
+ private String name;
+
+ private int testMark;
+
+ private int examMark;
+
+
+
+ Student(String theName) {
+
+ name = theName;
+
+ }
+
+
+
+ Student(String theName, int test, int exam) {
+
+ name = theName;
+
+ testMark = test;
+
+ examMark = exam;
+
+ }
+
+
+
+ public void setExamMark(int exam) {
+
+ examMark = exam;
+
+ System.out.println(name + &quot;\'s exam mark changed to &quot; + examMark);
+
+ }
+
+
+
+ public int getTestMark() {
+
+ return testMark;
+
+ }
+
+
+
+ public void displayInfo() {
+
+     System.out.println(name + &quot; got &quot; + testMark + &quot; in the test and &quot; + examMark + &quot; in the exam&quot;);
+
+   }
+
+
+
+ public void compareTo(Student other) { //方法的形参必须指定数据类型，根据方法体中使用other的可知，other是一个Student类型对象。
+
+     if (examMark &gt; other.examMark) 
+
+       System.out.println(name + &quot; did better than &quot; + other.name);
+
+     else
+
+       System.out.println(name + &quot; did worse than &quot; + other.name);
+
+   }
+
+ }
+</code></pre>
+<p>5.(填空题, 15分)（编程题）创建Melon类，包含初始值为0的静态变量totalNum、私有实例变量weight。编写Melon类的内容，完成以下功能： </p>
+<p>每当创建一个新的Melon对象，totalNum增加1。</p>
+<p>为Melon类编写实例方法void reduce(){}，每次调用reduce方法，totalNum的值减少1。为私有实例变量weight声明一对访问器方法，分别是int getWeight(){ }和void setWeight(int w){ }，实现对私有实例变量weight的读取和修改，编写这两个方法的方法体。</p>
+<p>测试Melon的功能。创建公共类TestMelon，包含main方法，在main方法中完成下面的功能测试。依次创建四个Melon对象m1、m2、m3、m4后，输出totalNum的值。依次调用m1和m2的reduce方法后，输出totalNum的值。</p>
+<p>调用m3的访问器方法设置私有成员变量weight的值为10，然后获取weight的值并输出。 要求将Melon类和公共类TestMelon放在同一个源程序文件TestMelon.java中。</p>
+<p>请将编写好的源程序截图粘贴到第1个空，源代码文件TestMelon.java以附件形式上传到第2个空，将运行结果截图粘贴第3个空中。</p>
+<p>完整代码：</p>
+<pre><code class="language-java">public class TestMelon{
+	
+	public static void main(String[] args) {
+		Melon m1 = new Melon();
+		Melon m2 = new Melon();
+		Melon m3 = new Melon();
+		Melon m4 = new Melon();
+		
+		System.out.println(Melon.totalNum);//不能写totalNum
+		
+		m1.reduce();//错误写法reduce(m1);
+		m2.reduce();
+		
+		System.out.println(Melon.totalNum);
+		
+		m3.setWeight(10);
+		
+		System.out.println(m3.getWeight());
+	}
+	
+}
+class Melon{
+
+	static int  totalNum;
+	private int weight;
+	//每当创建一个新的Melon对象，totalNum增加1。
+	Melon(){
+		totalNum++;
+		}
+	//为Melon类编写实例方法void reduce(){}，每次调用reduce方法，totalNum的值减少1。
+	void reduce(){
+		totalNum--;
+	}
+	
+	void setWeight(int w){ 
+		weight=w;
+	}
+	
+	int getWeight(){
+		return weight;
+	}
+
+}
+</code></pre>
+<p>6.(填空题, 15分)（编程题）学校图书馆需要设计一个图书信息系统来管理藏书。假设一个简单的图书信息系统需要完成书籍、输出书籍信息、比较书籍的功能。请创建两个类Book和TestBook完成上述功能，输出结果如下：</p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/8fc1043509126b67819ec4c2d93962fb.png" alt="img" /> </p>
+<p>编程要求：创建两个类Book和TestBook，其中TestBook是主类。</p>
+<p>Book的属性有书名、作者（假设只有一位作者）、出版年份，行为有打印图书信息、比较图书信息。</p>
+<p>在Book类中声明实例变量记录各个属性信息，成员变量的名称分别是name、author、publishYear。</p>
+<p>在Book类声明两个实例方法，一个实例方法的功能是打印图书信息；另一个实例方法的功能是比较两本图书，如果书名、作者和出版年份都一样，这两本书是同一本书。</p>
+<p>第一个实例方法的方法头是 void display(){ //请添加方法体 }</p>
+<p>第二个实例方法的方法头是boolean compareBook(Book another){ //请添加方法体 }</p>
+<p>在Book类中用静态变量copyCounter记录书的数目。 </p>
+<p>TestBook类中包含main方法，用于创建图书。</p>
+<p>完整代码：</p>
+<p>Book.java</p>
+<pre><code class="language-java">public class Book{
+	
+	static int copyCounter=0;
+	
+	String name ;
+	String author;
+	int publishYear;
+	
+	Book(String n,String a, int y){//必须要有构造方法
+	
+		name=n;
+		author=a;
+		publishYear=y;
+		
+		copyCounter++;
+	}
+	
+	void display(){
+		System.out.print(&quot;《&quot;+name+&quot;》，&quot;);
+		System.out.print(&quot;作者：&quot;+author+&quot;，&quot;);
+		System.out.print(&quot;出版年份：&quot;+publishYear+'\n');
+	}
+	
+	boolean compareBook(Book another){
+		if(name.equals(another.name)&amp;&amp;author.equals(another.author)&amp;&amp;(publishYear==another.publishYear)){
+		
+			return true;
+		}else{
+		
+			return false;
+		}
+	}
+}
+//可以简写为return name.equals(another.name)&amp;&amp;author.equals(another.author)&amp;&amp;(publishYear==another.publishYear
+//字符串比较用equals()
+</code></pre>
+<p>BookTest.java</p>
+<pre><code class="language-java">public class TestBook{
+	
+	public static void main(String[] args) {
+		Book book1 = new Book(&quot;红楼梦&quot;,&quot;曹雪芹&quot;,1791);
+		book1.display();
+		Book book2 = new Book(&quot;边城&quot;,&quot;沈从文&quot;,1934);
+		book2.display();
+		
+		String str = book1.compareBook(book2)?&quot;&quot;:&quot;不&quot;;
+		
+		System.out.println(&quot;这两本书&quot;+str+&quot;是同一本书&quot;);
+		
+		System.out.println(&quot;一共有&quot;+Book.copyCounter+&quot;本书&quot;);
+	}
+	
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="数据库理论"><a class="header" href="#数据库理论">数据库理论</a></h1>
 
                     </main>
