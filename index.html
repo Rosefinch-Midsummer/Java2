@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -31,7 +31,7 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -61,31 +61,38 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
                 <ol class="chapter"><li class="chapter-item expanded "><a href="前言.html" class="active"><strong aria-hidden="true">1.</strong> 前言</a></li><li class="chapter-item expanded "><a href="Google编码风格.html"><strong aria-hidden="true">2.</strong> Google编码风格</a></li><li class="chapter-item expanded "><a href="数据类型理论.html"><strong aria-hidden="true">3.</strong> 数据类型理论</a></li><li class="chapter-item expanded "><a href="分支语句理论.html"><strong aria-hidden="true">4.</strong> 分支语句理论</a></li><li class="chapter-item expanded "><a href="循环语句理论.html"><strong aria-hidden="true">5.</strong> 循环语句理论</a></li><li class="chapter-item expanded "><a href="异常处理理论.html"><strong aria-hidden="true">6.</strong> 异常处理理论</a></li><li class="chapter-item expanded "><a href="函数理论.html"><strong aria-hidden="true">7.</strong> 函数理论</a></li><li class="chapter-item expanded "><a href="文件理论.html"><strong aria-hidden="true">8.</strong> 文件理论</a></li><li class="chapter-item expanded "><a href="面向对象理论.html"><strong aria-hidden="true">9.</strong> 面向对象理论</a></li><li class="chapter-item expanded "><a href="数据库理论.html"><strong aria-hidden="true">10.</strong> 数据库理论</a></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -116,9 +123,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -166,14 +173,59 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="前言"><a class="header" href="#前言">前言</a></h1>
+                        <h1 id="window10安装jdk21并配置eclipse"><a class="header" href="#window10安装jdk21并配置eclipse">Window10安装jdk21并配置Eclipse</a></h1>
+<ul>
+<li><a href="#jdk%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">JDK环境配置</a></li>
+<li><a href="#%E7%94%A8eclipse%E5%86%99hello-world">用eclipse写hello world</a></li>
+</ul>
+<p><a href="https://blog.csdn.net/weixin_50455331/article/details/126083021">JDK的环境配置（超详细教程）</a></p>
+<p><a href="https://blog.csdn.net/weixin_50455331/article/details/126324741">eclipse下载与安装（汉化教程）超详细</a></p>
+<p><a href="https://blog.csdn.net/qq_46110497/article/details/124607392">eclipse工具栏图标太小了，这样修改</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1795246">Eclipse 小技巧之设置 Java 代码自动提示和补全设置</a></p>
+<h2 id="jdk环境配置"><a class="header" href="#jdk环境配置">JDK环境配置</a></h2>
+<p>JDK环境配置是JDK安装过程中最为重要的内容，大多数初学者安装JDK最大的问题就是出在环境配置上面，所以这里我以windows 10为例，分享一下JDK环境配置的过程。</p>
+<p>（PS：以下环境配置的标点符号是在英文状态下的）</p>
+<p>1.点击 我的电脑 ——&gt; 右键 ——&gt; 选择属性 ，跳出如下图所示（windows 10系统），点击“高级系统设置”。或者 控制面板——&gt;系统和安全——&gt;系统   也可以找到“高级系统设置”。</p>
+<p>2.跳出如下图所示内容，点击“系统环境变量”，</p>
+<p>3.点击环境变量后，跳出如下图所示对话框，第一步点击 “新建”，随后跳出 “新建系统变量” 对话框，一般来说系统变量中是没有JAVA_HOME的，所以我们在弹出的“新建系统变量”对话框中的“变量名”填入 ：JAVA_HOME ，“变量值 ”填入 ：C:\Program Files\Java\jdk-12.0.1（安装Java时jdk 所在的文件夹，   默认安装都是在C盘的）。如果已经存在JAVA_HOME的，那么就在它的变量值的最后面加上分号（即；），然后再将 jdk 的路径添加在这个分号的后面。</p>
+<p>注意：JAVA_HOME的变量值一定要进入到 jdk 所在的目录，然后再复制这个路径放进去。</p>
+<p>4.新建变量名：CLASSPATH，变量值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar （注意前面的  .;  也要放进去）如下图：</p>
+<p>注意：如果已经存在CLASSPATH，则在它的最前面或者最后面添加变量值，如果在最前面添加，应该先添加一个分号（即；），然后再在分号前面添加 .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar （ .; 也要放进去）；如果在最后面添加，应该先添加一个分号（即；），然后再在分号后面添加  .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar （ .; 也要放进去）。</p>
+<p>5.打开Path，点击新建按钮，添加变量值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin（注意：从分号分开作为两行）。</p>
+<p>注意：在window 10系统中，配置JDK环境变量时，如果不将 Path 的 变量值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin 进行如下图这样配置，不分开两行，则会出错。但是如果你的系统是window 7的话，则可以不分开。</p>
+<p>6.记得点击两次确定，如下图：</p>
+<p>三. 验证JDK环境是否配置成功。</p>
+<p>1.按住Window+R ，输入cmd，如下图：</p>
+<p>2.回车，在cmd命令行分别输入java和javac（可以不区分大小写） ，出现如下图所示的画面而不是“javac不是内部变量……”即表示安装成功。</p>
+<h2 id="用eclipse写hello-world"><a class="header" href="#用eclipse写hello-world">用eclipse写hello world</a></h2>
+<p>1.新建一个Java project（Java项目）文件</p>
+<p>选择File→new→java project</p>
+<p>如果找不到java project ,可以先找到project…</p>
+<p>然后在里面找到java project</p>
+<p><img src="https://img-blog.csdnimg.cn/f492027ea5f9408fbfcab94d12c3cc31.png#pic_center" alt="a" /></p>
+<p>2.在Project name（项目名称）里填入 Helloworld，然后点击finish （完成）会生成一个项目</p>
+<p><img src="https://img-blog.csdnimg.cn/03ce6d3995b64b78b93d5332fc584cb0.png#pic_center" alt="a" /></p>
+<p><img src="https://img-blog.csdnimg.cn/4237772d1a6e484f81e0e3e6fb7702a1.png#pic_center" alt="a" /></p>
+<p>3.创建完项目后，右键Helloworld→new→Package（包），然后点击Finish会在Helloworld文件下生成一个包</p>
+<p><img src="https://img-blog.csdnimg.cn/c9299c03023a450ea3c445c0035d5a1b.png#pic_center" alt="a" /></p>
+<p><img src="https://img-blog.csdnimg.cn/f87db52076f34b58825d098d63893c4c.png#pic_center" alt="a" /></p>
+<p>4.右键hello包（新生成的包）hello→new→Class (类)，新建一个类</p>
+<p><img src="https://img-blog.csdnimg.cn/40b5a0cd4a5b47b085179d77f378b744.png#pic_center" alt="a" /></p>
+<p>5.在生成的代码中的第七行填上下面这句代码：注意缩进</p>
+<p><code>System.out.println(&quot;hello world&quot;)</code></p>
+<p><img src="https://img-blog.csdnimg.cn/a32ea550651e4a9c96477f9d5a7d1bbe.png#pic_center" alt="a" /></p>
+<p>6.点击运行之后会弹出一个新的窗口，点击OK</p>
+<p><img src="https://img-blog.csdnimg.cn/0d3e4c3241ed4491aed820b13861da2d.png#pic_center" alt="a" /></p>
+<p>底部控制台出现hello world 则表示运行成功</p>
+<p><img src="https://img-blog.csdnimg.cn/7ef0afd6553445bca289ace49dbd0ed5.png#pic_center" alt="a" /></p>
+<p>如果运行没有出任何问题的话，那么恭喜你，eclipse已经配置成功了。</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
-                            <a rel="next" href="Google编码风格.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="Google编码风格.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -184,7 +236,7 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
-                    <a rel="next" href="Google编码风格.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="Google编码风格.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
