@@ -221,7 +221,418 @@
 <p><img src="https://img-blog.csdnimg.cn/7ef0afd6553445bca289ace49dbd0ed5.png#pic_center" alt="a" /></p>
 <p>如果运行没有出任何问题的话，那么恭喜你，eclipse已经配置成功了。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="google编码风格"><a class="header" href="#google编码风格">Google编码风格</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="数据类型理论"><a class="header" href="#数据类型理论">数据类型理论</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="数据类型"><a class="header" href="#数据类型">数据类型</a></h1>
+<ul>
+<li><a href="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%90%86%E8%AE%BA.html#%E5%86%85%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">内置数据类型</a>
+<ul>
+<li><a href="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%90%86%E8%AE%BA.html#%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4">数值类型取值范围</a></li>
+<li><a href="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%90%86%E8%AE%BA.html#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2">进制转换</a></li>
+<li><a href="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%90%86%E8%AE%BA.html#%E7%B1%BB%E5%9E%8B%E9%BB%98%E8%AE%A4%E5%80%BC">类型默认值</a></li>
+</ul>
+</li>
+<li><a href="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%90%86%E8%AE%BA.html#%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B">引用类型</a></li>
+<li><a href="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%90%86%E8%AE%BA.html#%E5%B8%B8%E9%87%8F">常量</a></li>
+<li><a href="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%90%86%E8%AE%BA.html#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">类型转换</a>
+<ul>
+<li><a href="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%90%86%E8%AE%BA.html#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">自动类型转换</a></li>
+<li><a href="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%90%86%E8%AE%BA.html#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">强制类型转换</a></li>
+<li><a href="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%90%86%E8%AE%BA.html#%E9%9A%90%E5%90%AB%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">隐含强制类型转换</a></li>
+</ul>
+</li>
+</ul>
+<p>变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。</p>
+<p>内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。</p>
+<p>因此，通过定义不同类型的变量，可以在内存中储存整数、小数或者字符。</p>
+<p>Java 有两大数据类型:</p>
+<ul>
+<li>内置数据类型</li>
+<li>引用数据类型</li>
+</ul>
+<h2 id="内置数据类型"><a class="header" href="#内置数据类型">内置数据类型</a></h2>
+<p>Java语言提供了八种基本类型。六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。</p>
+<p>其中long型数据的&quot;L&quot;理论上不分大小写，但是若写成&quot;l&quot;容易与数字&quot;1&quot;混淆，不容易分辩。所以最好大写。</p>
+<p><strong>浮点数比较不能用<code>==</code>！！！例如8.1/3和2.7。</strong></p>
+<p>浮点数定义时可以省略一部分内容，但不能省略小数点。</p>
+<pre><code class="language-java">public class helloworld {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		float f1 = .0001f;
+		float f2 = 1.0e-1f;
+		double d = 1.;
+		System.out.println(f1);
+		System.out.println(f2);
+		System.out.println(d);
+	}
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>1.0E-4
+0.1
+1.0
+</code></pre>
+<p><strong>字符型数据占16位</strong>。</p>
+<pre><code class="language-java">public class helloworld {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char c = 'b' + 1;
+		System.out.println(c); //c
+		System.out.println((int)c); //99
+		System.out.println((char)38889); //韩
+	}
+}
+</code></pre>
+<p>在Java中不能使用0表示false，也不能使用非0的整数表示true。</p>
+<h3 id="数值类型取值范围"><a class="header" href="#数值类型取值范围">数值类型取值范围</a></h3>
+<p>float数据类型精度7位，double数据类型精度11位。</p>
+<p>对于数值类型的基本类型的取值范围，我们无需强制去记忆，因为它们的值都已经以常量的形式定义在对应的包装类中了。请看下面的例子：</p>
+<pre><code class="language-java">public class PrimitiveTypeTest {  
+    public static void main(String[] args) {  
+        // byte  
+        System.out.println(&quot;基本类型：byte 二进制位数：&quot; + Byte.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Byte&quot;);  
+        System.out.println(&quot;最小值：Byte.MIN_VALUE=&quot; + Byte.MIN_VALUE);  
+        System.out.println(&quot;最大值：Byte.MAX_VALUE=&quot; + Byte.MAX_VALUE);  
+        System.out.println();  
+  
+        // short  
+        System.out.println(&quot;基本类型：short 二进制位数：&quot; + Short.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Short&quot;);  
+        System.out.println(&quot;最小值：Short.MIN_VALUE=&quot; + Short.MIN_VALUE);  
+        System.out.println(&quot;最大值：Short.MAX_VALUE=&quot; + Short.MAX_VALUE);  
+        System.out.println();  
+  
+        // int  
+        System.out.println(&quot;基本类型：int 二进制位数：&quot; + Integer.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Integer&quot;);  
+        System.out.println(&quot;最小值：Integer.MIN_VALUE=&quot; + Integer.MIN_VALUE);  
+        System.out.println(&quot;最大值：Integer.MAX_VALUE=&quot; + Integer.MAX_VALUE);  
+        System.out.println();  
+  
+        // long  
+        System.out.println(&quot;基本类型：long 二进制位数：&quot; + Long.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Long&quot;);  
+        System.out.println(&quot;最小值：Long.MIN_VALUE=&quot; + Long.MIN_VALUE);  
+        System.out.println(&quot;最大值：Long.MAX_VALUE=&quot; + Long.MAX_VALUE);  
+        System.out.println();  
+  
+        // float  
+        System.out.println(&quot;基本类型：float 二进制位数：&quot; + Float.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Float&quot;);  
+        System.out.println(&quot;最小值：Float.MIN_VALUE=&quot; + Float.MIN_VALUE);  
+        System.out.println(&quot;最大值：Float.MAX_VALUE=&quot; + Float.MAX_VALUE);  
+        System.out.println();  
+  
+        // double  
+        System.out.println(&quot;基本类型：double 二进制位数：&quot; + Double.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Double&quot;);  
+        System.out.println(&quot;最小值：Double.MIN_VALUE=&quot; + Double.MIN_VALUE);  
+        System.out.println(&quot;最大值：Double.MAX_VALUE=&quot; + Double.MAX_VALUE);  
+        System.out.println();  
+  
+        // char  
+        System.out.println(&quot;基本类型：char 二进制位数：&quot; + Character.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Character&quot;);  
+        // 以数值形式而不是字符形式将Character.MIN_VALUE输出到控制台  
+        System.out.println(&quot;最小值：Character.MIN_VALUE=&quot;  
+                + (int) Character.MIN_VALUE);  
+        // 以数值形式而不是字符形式将Character.MAX_VALUE输出到控制台  
+        System.out.println(&quot;最大值：Character.MAX_VALUE=&quot;  
+                + (int) Character.MAX_VALUE);  
+    }  
+}
+</code></pre>
+<p>编译以上代码输出结果如下所示：</p>
+<pre><code>基本类型：byte 二进制位数：8
+包装类：java.lang.Byte
+最小值：Byte.MIN_VALUE=-128
+最大值：Byte.MAX_VALUE=127
+
+基本类型：short 二进制位数：16
+包装类：java.lang.Short
+最小值：Short.MIN_VALUE=-32768
+最大值：Short.MAX_VALUE=32767
+
+基本类型：int 二进制位数：32
+包装类：java.lang.Integer
+最小值：Integer.MIN_VALUE=-2147483648
+最大值：Integer.MAX_VALUE=2147483647
+
+基本类型：long 二进制位数：64
+包装类：java.lang.Long
+最小值：Long.MIN_VALUE=-9223372036854775808
+最大值：Long.MAX_VALUE=9223372036854775807
+
+基本类型：float 二进制位数：32
+包装类：java.lang.Float
+最小值：Float.MIN_VALUE=1.4E-45
+最大值：Float.MAX_VALUE=3.4028235E38
+
+基本类型：double 二进制位数：64
+包装类：java.lang.Double
+最小值：Double.MIN_VALUE=4.9E-324
+最大值：Double.MAX_VALUE=1.7976931348623157E308
+
+基本类型：char 二进制位数：16
+包装类：java.lang.Character
+最小值：Character.MIN_VALUE=0
+最大值：Character.MAX_VALUE=65535
+</code></pre>
+<p>float和double的最小值和最大值都是以科学记数法的形式输出的，结尾的&quot;E+数字&quot;表示E之前的数字要乘以10的多少次方。比如3.14E3就是3.14 × 10^3 =3140，3.14E-3 就是 3.14x10^{-3} =0.00314。</p>
+<p>实际上，JAVA中还存在另外一种基本类型 void，它也有对应的包装类 java.lang.Void，不过我们无法直接对它们进行操作。</p>
+<h3 id="进制转换"><a class="header" href="#进制转换">进制转换</a></h3>
+<pre><code class="language-java">public class helloworld {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num1 = 0b1010;
+		int num2 = 01010;
+		int num3 = 1010;
+		int num4 = 0x1010;
+		char c = '漢';
+		
+		System.out.println(&quot;num1 = &quot; + num1);
+		System.out.println(&quot;num2 = &quot; + num2);
+		System.out.println(&quot;num3 = &quot; + num3);
+		System.out.println(&quot;num4 = &quot; + num4);
+		System.out.println(&quot;漢的utf-8编码为： &quot; + (int)c);
+	}
+}
+</code></pre>
+<p>输出结果如下：</p>
+<pre><code>num1 = 10
+num2 = 520
+num3 = 1010
+num4 = 4112
+漢的utf-8编码为： 28450
+</code></pre>
+<h3 id="类型默认值"><a class="header" href="#类型默认值">类型默认值</a></h3>
+<p>下表列出了 Java 各个类型的默认值：</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left"><strong>数据类型</strong></th><th style="text-align: left"><strong>默认值</strong></th></tr></thead><tbody>
+<tr><td style="text-align: left">byte</td><td style="text-align: left">0</td></tr>
+<tr><td style="text-align: left">short</td><td style="text-align: left">0</td></tr>
+<tr><td style="text-align: left">int</td><td style="text-align: left">0</td></tr>
+<tr><td style="text-align: left">long</td><td style="text-align: left">0L</td></tr>
+<tr><td style="text-align: left">float</td><td style="text-align: left">0.0f</td></tr>
+<tr><td style="text-align: left">double</td><td style="text-align: left">0.0d</td></tr>
+<tr><td style="text-align: left">char</td><td style="text-align: left">'u0000'</td></tr>
+<tr><td style="text-align: left">String (or any object)</td><td style="text-align: left">null</td></tr>
+<tr><td style="text-align: left">boolean</td><td style="text-align: left">false</td></tr>
+<tr><td style="text-align: left">测试示例：</td><td style="text-align: left"></td></tr>
+</tbody></table>
+</div>
+<pre><code class="language-java">public class Test {
+    static boolean bool;
+    static byte by;
+    static char ch;
+    static double d;
+    static float f;
+    static int i;
+    static long l;
+    static short sh;
+    static String str;
+ 
+    public static void main(String[] args) {
+        System.out.println(&quot;Bool :&quot; + bool);
+        System.out.println(&quot;Byte :&quot; + by);
+        System.out.println(&quot;Character:&quot; + ch);
+        System.out.println(&quot;Double :&quot; + d);
+        System.out.println(&quot;Float :&quot; + f);
+        System.out.println(&quot;Integer :&quot; + i);
+        System.out.println(&quot;Long :&quot; + l);
+        System.out.println(&quot;Short :&quot; + sh);
+        System.out.println(&quot;String :&quot; + str);
+    }
+}
+</code></pre>
+<p>实例输出结果：</p>
+<pre><code>Bool     :false
+Byte     :0
+Character:
+Double   :0.0
+Float    :0.0
+Integer  :0
+Long     :0
+Short    :0
+String   :null
+</code></pre>
+<h2 id="引用类型"><a class="header" href="#引用类型">引用类型</a></h2>
+<p>引用类型主要包括类（class）、接口（interface）和数组。</p>
+<ul>
+<li>在Java中，引用类型的变量非常类似于C/C++的指针。引用类型指向一个对象，指向对象的变量是引用变量。这些变量在声明时被指定为一个特定的类型，比如 Employee、Puppy 等。变量一旦声明后，类型就不能被改变了。</li>
+<li>对象、数组都是引用数据类型。</li>
+<li>所有引用类型的默认值都是null。</li>
+<li>一个引用变量可以用来引用任何与之兼容的类型。</li>
+<li>例子：Site site = new Site(&quot;Runoob&quot;)。</li>
+</ul>
+<h2 id="常量"><a class="header" href="#常量">常量</a></h2>
+<p>常量在程序运行时是不能被修改的。</p>
+<p>在 Java 中使用 final 关键字来修饰常量，声明方式和变量类似：</p>
+<pre><code class="language-java">final double PI = 3.1415927;
+</code></pre>
+<p>常量名虽然也可以用小写，但为了便于识别，通常使用大写字母表示常量。</p>
+<p>字面量可以赋给任何内置类型的变量。例如：</p>
+<pre><code class="language-java">byte a = 68;
+char a = 'A'
+</code></pre>
+<p>byte、int、long和short都可以用十进制、16进制以及8进制的方式来表示。</p>
+<p>当使用字面量的时候，前缀 0 表示 8 进制，而前缀 0x 代表 16 进制, 例如：</p>
+<pre><code class="language-java">int decimal = 100;
+int octal = 0144;
+int hexa =  0x64;
+</code></pre>
+<p>和其他语言一样，Java的字符串常量也是包含在两个引号之间的字符序列。下面是字符串型字面量的例子：</p>
+<pre><code class="language-java">&quot;Hello World&quot;
+&quot;two\nlines&quot;
+&quot;\&quot;This is in quotes\&quot;&quot;
+</code></pre>
+<p>字符串常量和字符变量都可以包含任何 Unicode 字符。例如：</p>
+<pre><code class="language-java">char a = '\u0001';
+String a = &quot;\u0001&quot;;
+</code></pre>
+<p>Java语言支持一些特殊的转义字符序列。</p>
+<div class="table-wrapper"><table><thead><tr><th>符号</th><th>字符含义</th></tr></thead><tbody>
+<tr><td>\n</td><td>换行 (0x0a)</td></tr>
+<tr><td>\r</td><td>回车 (0x0d)</td></tr>
+<tr><td>\f</td><td>换页符(0x0c)</td></tr>
+<tr><td>\b</td><td>退格 (0x08)</td></tr>
+<tr><td>\0</td><td>空字符 (0x0)</td></tr>
+<tr><td>\s</td><td>空格 (0x20)</td></tr>
+<tr><td>\t</td><td>制表符</td></tr>
+<tr><td>&quot;</td><td>双引号</td></tr>
+<tr><td>'</td><td>单引号</td></tr>
+<tr><td>\</td><td>反斜杠</td></tr>
+<tr><td>\ddd</td><td>八进制字符 (ddd)</td></tr>
+<tr><td>\uxxxx</td><td>16进制Unicode字符 (xxxx)</td></tr>
+</tbody></table>
+</div>
+<h2 id="类型转换"><a class="header" href="#类型转换">类型转换</a></h2>
+<h3 id="自动类型转换"><a class="header" href="#自动类型转换">自动类型转换</a></h3>
+<p><strong>整型、实型（常量）、字符型数据可以混合运算。运算中，不同类型的数据先转化为同一类型（容量最大的那种类型），然后进行运算。</strong></p>
+<p>转换从低级到高级顺序：</p>
+<pre><code>低  ------------------------------------&gt;  高
+
+byte,short,char—&gt; int —&gt; long—&gt; float —&gt; double 
+
+</code></pre>
+<p>（byte、short）和char之间赋值时不会发生自动类型转换，例如<code>byte b = 97;char c = b;</code>这种写法会报错。（byte、short）和char之间可以通过转换为int类型然后运算，例如<code>byte b = 97;short s = 10;short s2 = s + b;</code>也会报错。byte类型数据和byte类型数据之间运算结果也是int类型数据，例如<code>byte b1 = 97;byte b2 = 1;byte b = b1 + b2;</code>也会报错。</p>
+<p><strong>自动类型转换必须满足转换前的数据类型的位数要低于转换后的数据类型，例如: short数据类型的位数为16位，就可以自动转换位数为32的int类型，同样float数据类型的位数为32，可以自动转换为64位的double类型。</strong></p>
+<pre><code class="language-java">public class helloworld {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char c1='a';//定义一个char类型
+        int i1 = c1;//char自动类型转换为int
+        System.out.println(&quot;char自动类型转换为int后的值等于&quot;+i1);
+        char c2 = 'A';//定义一个char类型
+        int i2 = c2+1;//char 类型和 int 类型计算
+        System.out.println(&quot;char类型和int计算后的值等于&quot;+i2);
+	}
+
+}
+</code></pre>
+<p>运行结果为：</p>
+<pre><code>char自动类型转换为int后的值等于97
+char类型和int计算后的值等于66
+</code></pre>
+<p>数据类型转换必须满足如下规则：</p>
+<p>1.不能对boolean类型进行类型转换。</p>
+<p>2.不能把对象类型转换成不相关类的对象。</p>
+<p>3.<strong>在把容量大的类型转换为容量小的类型时必须使用强制类型转换。</strong></p>
+<p>4.转换过程中可能导致溢出或损失精度，例如：</p>
+<pre><code class="language-java">public class helloworld {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i =128;   
+		byte b = (byte)i;
+
+		System.out.println(b);//输出-128
+	}
+
+}
+</code></pre>
+<p>因为 byte 类型是 8 位，最大值为127，所以当 int 强制转换为 byte 类型时，值 128 时候就会导致溢出。</p>
+<p>5.<strong>浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入，也可以视为向零舍去</strong>，例如：</p>
+<pre><code class="language-java">public class helloworld {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println((int)23.7 == 23);//true
+		System.out.println((int)-45.89f == -45);//true
+	}
+
+}
+</code></pre>
+<h3 id="强制类型转换"><a class="header" href="#强制类型转换">强制类型转换</a></h3>
+<p>定义语句<code>int n1 = 9L;</code>会报错，定义语句<code>float f = 1.1;</code>也会报错。</p>
+<ul>
+<li>
+<ol>
+<li>条件是转换的数据类型必须是兼容的。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>格式：(type)value中 type是要强制类型转换后的数据类型 </li>
+</ol>
+</li>
+<li>3.强制转换符号只对最近的操作数有效，可以用小括号指定强制类型转换范围</li>
+<li>4.char类型可以保存int类型常量值，但不能保存int类型变量值（此时需要强制类型转换）</li>
+<li>5.byte、short、char类型数据参与运算时当作int类型处理</li>
+</ul>
+<p>基本数据类型和String类型的转换：</p>
+<ul>
+<li>基本数据类型转String类型：加“”即可</li>
+<li>String类型转基本数据类型：根据基本数据类型的包装类调用parserXX方法即可，要获取特定字符可以使用字符串变量的charAt()方法</li>
+</ul>
+<pre><code class="language-java">public class helloworld {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num1 = 10;
+		String s1 = num1 + &quot;&quot;;
+		System.out.println(s1);
+		
+		String s2 = &quot;123&quot;;
+		int num2 = Integer.parseInt(s2);
+		System.out.println(num2);
+		double num3 = Double.parseDouble(s2);
+		System.out.println(num3);
+		char c = s2.charAt(1);
+		System.out.println(c);
+	}
+}
+</code></pre>
+<p>输出结果如下：</p>
+<pre><code>10
+123
+123.0
+2
+</code></pre>
+<h3 id="隐含强制类型转换"><a class="header" href="#隐含强制类型转换">隐含强制类型转换</a></h3>
+<ul>
+<li>1.整数的默认类型是 int。</li>
+<li>2.小数默认是 double 类型浮点型，在定义 float 类型时必须在数字后面跟上 F 或者 f。</li>
+</ul>
+<p>涉及+号的数值类型转换，从左向右运算。如果+号左右两边都是数值类型则做加法运算；如果左右有一部分是字符串则作字符串拼接。</p>
+<pre><code class="language-java">public class helloworld {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(100 + 98);
+		System.out.println(&quot;100&quot; + 98);
+		System.out.println(100 + 98 + &quot;hello&quot;);
+		System.out.println(&quot;hello&quot; + 100 + 98);
+	}
+}
+</code></pre>
+<pre><code>198
+10098
+198hello
+hello10098
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="分支语句理论"><a class="header" href="#分支语句理论">分支语句理论</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="循环语句理论"><a class="header" href="#循环语句理论">循环语句理论</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="异常处理理论"><a class="header" href="#异常处理理论">异常处理理论</a></h1>
@@ -2173,7 +2584,7 @@ public class Application {
         }
 }
 </code></pre>
-<h4 id="类型转换"><a class="header" href="#类型转换">类型转换</a></h4>
+<h4 id="类型转换-1"><a class="header" href="#类型转换-1">类型转换</a></h4>
 <p>要点：</p>
 <ul>
 <li>父类引用可以指向子类的对象</li>
