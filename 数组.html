@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>数组 - Java语言程序设计</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="前言.html">前言</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="Google编码风格.html"><strong aria-hidden="true">1.</strong> Google编码风格</a></li><li class="chapter-item expanded "><a href="数据类型理论.html"><strong aria-hidden="true">2.</strong> 数据类型</a></li><li class="chapter-item expanded "><a href="运算符.html"><strong aria-hidden="true">3.</strong> 运算符</a></li><li class="chapter-item expanded "><a href="程序流程控制.html"><strong aria-hidden="true">4.</strong> 程序流程控制</a></li><li class="chapter-item expanded "><a href="数组.html" class="active"><strong aria-hidden="true">5.</strong> 数组</a></li><li class="chapter-item expanded "><a href="异常处理理论.html"><strong aria-hidden="true">6.</strong> 异常处理</a></li><li class="chapter-item expanded "><a href="函数理论.html"><strong aria-hidden="true">7.</strong> 函数</a></li><li class="chapter-item expanded "><a href="文件理论.html"><strong aria-hidden="true">8.</strong> 文件</a></li><li class="chapter-item expanded "><a href="面向对象理论.html"><strong aria-hidden="true">9.</strong> 面向对象</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Java语言程序设计</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="数组"><a class="header" href="#数组">数组</a></h1>
+<p>数组对于每一门编程语言来说都是重要的数据结构之一，当然不同语言对数组的实现及处理也不尽相同。</p>
+<p>Java 语言中提供的数组是用来存储固定大小的同类型元素。</p>
+<p>你可以声明一个数组变量，如 <code>numbers[100]</code> 来代替直接声明 100 个独立变量 number0，number1，....，number99。</p>
+<p>本教程将为大家介绍 Java 数组的声明、创建和初始化，并给出其对应的代码。</p>
+<hr />
+<ul>
+<li><a href="#%E5%A3%B0%E6%98%8E%E6%95%B0%E7%BB%84%E5%8F%98%E9%87%8F">声明数组变量</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84">创建数组</a></li>
+<li><a href="#%E5%A4%84%E7%90%86%E6%95%B0%E7%BB%84">处理数组</a></li>
+<li><a href="#for-each-%E5%BE%AA%E7%8E%AF">For-Each 循环</a></li>
+<li><a href="#%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0">数组作为函数的参数</a></li>
+<li><a href="#%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC">数组作为函数的返回值</a></li>
+<li><a href="#%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84">多维数组</a>
+<ul>
+<li><a href="#%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%A5%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%BA%E4%BE%8B">多维数组的动态初始化（以二维数组为例）</a></li>
+<li><a href="#%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E5%BC%95%E7%94%A8%E4%BB%A5%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%BA%E4%BE%8B">多维数组的引用（以二维数组为例）</a></li>
+</ul>
+</li>
+<li><a href="#arrays-%E7%B1%BB">Arrays 类</a></li>
+</ul>
+<h2 id="声明数组变量"><a class="header" href="#声明数组变量">声明数组变量</a></h2>
+<p>首先必须声明数组变量，才能在程序中使用数组。下面是声明数组变量的语法：</p>
+<pre><code class="language-java">dataType[] arrayRefVar;   // 首选的方法
+ 
+或
+ 
+dataType arrayRefVar[];  // 效果相同，但不是首选方法
+</code></pre>
+<p><strong>注意:</strong> 建议使用 <strong>dataType[] arrayRefVar</strong> 的声明风格声明数组变量。 dataType arrayRefVar[] 风格是来自 C/C++ 语言 ，在Java中采用是为了让 C/C++ 程序员能够快速理解java语言。</p>
+<p>下面是这两种语法的代码示例：</p>
+<pre><code class="language-java">double[] myList;         // 首选的方法
+ 
+或
+ 
+double myList[];         //  效果相同，但不是首选方法
+</code></pre>
+<hr />
+<h2 id="创建数组"><a class="header" href="#创建数组">创建数组</a></h2>
+<p>Java语言使用new操作符来创建数组，语法如下：</p>
+<pre><code class="language-java">arrayRefVar = new dataType[arraySize];
+</code></pre>
+<p>上面的语法语句做了两件事：</p>
+<ul>
+<li>一、使用 <code>dataType[arraySize]</code> 创建了一个数组。</li>
+<li>二、把新创建的数组的引用赋值给变量 arrayRefVar。</li>
+</ul>
+<p>数组变量的声明，和创建数组可以用一条语句完成，如下所示：</p>
+<pre><code class="language-java">dataType[] arrayRefVar = new dataType[arraySize];
+</code></pre>
+<p>另外，你还可以使用如下的方式创建数组。</p>
+<pre><code class="language-java">dataType[] arrayRefVar = {value0, value1, ..., valuek};
+</code></pre>
+<p><strong>数组中的元素可以是任何数据类型，包括基本类型和引用类型，但是不能混用。</strong></p>
+<p>数组创建后如果没有赋值，有默认值：</p>
+<p>int 0，short 0，byte 0，long 0，float 0.0， double 0.0，char <code>\u0000</code>，
+boolean false， String null</p>
+<p>数组的元素是通过索引访问的。数组索引从 0 开始，所以索引值从 0 到 arrayRefVar.length-1。</p>
+<p>下面的语句首先声明了一个数组变量 myList，接着创建了一个包含 10 个 double 类型元素的数组，并且把它的引用赋值给 myList 变量。</p>
+<pre><code class="language-java">public class TestArray {
+   public static void main(String[] args) {
+      // 数组大小
+      int size = 10;
+      // 定义数组
+      double[] myList = new double[size];
+      myList[0] = 5.6;
+      myList[1] = 4.5;
+      myList[2] = 3.3;
+      myList[3] = 13.2;
+      myList[4] = 4.0;
+      myList[5] = 34.33;
+      myList[6] = 34.0;
+      myList[7] = 45.45;
+      myList[8] = 99.993;
+      myList[9] = 11123;
+      // 计算所有元素的总和
+      double total = 0;
+      for (int i = 0; i &lt; size; i++) {
+         total += myList[i];
+      }
+      System.out.println(&quot;总和为： &quot; + total);
+   }
+}
+</code></pre>
+<p>以上实例输出结果为：</p>
+<pre><code>总和为： 11367.373
+</code></pre>
+<p>下面的图片描绘了数组 myList。这里 myList 数组里有 10 个 double 元素，它的下标从 0 到 9。</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2013/12/12-130Q0221Q5602.jpg" alt="java数组结构说明" /></p>
+<hr />
+<h2 id="处理数组"><a class="header" href="#处理数组">处理数组</a></h2>
+<p><strong>数组赋值机制：数组在默认情况下是引用传递（地址传递）而不是值传递，赋的值是地址</strong></p>
+<pre><code class="language-java">public class helloworld {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr1 = {1,2,3,4};
+		int[] arr2 = arr1;
+		arr1[2] = 6;
+		for(int i = 0; i &lt; arr2.length; i++) {
+			System.out.println(arr2[i]);
+		}
+	}
+}
+
+</code></pre>
+<p>输出结果如下：</p>
+<pre><code>1
+2
+6
+4
+</code></pre>
+<p>数组的元素类型和数组的大小都是确定的，所以当处理数组元素时候，我们通常使用基本循环或者 For-Each 循环。</p>
+<p>该实例完整地展示了如何创建、初始化和操纵数组：</p>
+<pre><code class="language-java">public class TestArray {
+   public static void main(String[] args) {
+      double[] myList = {1.9, 2.9, 3.4, 3.5};
+ 
+      // 打印所有数组元素
+      for (int i = 0; i &lt; myList.length; i++) {
+         System.out.println(myList[i] + &quot; &quot;);
+      }
+      // 计算所有元素的总和
+      double total = 0;
+      for (int i = 0; i &lt; myList.length; i++) {
+         total += myList[i];
+      }
+      System.out.println(&quot;Total is &quot; + total);
+      // 查找最大元素
+      double max = myList[0];
+      for (int i = 1; i &lt; myList.length; i++) {
+         if (myList[i] &gt; max) max = myList[i];
+      }
+      System.out.println(&quot;Max is &quot; + max);
+   }
+}
+</code></pre>
+<p>以上实例编译运行结果如下：</p>
+<pre><code>1.9
+2.9
+3.4
+3.5
+Total is 11.7
+Max is 3.5
+</code></pre>
+<hr />
+<h2 id="for-each-循环"><a class="header" href="#for-each-循环">For-Each 循环</a></h2>
+<p>JDK 1.5 引进了一种新的循环类型，被称为 For-Each 循环或者加强型循环，它能在不使用下标的情况下遍历数组。</p>
+<p>语法格式如下：</p>
+<pre><code class="language-java">for(type element: array)
+{
+    System.out.println(element);
+}
+</code></pre>
+<p>该实例用来显示数组 myList 中的所有元素：</p>
+<pre><code class="language-java">public class TestArray {
+   public static void main(String[] args) {
+      double[] myList = {1.9, 2.9, 3.4, 3.5};
+ 
+      // 打印所有数组元素
+      for (double element: myList) {
+         System.out.println(element);
+      }
+   }
+}
+</code></pre>
+<p>以上实例编译运行结果如下：</p>
+<pre><code>1.9
+2.9
+3.4
+3.5
+</code></pre>
+<hr />
+<h2 id="数组作为函数的参数"><a class="header" href="#数组作为函数的参数">数组作为函数的参数</a></h2>
+<p>数组可以作为参数传递给方法。</p>
+<p>例如，下面的例子就是一个打印 int 数组中元素的方法:</p>
+<pre><code class="language-java">public static void printArray(int[] array) {
+  for (int i = 0; i &lt; array.length; i++) {
+    System.out.print(array[i] + &quot; &quot;);
+  }
+}
+</code></pre>
+<p>下面例子调用 printArray 方法打印出 3，1，2，6，4 和 2：</p>
+<pre><code class="language-java">printArray(new int[]{3, 1, 2, 6, 4, 2});
+</code></pre>
+<hr />
+<h2 id="数组作为函数的返回值"><a class="header" href="#数组作为函数的返回值">数组作为函数的返回值</a></h2>
+<pre><code class="language-java">public static int[] reverse(int[] list) {
+  int[] result = new int[list.length];
+ 
+  for (int i = 0, j = result.length - 1; i &lt; list.length; i++, j--) {
+    result[j] = list[i];
+  }
+  return result;
+}
+</code></pre>
+<p>以上实例中 result 数组作为函数的返回值。</p>
+<hr />
+<h2 id="多维数组"><a class="header" href="#多维数组">多维数组</a></h2>
+<p>多维数组可以看成是数组的数组，比如二维数组就是一个特殊的一维数组，其每一个元素都是一个一维数组，例如：</p>
+<pre><code class="language-java">String[][] str = new String[3][4];
+</code></pre>
+<p>二维数组的声明形式有如下三种：<code>int[][] y;</code>、<code>int[] y[];</code>、<code>int y[][];</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/202401151546762.png" alt="" /></p>
+<p>这种赋值方式<code>String[] strs = new String[]{&quot;a&quot;, &quot;b&quot;, &quot;c&quot;};</code>也是允许的。</p>
+<h3 id="多维数组的动态初始化以二维数组为例"><a class="header" href="#多维数组的动态初始化以二维数组为例">多维数组的动态初始化（以二维数组为例）</a></h3>
+<ol>
+<li>直接为每一维分配空间，格式如下：</li>
+</ol>
+<pre><code class="language-java">type[][] typeName = new type[typeLength1][typeLength2];
+</code></pre>
+<p>type 可以为基本数据类型和复合数据类型，typeLength1 和 typeLength2 必须为正整数，typeLength1 为行数，typeLength2 为列数。</p>
+<p>例如：</p>
+<pre><code class="language-java">int[][] a = new int[2][3];
+</code></pre>
+<p>解析：</p>
+<p>二维数组 a 可以看成一个两行三列的数组。</p>
+<ol start="2">
+<li>从最高维开始，分别为每一维分配空间，例如：</li>
+</ol>
+<pre><code class="language-java">String[][] s = new String[2][];
+s[0] = new String[2];
+s[1] = new String[3];
+s[0][0] = new String(&quot;Good&quot;);
+s[0][1] = new String(&quot;Luck&quot;);
+s[1][0] = new String(&quot;to&quot;);
+s[1][1] = new String(&quot;you&quot;);
+s[1][2] = new String(&quot;!&quot;);
+</code></pre>
+<p>解析：</p>
+<p><strong><code>s[0]=new String[2]** 和 **s[1]=new String[3]</code></strong> 是为最高维分配引用空间，也就是为最高维限制其能保存数据的最长的长度，然后再为其每个数组元素单独分配空间 <strong>s0=new String(&quot;Good&quot;)</strong> 等操作。</p>
+<p>实例：</p>
+<pre><code class="language-java">public class helloworld {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[][] a = new int[2][3];
+		int k = 1;
+		for(int i = 0; i &lt; a.length; i++) {
+			for(int j = 0; j &lt; a[i].length; j += 2) {
+				a[i][j] = k++;
+			}
+		}
+		for(int i = 0; i &lt; a.length; i++) {
+			for(int j = 0; j &lt; a[i].length; j++) {
+				System.out.print(a[i][j] + &quot; &quot;);
+			}
+			System.out.print('\n');
+		}
+		int[][] b = {{1}, {1,2,3}};
+		for(int i = 0; i &lt; b.length; i++) {
+			for(int j = 0; j &lt; b[i].length; j++) {
+				System.out.print(b[i][j] + &quot; &quot;);
+			}
+			System.out.println();
+		}
+		int n = 10;
+		int[][] c = new int[n][];
+		for(int i = 0; i &lt; c.length; i++) {
+			c[i] = new int[i + 1];
+			for(int j = 0; j &lt; c[i].length; j++) {
+				if(j == 0 || j == c[i].length - 1) {
+					c[i][j] = 1;
+				}else {
+					c[i][j] = c[i - 1][j - 1] + c[i - 1][j];
+				}
+			}
+		}
+		for(int i = 0; i &lt; c.length; i++) {
+			for(int j = 0; j &lt; c[i].length; j++) {
+				System.out.print(c[i][j] + &quot;\t&quot;);
+			}
+			System.out.println();
+		}
+	}
+	
+}
+</code></pre>
+<p>输出结果如下：</p>
+<pre><code>1 0 2 
+3 0 4 
+1 
+1 2 3 
+1	
+1	1	
+1	2	1	
+1	3	3	1	
+1	4	6	4	1	
+1	5	10	10	5	1	
+1	6	15	20	15	6	1	
+1	7	21	35	35	21	7	1	
+1	8	28	56	70	56	28	8	1	
+1	9	36	84	126	126	84	36	9	1
+</code></pre>
+<p>注意：二维数组中可以省略部分元素</p>
+<h3 id="多维数组的引用以二维数组为例"><a class="header" href="#多维数组的引用以二维数组为例">多维数组的引用（以二维数组为例）</a></h3>
+<p>对二维数组中的每个元素，引用方式为 <strong><code>arrayName[index1][index2]</code></strong>，例如：</p>
+<pre><code class="language-java">num[1][0];
+</code></pre>
+<hr />
+<h2 id="arrays-类"><a class="header" href="#arrays-类">Arrays 类</a></h2>
+<p>java.util.Arrays 类能方便地操作数组，它提供的所有方法都是静态的。</p>
+<p>具有以下功能：</p>
+<ul>
+<li>给数组赋值：通过 fill 方法。</li>
+<li>对数组排序：通过 sort 方法,按升序。</li>
+<li>比较数组：通过 equals 方法比较数组中元素值是否相等。</li>
+<li>查找数组元素：通过 binarySearch 方法能对排序好的数组进行二分查找法操作。</li>
+</ul>
+<p>具体说明请查看下表：</p>
+<div class="table-wrapper"><table><thead><tr><th>序号</th><th>方法和说明</th></tr></thead><tbody>
+<tr><td>1</td><td><strong>public static int binarySearch(Object[] a, Object key)</strong>  <br>用二分查找算法在给定数组中搜索给定值的对象(Byte,Int,double等)。数组在调用前必须排序好的。如果查找值包含在数组中，则返回搜索键的索引；否则返回 (-(<em>插入点</em>) - 1)。</td></tr>
+<tr><td>2</td><td><strong>public static boolean equals(long[] a, long[] a2)</strong>  <br>如果两个指定的 long 型数组彼此_相等_，则返回 true。如果两个数组包含相同数量的元素，并且两个数组中的所有相应元素对都是相等的，则认为这两个数组是相等的。换句话说，如果两个数组以相同顺序包含相同的元素，则两个数组是相等的。同样的方法适用于所有的其他基本数据类型（Byte，short，Int等）。</td></tr>
+<tr><td>3</td><td><strong>public static void fill(int[] a, int val)</strong>  <br>将指定的 int 值分配给指定 int 型数组指定范围中的每个元素。同样的方法适用于所有的其他基本数据类型（Byte，short，Int等）。</td></tr>
+<tr><td>4</td><td><strong>public static void sort(Object[] a)</strong>  <br>对指定对象数组根据其元素的自然顺序进行升序排列。同样的方法适用于所有的其他基本数据类型（Byte，short，Int等）。</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="程序流程控制.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="异常处理理论.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="程序流程控制.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="异常处理理论.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
