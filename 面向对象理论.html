@@ -289,7 +289,7 @@
 	
     
     void showPrompt(){
-	      System.out.println(&quot;Welcome&quot;);	
+	      System.out.println("Welcome");	
 	}
 	
 	void insertMoney(int amount){
@@ -301,7 +301,7 @@
 	}
 	void getFood(){
 		if(balance&gt;=price){
-			 System.out.println(&quot;Here you are.&quot;);	
+			 System.out.println("Here you are.");	
 			balance = balance-price;
 			total=total+price;
 		}
@@ -348,7 +348,7 @@ Here you are.
 
 public class Student {
     public static void say() {
-        System.out.println(&quot;学生说话了!!&quot;);
+        System.out.println("学生说话了!!");
     }
 }
 </code></pre>
@@ -369,7 +369,7 @@ public class Demo2 {
 
 public class Student {
     public void say() {
-        System.out.println(&quot;学生说话了!!&quot;);
+        System.out.println("学生说话了!!");
     }
 }
 </code></pre>
@@ -418,7 +418,7 @@ public class Student {
 
     //方法
     public void study() {
-        System.out.println(this.name+&quot;在学习!!&quot;);
+        System.out.println(this.name+"在学习!!");
     }
 }
 </code></pre>
@@ -431,7 +431,7 @@ public class Application {
         //student对象是Student类的一个具体实例
         Student student = new Student();
         System.out.println(student.name);
-        student.name = &quot;小豹子&quot;;//需要用&quot;&quot;
+        student.name = "小豹子";//需要用""
         System.out.println(student.name);
     }
 }
@@ -459,7 +459,7 @@ public class Person {
     //1.使用new关键字，本质上是调用构造器
     //2.用来初始化值
     public Person(){
-        this.name = &quot;RM&quot;;
+        this.name = "RM";
 
     }
 }
@@ -501,7 +501,7 @@ public class Person {
 public class Application {
     public static void main(String[] args) {
         //new 实例化了一个对象
-        Person person = new Person(&quot;kuangshen&quot;);
+        Person person = new Person("kuangshen");
         System.out.println(person.name);
     }
 }
@@ -580,7 +580,7 @@ public class Application {
     public static void main(String[] args) {
 
         Student student = new Student();
-        student.setName(&quot;RM&quot;);
+        student.setName("RM");
         System.out.println(student.getName());
     }
 }
@@ -634,7 +634,7 @@ public class Application {
     public static void main(String[] args) {
 
         Student student = new Student();
-        student.setName(&quot;RM&quot;);
+        student.setName("RM");
         System.out.println(student.getName());
         student.setAge(999);
         System.out.println(student.getAge());
@@ -653,7 +653,7 @@ public class Application {
 
 public class Person {
     public void say(){
-        System.out.println(&quot;川普说话了！&quot;);
+        System.out.println("川普说话了！");
     }
 }
 
@@ -700,13 +700,13 @@ public class Application {
 <pre><code class="language-java">package oop;
 
 public class Person {
-    protected String name = &quot;kuangshen&quot;;
+    protected String name = "kuangshen";
 }
 </code></pre>
 <pre><code class="language-java">package oop;
 
 public class Student extends Person {
-    private  String name = &quot;RM&quot;;
+    private  String name = "RM";
 
     public void test(String name){
         System.out.println(name);//传入的参数如孔夫子
@@ -726,7 +726,7 @@ public class Application {
 
         Student student = new Student();
 
-        student.test(&quot;孔夫子&quot;);
+        student.test("孔夫子");
 
     }
 }
@@ -739,20 +739,20 @@ kuangshen
 <pre><code class="language-java">package oop;
 
 public class Person {
-    protected String name = &quot;kuangshen&quot;;
+    protected String name = "kuangshen";
 
     public void print(){
-        System.out.println(&quot;Person&quot;);
+        System.out.println("Person");
     }
 }
 </code></pre>
 <pre><code class="language-java">package oop;
 
 public class Student extends Person {
-    private  String name = &quot;RM&quot;;
+    private  String name = "RM";
 
     public void print(){
-        System.out.println(&quot;Student&quot;);
+        System.out.println("Student");
     }
 
     public void test(){
@@ -788,13 +788,13 @@ Person
 public class Person {
 
     public Person() {
-        System.out.println(&quot;Person无参执行了！&quot;);
+        System.out.println("Person无参执行了！");
     }
 
-    protected String name = &quot;kuangshen&quot;;
+    protected String name = "kuangshen";
 
     public void print(){
-        System.out.println(&quot;Person&quot;);
+        System.out.println("Person");
     }
 }
 </code></pre>
@@ -805,13 +805,13 @@ public class Student extends Person {
     public Student() {
         //这里存在隐藏代码super();，调用了父类的无参构造
         //super();//Call to 'super()' must be first statement in constructor body
-        System.out.println(&quot;Student无参执行了！&quot;);
+        System.out.println("Student无参执行了！");
     }
 
-    private  String name = &quot;RM&quot;;
+    private  String name = "RM";
 
     public void print(){
-        System.out.println(&quot;Student&quot;);
+        System.out.println("Student");
     }
 
     public void test(){
@@ -854,7 +854,7 @@ Student无参执行了！
 
 public class B {
     public  static void test(){
-        System.out.println(&quot;B=&gt;test&quot;);
+        System.out.println("B=&gt;test");
     }
 }
 </code></pre>
@@ -862,7 +862,7 @@ public class B {
 
 public class A extends B{
     public static void test() {
-        System.out.println(&quot;A=&gt;test&quot;);
+        System.out.println("A=&gt;test");
     }
 }
 </code></pre>
@@ -889,7 +889,7 @@ B=&gt;test
 
 public class B {
     public  void test(){
-        System.out.println(&quot;B=&gt;test&quot;);
+        System.out.println("B=&gt;test");
     }
 }
 </code></pre>
@@ -899,7 +899,7 @@ public class A extends B{
     @Override//重写@代表有功能的注释
     public void test() {
         //super.test();
-        System.out.println(&quot;A=&gt;test&quot;);
+        System.out.println("A=&gt;test");
 
     }
 }
@@ -945,7 +945,7 @@ Object s3 = new Student();
 public class Person {
 
     public void run(){
-        System.out.println(&quot;Run&quot;);
+        System.out.println("Run");
     }
 }
 </code></pre>
@@ -955,10 +955,10 @@ public class Student extends Person {
 
     @Override
     public void run() {
-        System.out.println(&quot;Son&quot;);
+        System.out.println("Son");
     }
     public void eat(){
-        System.out.println(&quot;Eat&quot;);
+        System.out.println("Eat");
     }
 }
 </code></pre>
@@ -993,7 +993,7 @@ Eat
 public class Person {
 
     public void run(){
-        System.out.println(&quot;Run&quot;);
+        System.out.println("Run");
     }
 }
 </code></pre>
@@ -1003,10 +1003,10 @@ public class Student extends Person {
 
     @Override
     public void run() {
-        System.out.println(&quot;Son&quot;);
+        System.out.println("Son");
     }
     public void eat(){
-        System.out.println(&quot;Eat&quot;);
+        System.out.println("Eat");
     }
 }
 </code></pre>
@@ -1035,7 +1035,7 @@ public class Application {
         System.out.println(object instanceof Teacher);//false
         System.out.println(object instanceof String);//false
 
-        System.out.println(&quot;=====================&quot;);
+        System.out.println("=====================");
 
         Person person = new Student();
 
@@ -1045,7 +1045,7 @@ public class Application {
         System.out.println(person instanceof Teacher);//false
         //System.out.println(person instanceof String);//编译报错
 
-        System.out.println(&quot;=====================&quot;);
+        System.out.println("=====================");
 
 
         Student student = new Student();
@@ -1072,7 +1072,7 @@ public class Application {
 public class Person {
 
     public void run(){
-        System.out.println(&quot;run&quot;);
+        System.out.println("run");
     }
 }
 </code></pre>
@@ -1081,7 +1081,7 @@ public class Person {
 public class Student extends Person {
 
     public void go() {
-        System.out.println(&quot;go&quot;);
+        System.out.println("go");
     }
 }
 </code></pre>
@@ -1118,7 +1118,7 @@ public class Student  {
     
     public void go() {
         
-        System.out.println(&quot;go&quot;);
+        System.out.println("go");
     }
 
     public static void main(String[] args) {
@@ -1146,7 +1146,7 @@ public class Student  {
 
     public static void go() {
 
-        System.out.println(&quot;go&quot;);
+        System.out.println("go");
     }
 
     public static void main(String[] args) {
@@ -1161,14 +1161,14 @@ public class Student  {
 public class Person {
 
     {
-        System.out.println(&quot;匿名代码块&quot;);
+        System.out.println("匿名代码块");
     }
     
     static{
-        System.out.println(&quot;静态代码块&quot;);
+        System.out.println("静态代码块");
     }
     public Person(){
-        System.out.println(&quot;构造方法&quot;);
+        System.out.println("构造方法");
     }
 
     public static void main(String[] args) {
@@ -1187,18 +1187,18 @@ public class Person {
 public class Person {
 
     {
-        System.out.println(&quot;匿名代码块&quot;);//可以用来赋初值
+        System.out.println("匿名代码块");//可以用来赋初值
     }
     static{
-        System.out.println(&quot;静态代码块&quot;);//和类一起加载，第一个执行，且只执行一次
+        System.out.println("静态代码块");//和类一起加载，第一个执行，且只执行一次
     }
     public Person(){
-        System.out.println(&quot;构造方法&quot;);
+        System.out.println("构造方法");
     }
 
     public static void main(String[] args) {
         Person person1 = new Person();
-        System.out.println(&quot;=====================&quot;);
+        System.out.println("=====================");
         Person person2 = new Person();
 
     }
@@ -1246,7 +1246,7 @@ public abstract class Action {
     //特点3：抽象方法必须在抽象类中
     //抽象的抽象：约束～
     public static void main(String[] args) {
-        System.out.println(&quot;有构造器吗？&quot;);
+        System.out.println("有构造器吗？");
     }
 }
 </code></pre>
@@ -1265,7 +1265,7 @@ public abstract class Action {
     public abstract void doSomething();
 
     public static void main(String[] args) {
-        System.out.println(&quot;有构造器吗？&quot;);
+        System.out.println("有构造器吗？");
     }
 }
 </code></pre>
@@ -1381,11 +1381,11 @@ class A{
 public class Outer {
     private int id;
     public void out(){
-        System.out.println(&quot;这是外部类的方法&quot;);
+        System.out.println("这是外部类的方法");
     }
     public class Inner{
         public void in(){
-            System.out.println(&quot;这是内部类的方法&quot;);
+            System.out.println("这是内部类的方法");
         }
     }
 }
@@ -1410,11 +1410,11 @@ public class Application{
 public class Outer {
     private int id = 10;
     public void out(){
-        System.out.println(&quot;这是外部类的方法&quot;);
+        System.out.println("这是外部类的方法");
     }
     public class Inner{
         public void in(){
-            System.out.println(&quot;这是内部类的方法&quot;);
+            System.out.println("这是内部类的方法");
         }
         //获得外部类的私有属性
         public void getID(){
@@ -1443,11 +1443,11 @@ public class Application{
 public class Outer {
     private  int id = 10;
     public void out(){
-        System.out.println(&quot;这是外部类的方法&quot;);
+        System.out.println("这是外部类的方法");
     }
     public static class Inner{
         public void in(){
-            System.out.println(&quot;这是内部类的方法&quot;);
+            System.out.println("这是内部类的方法");
         }
         //获得外部类的私有属性
         public void getID(){
@@ -1462,11 +1462,11 @@ public class Outer {
 public class Outer {
     private static int id = 10;
     public void out(){
-        System.out.println(&quot;这是外部类的方法&quot;);
+        System.out.println("这是外部类的方法");
     }
     public static class Inner{
         public void in(){
-            System.out.println(&quot;这是内部类的方法&quot;);
+            System.out.println("这是内部类的方法");
         }
         //获得外部类的私有属性
         public void getID(){
@@ -1506,7 +1506,7 @@ public class Test {
 
 class Apple{
     public void eat(){
-        System.out.println(&quot;1&quot;);
+        System.out.println("1");
     }
 }
 
@@ -1528,7 +1528,7 @@ public class Test {
 
 class Apple{
     public void eat(){
-        System.out.println(&quot;1&quot;);
+        System.out.println("1");
     }
 }
 interface UserService1{
@@ -1543,9 +1543,9 @@ interface UserService1{
 <pre><code class="language-java">public class GC1 {
 	public static void main(String[] args) {
 		MyCircle c = new MyCircle(2.0);
-		System.out.println(&quot;圆面积:&quot; + c.CalculateArea());
+		System.out.println("圆面积:" + c.CalculateArea());
 		MyRectangle r = new MyRectangle(2.0, 3.0);
-		System.out.println(&quot;矩形面积:&quot; + r.CalculateArea());//*******
+		System.out.println("矩形面积:" + r.CalculateArea());//*******
 	}
 }
 
@@ -1595,7 +1595,7 @@ public class Person {
 	
 public  void printInfo() {
 
- System.out.println(&quot;姓名：&quot;+this.name);
+ System.out.println("姓名："+this.name);
 
  } 
 
@@ -1612,7 +1612,7 @@ class EmployeeManagement {
 
  public static void main(String[] args) {
 
- Employee e=new Employee(&quot;Jack&quot;,6134.78);
+ Employee e=new Employee("Jack",6134.78);
 
  e.printInfo();
 
@@ -1640,13 +1640,13 @@ class Employee extends Person{
 
 public void printInfo() {
 
- System.out.println(&quot;姓名：&quot;+this.name+&quot; 工资：&quot;+this.salary);
+ System.out.println("姓名："+this.name+" 工资："+this.salary);
 
  }
 
 }
 </code></pre>
-<p>3.（程序填空题）下列程序中定义了抽象类Person和它的两个子类Worker和Student，分别创建Worker和Person的对象，显示两个对象的描述信息，程序的运行结果如下图所示。 </p>
+<p>3.（程序填空题）下列程序中定义了抽象类Person和它的两个子类Worker和Student，分别创建Worker和Person的对象，显示两个对象的描述信息，程序的运行结果如下图所示。</p>
 <p><img src="https://p.ananas.chaoxing.com/star3/origin/07fd49c2e7f5f0ff7cfe9a51ab6c0c7e.png" alt="img" /></p>
 <pre><code class="language-java">public class PersonManagement {
 
@@ -1654,15 +1654,15 @@ public static void main(String[] args) {
 
 Person[] people=new Person[2];
 
-people[0]= new Worker(&quot;老张&quot;,30000.0);
+people[0]= new Worker("老张",30000.0);
 
-people[1]=new Student(&quot;小王&quot;,&quot;计算机&quot;);
+people[1]=new Student("小王","计算机");
 
 for(int i=0;i&lt;people.length;i++) {
 
 Person p=people[i];
 
-System.out.println(p.getName()+&quot;,&quot;+p.getDescription());
+System.out.println(p.getName()+","+p.getDescription());
 
 }
 
@@ -1711,7 +1711,7 @@ salary=s;
 
 public String getDescription() {
 
-return &quot;工人，年薪是 &quot;+salary+&quot;元&quot;;
+return "工人，年薪是 "+salary+"元";
 
 }
 
@@ -1734,7 +1734,7 @@ major=m;
 
 public String getDescription() {
 
-return &quot;学生，专业是&quot;+major;
+return "学生，专业是"+major;
 
 }
 
@@ -1793,7 +1793,7 @@ class Volunteer
 
          //在此处定义方法体（填入第3空）
 
-                return this.name+&quot;\t线上工作时长：&quot;+this.onlineHours+&quot;\t线下工作时长&quot;+this.offlineHours+&quot;总评分：&quot;+this.score;
+                return this.name+"\t线上工作时长："+this.onlineHours+"\t线下工作时长"+this.offlineHours+"总评分："+this.score;
 
         }
 
@@ -1803,19 +1803,19 @@ class Volunteer
 
                  if (this.score&gt;v1.score){
 
-                         System.out.println(this.name+&quot;的评分较高&quot;);
+                         System.out.println(this.name+"的评分较高");
 
                  }
 
                  else if (this.score&lt;v1.score) {
 
-                         System.out.println(this.name+&quot;的评分较高&quot;);
+                         System.out.println(this.name+"的评分较高");
 
                  }
 
                  else {
 
-                         System.out.println(this.name+&quot;和&quot;+v1.name+&quot;的评分相同&quot;);
+                         System.out.println(this.name+"和"+v1.name+"的评分相同");
 
                  }
 
@@ -1828,10 +1828,10 @@ class Volunteer
          //在此处定义方法体（填入第4空）
 		if(this.score&gt;=20){
 		
-			System.out.println(this.name+&quot;获得优秀志愿者称号&quot;);
+			System.out.println(this.name+"获得优秀志愿者称号");
 		}else{
 			
-			System.out.println(this.name+&quot;暂未入选优秀志愿者称号&quot;);
+			System.out.println(this.name+"暂未入选优秀志愿者称号");
 			
 		}
  
@@ -1848,7 +1848,7 @@ public class BC2 {
 
         public static void main(String[] args) {
 
-                 Volunteer v1=new Volunteer(&quot;小白鹭1号&quot;,10,15);
+                 Volunteer v1=new Volunteer("小白鹭1号",10,15);
 
                  v1.calScore();
 
@@ -1858,7 +1858,7 @@ public class BC2 {
 
                  v1.isExcellentVolunteer();
 
-                 Volunteer v2=new Volunteer(&quot;小白鹭6号&quot;,5,5);
+                 Volunteer v2=new Volunteer("小白鹭6号",5,5);
 
                  v2.calScore();
 
@@ -1960,21 +1960,21 @@ isPaid=paid;//这点不会知道补啥
 
  public String toString() {//这个通常有什么用呢？，好像是个函数
 
- String orderInfo = &quot;New Order: \n&quot;;
+ String orderInfo = "New Order: \n";
 
- orderInfo += numCoffees + &quot; Coffees $&quot; + numCoffees * 3 + &quot;\n&quot;;
+ orderInfo += numCoffees + " Coffees $" + numCoffees * 3 + "\n";
 
- orderInfo += numCakes + &quot; Cakes $&quot; + numCakes * 4 + &quot;\n&quot;;
+ orderInfo += numCakes + " Cakes $" + numCakes * 4 + "\n";
 
- orderInfo += &quot; Total $&quot; + getTotal() + &quot; &quot;;
+ orderInfo += " Total $" + getTotal() + " ";
 
  if (isPaid)
 
- orderInfo += &quot; has been paid \n&quot;;
+ orderInfo += " has been paid \n";
 
  else
 
- orderInfo += &quot; not paid \n&quot;;
+ orderInfo += " not paid \n";
  return orderInfo;
 
 
@@ -1989,7 +1989,7 @@ public static void main(String[] args) {
 
 Rectangle r=new Rectangle(3.0,5.0);
 
-System.out.println(&quot;周长是&quot;+r.girth());
+System.out.println("周长是"+r.girth());
 
 }
 
@@ -2064,7 +2064,7 @@ class InactivatedVaccine extends Vaccine{//灭活疫苗
 
     void vaccinate() {
 
-        System.out.println(&quot;该灭活疫苗的生产厂商是&quot;+manufacturer+&quot;，接种剂次：&quot;+n);
+        System.out.println("该灭活疫苗的生产厂商是"+manufacturer+"，接种剂次："+n);
 
     }
 
@@ -2084,7 +2084,7 @@ class AdenovirusVectorVaccine extends Vaccine{//腺病毒载体疫苗
 
     void vaccinate() {
 
-        System.out.println(&quot;该腺病毒载体疫苗的生产厂商是&quot;+manufacturer+&quot;，只需接种1剂。&quot;);
+        System.out.println("该腺病毒载体疫苗的生产厂商是"+manufacturer+"，只需接种1剂。");
 
     }
 
@@ -2096,15 +2096,15 @@ public class TK2 {
 
     public static void main(String[] args) {
 
-        InactivatedVaccine v1=new InactivatedVaccine(&quot;北京生物&quot;,2);
+        InactivatedVaccine v1=new InactivatedVaccine("北京生物",2);
 
         v1.vaccinate();
 
-        InactivatedVaccine v2=new InactivatedVaccine(&quot;科兴&quot;,2);
+        InactivatedVaccine v2=new InactivatedVaccine("科兴",2);
 
         v2.vaccinate();
 
-        AdenovirusVectorVaccine v3=new AdenovirusVectorVaccine(&quot;康希诺&quot;);
+        AdenovirusVectorVaccine v3=new AdenovirusVectorVaccine("康希诺");
 
         v3.vaccinate();
 
@@ -2131,7 +2131,7 @@ Person.setID(444);
 
 
 
- p1 = new Person(&quot;John&quot;); // p1赋初值
+ p1 = new Person("John"); // p1赋初值
 
  p1.changeAge(2); // p1调用changeAge方法
 
@@ -2140,7 +2140,7 @@ Person.setID(444);
 
 
  //请将下面缺失的三行代码填入第二个空
- p2 = new Person(&quot;Fred&quot;); // p1赋初值
+ p2 = new Person("Fred"); // p1赋初值
 
  p2.changeAge(2); // p1调用changeAge方法
 
@@ -2149,7 +2149,7 @@ Person.setID(444);
 
 
  //请将下面缺失的三行代码填入第三个空
- p3 = new Person(&quot;Elma&quot;); // p1赋初值
+ p3 = new Person("Elma"); // p1赋初值
 
  p3.changeAge(2); // p1调用changeAge方法
 
@@ -2208,7 +2208,7 @@ class Person {
 
  public String toString() {
 
- return &quot;Name: &quot; + name + &quot; Age: &quot; + age + &quot; ID: &quot; + id;
+ return "Name: " + name + " Age: " + age + " ID: " + id;
 
  }
 
@@ -2270,13 +2270,13 @@ public class TC2 {
 
     public static void main(String[] args) {
 
-       Haluo h=new Haluo(&quot;20210001&quot;,2251.2,402);    
+       Haluo h=new Haluo("20210001",2251.2,402);    
 
-       System.out.println(&quot;平均每天行驶里程:&quot;+ h.getDisPerday() +&quot;公里&quot;);
+       System.out.println("平均每天行驶里程:"+ h.getDisPerday() +"公里");
 
        h.setPrice(1.8);
 
-       System.out.println(&quot;平均每天骑行费用:&quot;+h.getDailyFee()+&quot;元&quot;);
+       System.out.println("平均每天骑行费用:"+h.getDailyFee()+"元");
 
     }
 
@@ -2329,12 +2329,12 @@ public class Son extends Father{
 	}
 	
 	public void methodA(){
-		System.out.println(&quot;AAA&quot;);
+		System.out.println("AAA");
 	}
 	
 	public void methodB(){
 		this.methodA();//methodA();
-		System.out.println(&quot;BBB&quot;);
+		System.out.println("BBB");
 	}
 	
 	
@@ -2362,7 +2362,7 @@ AAA
 BBB
 
 </code></pre>
-<p>3.(填空题, 20分)（编程题）根据鸢尾花的花瓣长度和宽度来判断它的类别。Iris类的成员变量和成员方法的说明见程序中的注释。已知两朵鸢尾花，第一朵花瓣长1.6cm，花瓣宽0.6cm，类别为&quot;山鸢尾&quot;，第二朵花瓣长5.8cm，花瓣宽3.1cm，类别为&quot;变色鸢尾&quot;；现要判断一朵新的鸢尾花类别，其方法如下：若它距离第一朵鸢尾花更近，则它的类别为&quot;山鸢尾&quot;，如果它距离第二朵鸢尾花更近，其类别就是&quot;变色鸢尾&quot;（如果距离相等，类别设置为&quot;山鸢尾&quot;）。两朵鸢尾花之间的距离计算公式如下：</p>
+<p>3.(填空题, 20分)（编程题）根据鸢尾花的花瓣长度和宽度来判断它的类别。Iris类的成员变量和成员方法的说明见程序中的注释。已知两朵鸢尾花，第一朵花瓣长1.6cm，花瓣宽0.6cm，类别为"山鸢尾"，第二朵花瓣长5.8cm，花瓣宽3.1cm，类别为"变色鸢尾"；现要判断一朵新的鸢尾花类别，其方法如下：若它距离第一朵鸢尾花更近，则它的类别为"山鸢尾"，如果它距离第二朵鸢尾花更近，其类别就是"变色鸢尾"（如果距离相等，类别设置为"山鸢尾"）。两朵鸢尾花之间的距离计算公式如下：</p>
 <p><img src="https://p.ananas.chaoxing.com/star3/origin/6912459a56fd6a8718e674cf97cc4cbd.png" alt="r" /></p>
 <p>其中：plen1，pwid1分别为其中一朵鸢尾花的花瓣长度和花瓣宽度，plen2，pwid2为另一朵鸢尾花的花瓣长度和花瓣宽度。程序的运行结果如下图所示：</p>
 <p><img src="https://p.ananas.chaoxing.com/star3/origin/bbf40b814edfc712fa791bc75e791638.png" alt="r" /></p>
@@ -2402,7 +2402,7 @@ BBB
 
                public String  toString() {          //生成并返回对象的相关信息
 
-                              String s=&quot;花瓣长：&quot;+plen+&quot; 花瓣宽：&quot;+pwid+&quot; &quot;+&quot; 类别是：&quot;+target;
+                              String s="花瓣长："+plen+" 花瓣宽："+pwid+" "+" 类别是："+target;
                                return s; 
 
                }
@@ -2419,18 +2419,18 @@ BBB
 
 public class TC2 {
 
-               static Iris iris1=new Iris(1.6,0.6,&quot;山鸢尾&quot;);
+               static Iris iris1=new Iris(1.6,0.6,"山鸢尾");
 
-               static Iris iris2=new Iris(5.8,3.1,&quot;变色鸢尾&quot;);
+               static Iris iris2=new Iris(5.8,3.1,"变色鸢尾");
 
               
 
                public  static String classify(Iris irisnew) {//判断irisnew的类别
 
                     if(irisnew.distance(iris1&lt;=irisnew.distance(iris2)){
-								   return &quot;山鸢尾&quot;;
+								   return "山鸢尾";
 				    }else{
-								   return  &quot;变色鸢尾&quot;;
+								   return  "变色鸢尾";
 							   }
 
                }
@@ -2459,7 +2459,7 @@ public class TC2 {
 <pre><code class="language-java">//类中
 public String  toString() {          //生成并返回对象的相关信息
 
-                              String s=&quot;花瓣长：&quot;+plen+&quot; 花瓣宽：&quot;+pwid+&quot; &quot;+&quot; 类别是：&quot;+target;
+                              String s="花瓣长："+plen+" 花瓣宽："+pwid+" "+" 类别是："+target;
                                return s; 
 
                }
@@ -2481,9 +2481,9 @@ System.out.println(testSample2.toString());
 
  Student student2;
 
- student1 = new Student(&quot;张楠&quot;, 70, 85);
+ student1 = new Student("张楠", 70, 85);
 
- student2 = new Student(&quot;李浩&quot;, 80, 90);
+ student2 = new Student("李浩", 80, 90);
 
  student1.displayInfo();
 
@@ -2533,7 +2533,7 @@ class Student {
 
  examMark = exam;
 
- System.out.println(name + &quot;\'s exam mark changed to &quot; + examMark);
+ System.out.println(name + "\'s exam mark changed to " + examMark);
 
  }
 
@@ -2549,7 +2549,7 @@ class Student {
 
  public void displayInfo() {
 
-     System.out.println(name + &quot; got &quot; + testMark + &quot; in the test and &quot; + examMark + &quot; in the exam&quot;);
+     System.out.println(name + " got " + testMark + " in the test and " + examMark + " in the exam");
 
    }
 
@@ -2559,17 +2559,17 @@ class Student {
 
      if (examMark &gt; other.examMark) 
 
-       System.out.println(name + &quot; did better than &quot; + other.name);
+       System.out.println(name + " did better than " + other.name);
 
      else
 
-       System.out.println(name + &quot; did worse than &quot; + other.name);
+       System.out.println(name + " did worse than " + other.name);
 
    }
 
  }
 </code></pre>
-<p>5.(填空题, 15分)（编程题）创建Melon类，包含初始值为0的静态变量totalNum、私有实例变量weight。编写Melon类的内容，完成以下功能： </p>
+<p>5.(填空题, 15分)（编程题）创建Melon类，包含初始值为0的静态变量totalNum、私有实例变量weight。编写Melon类的内容，完成以下功能：</p>
 <p>每当创建一个新的Melon对象，totalNum增加1。</p>
 <p>为Melon类编写实例方法void reduce(){}，每次调用reduce方法，totalNum的值减少1。为私有实例变量weight声明一对访问器方法，分别是int getWeight(){ }和void setWeight(int w){ }，实现对私有实例变量weight的读取和修改，编写这两个方法的方法体。</p>
 <p>测试Melon的功能。创建公共类TestMelon，包含main方法，在main方法中完成下面的功能测试。依次创建四个Melon对象m1、m2、m3、m4后，输出totalNum的值。依次调用m1和m2的reduce方法后，输出totalNum的值。</p>
@@ -2621,14 +2621,14 @@ class Melon{
 }
 </code></pre>
 <p>6.(填空题, 15分)（编程题）学校图书馆需要设计一个图书信息系统来管理藏书。假设一个简单的图书信息系统需要完成书籍、输出书籍信息、比较书籍的功能。请创建两个类Book和TestBook完成上述功能，输出结果如下：</p>
-<p><img src="https://p.ananas.chaoxing.com/star3/origin/8fc1043509126b67819ec4c2d93962fb.png" alt="img" /> </p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/8fc1043509126b67819ec4c2d93962fb.png" alt="img" /></p>
 <p>编程要求：创建两个类Book和TestBook，其中TestBook是主类。</p>
 <p>Book的属性有书名、作者（假设只有一位作者）、出版年份，行为有打印图书信息、比较图书信息。</p>
 <p>在Book类中声明实例变量记录各个属性信息，成员变量的名称分别是name、author、publishYear。</p>
 <p>在Book类声明两个实例方法，一个实例方法的功能是打印图书信息；另一个实例方法的功能是比较两本图书，如果书名、作者和出版年份都一样，这两本书是同一本书。</p>
 <p>第一个实例方法的方法头是 void display(){ //请添加方法体 }</p>
 <p>第二个实例方法的方法头是boolean compareBook(Book another){ //请添加方法体 }</p>
-<p>在Book类中用静态变量copyCounter记录书的数目。 </p>
+<p>在Book类中用静态变量copyCounter记录书的数目。</p>
 <p>TestBook类中包含main方法，用于创建图书。</p>
 <p>完整代码：</p>
 <p>Book.java</p>
@@ -2650,9 +2650,9 @@ class Melon{
 	}
 	
 	void display(){
-		System.out.print(&quot;《&quot;+name+&quot;》，&quot;);
-		System.out.print(&quot;作者：&quot;+author+&quot;，&quot;);
-		System.out.print(&quot;出版年份：&quot;+publishYear+'\n');
+		System.out.print("《"+name+"》，");
+		System.out.print("作者："+author+"，");
+		System.out.print("出版年份："+publishYear+'\n');
 	}
 	
 	boolean compareBook(Book another){
@@ -2672,16 +2672,16 @@ class Melon{
 <pre><code class="language-java">public class TestBook{
 	
 	public static void main(String[] args) {
-		Book book1 = new Book(&quot;红楼梦&quot;,&quot;曹雪芹&quot;,1791);
+		Book book1 = new Book("红楼梦","曹雪芹",1791);
 		book1.display();
-		Book book2 = new Book(&quot;边城&quot;,&quot;沈从文&quot;,1934);
+		Book book2 = new Book("边城","沈从文",1934);
 		book2.display();
 		
-		String str = book1.compareBook(book2)?&quot;&quot;:&quot;不&quot;;
+		String str = book1.compareBook(book2)?"":"不";
 		
-		System.out.println(&quot;这两本书&quot;+str+&quot;是同一本书&quot;);
+		System.out.println("这两本书"+str+"是同一本书");
 		
-		System.out.println(&quot;一共有&quot;+Book.copyCounter+&quot;本书&quot;);
+		System.out.println("一共有"+Book.copyCounter+"本书");
 	}
 	
 }

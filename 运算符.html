@@ -213,19 +213,19 @@
 		int a = 10;
 	    int b = 20;
 	    int c = 25;
-	    System.out.println(&quot;a + b = &quot; + (a + b) );
-	    System.out.println(&quot;a - b = &quot; + (a - b) );
-	    System.out.println(&quot;a * b = &quot; + (a * b) );
-	    System.out.println(&quot;b / a = &quot; + (b / a) );
-	    System.out.println(&quot;b % a = &quot; + (b % a) );
-	    System.out.println(&quot;c % a = &quot; + (c % a) );
-	    System.out.println(&quot;a++   = &quot; +  (a++) );
-	    System.out.println(&quot;a--   = &quot; +  (a--) );
+	    System.out.println("a + b = " + (a + b) );
+	    System.out.println("a - b = " + (a - b) );
+	    System.out.println("a * b = " + (a * b) );
+	    System.out.println("b / a = " + (b / a) );
+	    System.out.println("b % a = " + (b % a) );
+	    System.out.println("c % a = " + (c % a) );
+	    System.out.println("a++   = " +  (a++) );
+	    System.out.println("a--   = " +  (a--) );
 	    // 查看  d++ 与 ++d 的不同
 	    int d = 25;
-	    System.out.println(&quot;d++   = &quot; +  (d++) );
+	    System.out.println("d++   = " +  (d++) );
 	    d = 25;
-	    System.out.println(&quot;++d   = &quot; +  (++d) );
+	    System.out.println("++d   = " +  (++d) );
 	}
 }
 </code></pre>
@@ -284,12 +284,12 @@ d++   = 25
 		// TODO Auto-generated method stub
 		int a = 10;
 	    int b = 20;
-	    System.out.println(&quot;a == b = &quot; + (a == b) );
-	    System.out.println(&quot;a != b = &quot; + (a != b) );
-	    System.out.println(&quot;a &gt; b = &quot; + (a &gt; b) );
-	    System.out.println(&quot;a &lt; b = &quot; + (a &lt; b) );
-	    System.out.println(&quot;b &gt;= a = &quot; + (b &gt;= a) );
-	    System.out.println(&quot;b &lt;= a = &quot; + (b &lt;= a) );
+	    System.out.println("a == b = " + (a == b) );
+	    System.out.println("a != b = " + (a != b) );
+	    System.out.println("a &gt; b = " + (a &gt; b) );
+	    System.out.println("a &lt; b = " + (a &lt; b) );
+	    System.out.println("b &gt;= a = " + (b &gt;= a) );
+	    System.out.println("b &lt;= a = " + (b &lt;= a) );
 	}
 }
 
@@ -309,7 +309,7 @@ b &lt;= a = false
 </code></pre>
 <p>如果运算符左侧变量所指的对象，是操作符右侧类或接口(class/interface)的一个对象，那么结果为真。</p>
 <p>下面是一个例子：</p>
-<pre><code class="language-java">String name = &quot;James&quot;;
+<pre><code class="language-java">String name = "James";
 boolean result = name instanceof String; // 由于 name 是 String 类型，所以返回真
 </code></pre>
 <p>如果被比较的对象兼容于右侧类型，该运算符仍然返回 true。</p>
@@ -358,25 +358,25 @@ A ^ B = 0011 0001
 	    int b = 13; /* 13 = 0000 1101 */
 	    int c = 0;
 	    c = a &amp; b;       /* 12 = 0000 1100 */
-	    System.out.println(&quot;a &amp; b = &quot; + c );
+	    System.out.println("a &amp; b = " + c );
 	 
 	    c = a | b;       /* 61 = 0011 1101 */
-	    System.out.println(&quot;a | b = &quot; + c );
+	    System.out.println("a | b = " + c );
 	 
 	    c = a ^ b;       /* 49 = 0011 0001 */
-	    System.out.println(&quot;a ^ b = &quot; + c );
+	    System.out.println("a ^ b = " + c );
 	 
 	    c = ~a;          /*-61 = 1100 0011 */
-	    System.out.println(&quot;~a = &quot; + c );
+	    System.out.println("~a = " + c );
 	 
 	    c = a &lt;&lt; 2;     /* 240 = 1111 0000 */
-	    System.out.println(&quot;a &lt;&lt; 2 = &quot; + c );
+	    System.out.println("a &lt;&lt; 2 = " + c );
 	 
 	    c = a &gt;&gt; 2;     /* 15 = 1111 */
-	    System.out.println(&quot;a &gt;&gt; 2  = &quot; + c );
+	    System.out.println("a &gt;&gt; 2  = " + c );
 	  
 	    c = a &gt;&gt;&gt; 2;     /* 15 = 0000 1111 */
-	    System.out.println(&quot;a &gt;&gt;&gt; 2 = &quot; + c );
+	    System.out.println("a &gt;&gt;&gt; 2 = " + c );
 	}
 }
 </code></pre>
@@ -404,9 +404,9 @@ a &gt;&gt;&gt; 2 = 15
 		// TODO Auto-generated method stub
 		boolean a = true;
 	    boolean b = false;
-	    System.out.println(&quot;a &amp;&amp; b = &quot; + (a&amp;&amp;b));
-	    System.out.println(&quot;a || b = &quot; + (a||b) );
-	    System.out.println(&quot;!(a &amp;&amp; b) = &quot; + !(a &amp;&amp; b));
+	    System.out.println("a &amp;&amp; b = " + (a&amp;&amp;b));
+	    System.out.println("a || b = " + (a||b) );
+	    System.out.println("!(a &amp;&amp; b) = " + !(a &amp;&amp; b));
 	}
 }
 
@@ -424,8 +424,8 @@ a || b = true
 		// TODO Auto-generated method stub
 		int a = 5;//定义一个变量；
         boolean b = (a&lt;4)&amp;&amp;(a++&lt;10);
-        System.out.println(&quot;使用短路逻辑运算符的结果为&quot;+b);
-        System.out.println(&quot;a的结果为&quot;+a);
+        System.out.println("使用短路逻辑运算符的结果为"+b);
+        System.out.println("a的结果为"+a);
 	}
 }
 </code></pre>
@@ -444,21 +444,21 @@ a的结果为5
         {
         	x = 11;
         }
-        System.out.println(&quot;x = &quot; + x + &quot; y = &quot; + y );//6,6
+        System.out.println("x = " + x + " y = " + y );//6,6
         x = 5;
         y = 5;
         if(x++ == 6 &amp;&amp; ++y == 6) //逻辑与，短路运算
         {
         	x = 11;
         }
-        System.out.println(&quot;x = &quot; + x + &quot; y = &quot; + y );//6,5
+        System.out.println("x = " + x + " y = " + y );//6,5
         x = 5;
         y = 5;
         if(x++ == 6 | ++y == 6)//位运算
         {
         	x = 11;
         }
-        System.out.println(&quot;x = &quot; + x + &quot; y = &quot; + y );//11,6
+        System.out.println("x = " + x + " y = " + y );//11,6
         
         x = 5;
         y = 5;
@@ -466,7 +466,7 @@ a的结果为5
         {
         	x = 11;
         }
-        System.out.println(&quot;x = &quot; + x + &quot; y = &quot; + y );//11,5
+        System.out.println("x = " + x + " y = " + y );//11,5
 	}
 }
 </code></pre>
@@ -501,33 +501,33 @@ x = 11 y = 6
         int b = 20;
         int c = 0;
         c = a + b;
-        System.out.println(&quot;c = a + b = &quot; + c );
+        System.out.println("c = a + b = " + c );
         c += a ;
-        System.out.println(&quot;c += a  = &quot; + c );
+        System.out.println("c += a  = " + c );
         c -= a ;
-        System.out.println(&quot;c -= a = &quot; + c );
+        System.out.println("c -= a = " + c );
         c *= a ;
-        System.out.println(&quot;c *= a = &quot; + c );
+        System.out.println("c *= a = " + c );
         a = 10;
         c = 15;
         c /= a ;
-        System.out.println(&quot;c /= a = &quot; + c );
+        System.out.println("c /= a = " + c );
         a = 10;
         c = 15;
         c %= a ;
-        System.out.println(&quot;c %= a  = &quot; + c );
+        System.out.println("c %= a  = " + c );
         c &lt;&lt;= 2 ;
-        System.out.println(&quot;c &lt;&lt;= 2 = &quot; + c );
+        System.out.println("c &lt;&lt;= 2 = " + c );
         c &gt;&gt;= 2 ;
-        System.out.println(&quot;c &gt;&gt;= 2 = &quot; + c );
+        System.out.println("c &gt;&gt;= 2 = " + c );
         c &gt;&gt;= 2 ;
-        System.out.println(&quot;c &gt;&gt;= 2 = &quot; + c );
+        System.out.println("c &gt;&gt;= 2 = " + c );
         c &amp;= a ;
-        System.out.println(&quot;c &amp;= a  = &quot; + c );
+        System.out.println("c &amp;= a  = " + c );
         c ^= a ;
-        System.out.println(&quot;c ^= a   = &quot; + c );
+        System.out.println("c ^= a   = " + c );
         c |= a ;
-        System.out.println(&quot;c |= a   = &quot; + c );
+        System.out.println("c |= a   = " + c );
 	}
 }
 </code></pre>
@@ -558,11 +558,11 @@ c |= a   = 10
 	    a = 10;
 	    // 如果 a 等于 1 成立，则设置 b 为 20，否则为 30
 	    b = (a == 1) ? 20 : 30;
-	    System.out.println( &quot;Value of b is : &quot; +  b );
+	    System.out.println( "Value of b is : " +  b );
 	 
 	    // 如果 a 等于 10 成立，则设置 b 为 20，否则为 30
 	    b = (a == 10) ? 20 : 30;
-	    System.out.println( &quot;Value of b is : &quot; + b );
+	    System.out.println( "Value of b is : " + b );
 	}
 }
 </code></pre>

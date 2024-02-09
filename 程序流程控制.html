@@ -226,7 +226,7 @@
       int x = 10;
  
       if( x &lt; 20 ){
-         System.out.print(&quot;这是 if 语句&quot;);
+         System.out.print("这是 if 语句");
       }
    }
 }
@@ -250,9 +250,9 @@
       int x = 30;
  
       if( x &lt; 20 ){
-         System.out.print(&quot;这是 if 语句&quot;);
+         System.out.print("这是 if 语句");
       }else{
-         System.out.print(&quot;这是 else 语句&quot;);
+         System.out.print("这是 else 语句");
       }
    }
 }
@@ -285,13 +285,13 @@
       int x = 30;
  
       if( x == 10 ){
-         System.out.print(&quot;Value of X is 10&quot;);
+         System.out.print("Value of X is 10");
       }else if( x == 20 ){
-         System.out.print(&quot;Value of X is 20&quot;);
+         System.out.print("Value of X is 20");
       }else if( x == 30 ){
-         System.out.print(&quot;Value of X is 30&quot;);
+         System.out.print("Value of X is 30");
       }else{
-         System.out.print(&quot;这是 else 语句&quot;);
+         System.out.print("这是 else 语句");
       }
    }
 }
@@ -342,23 +342,23 @@ public class helloworld {
 		// TODO Auto-generated method stub
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.println(&quot;Please input your score:&quot;);
+		System.out.println("Please input your score:");
 		double score = scanner.nextDouble();
 		if(score &gt;= 8.0){
-			System.out.println(&quot;Please input your gender:&quot;);
+			System.out.println("Please input your gender:");
 			char gender = scanner.next().charAt(0); 
 			if(gender == '男'){
-				System.out.println(&quot;Succeed to join men's group!&quot;);
+				System.out.println("Succeed to join men's group!");
 			}
 			else if(gender == '女'){
-				System.out.println(&quot;Succeed to join women's group!&quot;);
+				System.out.println("Succeed to join women's group!");
 			}
 			else {
-				System.out.println(&quot;You inputed the wrong gender!&quot;);
+				System.out.println("You inputed the wrong gender!");
 			}
 		}
 		else {
-			System.out.println(&quot;You are fired!&quot;);
+			System.out.println("You are fired!");
 		}
 		scanner.close();
 	}
@@ -406,22 +406,22 @@ public class SwitchDemo1 {
 
         switch(grade){
             case 'A':
-                System.out.println(&quot;优秀&quot;);
+                System.out.println("优秀");
                 break;
             case 'B':
-                System.out.println(&quot;良好&quot;);
+                System.out.println("良好");
                 break;
             case 'C':
-                System.out.println(&quot;及格&quot;);
+                System.out.println("及格");
                 break;
             case 'D':
-                System.out.println(&quot;再接再厉&quot;);
+                System.out.println("再接再厉");
                 break;
             case 'E':
-                System.out.println(&quot;挂科&quot;);
+                System.out.println("挂科");
                 break;
             default:
-                System.out.println(&quot;未知等级&quot;);
+                System.out.println("未知等级");
 
                 //存在case穿透现象，每写一个case就要添加一个break语句
 
@@ -440,13 +440,13 @@ public class SwitchDemo1 {
       int i = 5;
       switch(i){
          case 0:
-            System.out.println(&quot;0&quot;);
+            System.out.println("0");
          case 1:
-            System.out.println(&quot;1&quot;);
+            System.out.println("1");
          case 2:
-            System.out.println(&quot;2&quot;);
+            System.out.println("2");
          default:
-            System.out.println(&quot;default&quot;);
+            System.out.println("default");
       }
    }
 }
@@ -461,13 +461,13 @@ public class SwitchDemo1 {
       int i = 1;
       switch(i){
          case 0:
-            System.out.println(&quot;0&quot;);
+            System.out.println("0");
          case 1:
-            System.out.println(&quot;1&quot;);
+            System.out.println("1");
          case 2:
-            System.out.println(&quot;2&quot;);
+            System.out.println("2");
          default:
-            System.out.println(&quot;default&quot;);
+            System.out.println("default");
       }
    }
 }
@@ -484,15 +484,15 @@ default
       int i = 1;
       switch(i){
          case 0:
-            System.out.println(&quot;0&quot;);
+            System.out.println("0");
          case 1:
-            System.out.println(&quot;1&quot;);
+            System.out.println("1");
          case 2:
-            System.out.println(&quot;2&quot;);
+            System.out.println("2");
          case 3:
-            System.out.println(&quot;3&quot;); break;
+            System.out.println("3"); break;
          default:
-            System.out.println(&quot;default&quot;);
+            System.out.println("default");
       }
    }
 }
@@ -507,16 +507,16 @@ default
 
 public class SwitchDemo2 {
     public static void main(String[] args) {
-        String name= &quot;狂神&quot;;
+        String name= "狂神";
 
         switch (name){
-            case &quot;包子&quot;:
-                System.out.println(&quot;包子&quot;);
-            case &quot;狂神&quot;:
-                System.out.println(&quot;狂神&quot;);
+            case "包子":
+                System.out.println("包子");
+            case "狂神":
+                System.out.println("狂神");
                 break;
             default:
-                System.out.println(&quot;输错了&quot;);
+                System.out.println("输错了");
 
         }
     }
@@ -544,9 +544,9 @@ public class SwitchDemo2 {
    public static void main(String[] args) {
       int x = 10;
       while( x &lt; 20 ) {
-         System.out.print(&quot;value of x : &quot; + x );
+         System.out.print("value of x : " + x );
          x++;
-         System.out.print(&quot;\n&quot;);
+         System.out.print("\n");
       }
    }
 }
@@ -577,9 +577,9 @@ value of x : 19
       int x = 10;
  
       do{
-         System.out.print(&quot;value of x : &quot; + x );
+         System.out.print("value of x : " + x );
          x++;
-         System.out.print(&quot;\n&quot;);
+         System.out.print("\n");
       }while( x &lt; 20 );
    }
 }
@@ -617,8 +617,8 @@ value of x : 19
 		// TODO Auto-generated method stub
 		
 		for(int x = 10, y = 0; x &lt; 15; x = x+1, y++) {
-	         System.out.println(&quot;value of x : &quot; + x );
-	         System.out.println(&quot;value of y : &quot; + y );
+	         System.out.println("value of x : " + x );
+	         System.out.println("value of y : " + y );
 	      }
 	}
 }
@@ -638,7 +638,7 @@ value of y : 4
 <p>下面这种写法为死循环：</p>
 <pre><code class="language-java">for(;;)
 {
-	System.out.println(&quot;香水有毒！&quot;);
+	System.out.println("香水有毒！");
 }
 </code></pre>
 <h3 id="java-增强-for-循环"><a class="header" href="#java-增强-for-循环">Java 增强 for 循环</a></h3>
@@ -661,13 +661,13 @@ value of y : 4
 		 
 	    for(int x : numbers ){
 	       System.out.print( x );
-	       System.out.print(&quot;,&quot;);
+	       System.out.print(",");
 	    }
-	    System.out.print(&quot;\n&quot;);
-	    String [] names ={&quot;James&quot;, &quot;Larry&quot;, &quot;Tom&quot;, &quot;Lacy&quot;};
+	    System.out.print("\n");
+	    String [] names ={"James", "Larry", "Tom", "Lacy"};
 	    for( String name : names ) {
 	       System.out.print( name );
-	       System.out.print(&quot;,&quot;);
+	       System.out.print(",");
 	    }
 	}
 }
@@ -684,7 +684,7 @@ public class ForDemo2 {
     public static void main(String[] args) {
         for (int i = 1; i &lt; 10; i++) {
             for(int j =1; j&lt;=i;j++){
-                System.out.print(&quot;&quot;+j+'*'+i+'='+(i*j)+&quot;\t&quot;);
+                System.out.print(""+j+'*'+i+'='+(i*j)+"\t");
             }
             System.out.println();
         }
@@ -813,7 +813,7 @@ public class ForDemo2 {
             break;
          }
          System.out.print( x );
-         System.out.print(&quot;\n&quot;);
+         System.out.print("\n");
       }
    }
 }
@@ -872,7 +872,7 @@ public class ForDemo2 {
         continue;
          }
          System.out.print( x );
-         System.out.print(&quot;\n&quot;);
+         System.out.print("\n");
       }
    }
 }

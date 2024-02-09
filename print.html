@@ -213,7 +213,7 @@
 <p>4.右键hello包（新生成的包）hello→new→Class (类)，新建一个类</p>
 <p><img src="https://img-blog.csdnimg.cn/40b5a0cd4a5b47b085179d77f378b744.png#pic_center" alt="a" /></p>
 <p>5.在生成的代码中的第七行填上下面这句代码：注意缩进</p>
-<p><code>System.out.println(&quot;hello world&quot;)</code></p>
+<p><code>System.out.println("hello world")</code></p>
 <p><img src="https://img-blog.csdnimg.cn/a32ea550651e4a9c96477f9d5a7d1bbe.png#pic_center" alt="a" /></p>
 <p>6.点击运行之后会弹出一个新的窗口，点击OK</p>
 <p><img src="https://img-blog.csdnimg.cn/0d3e4c3241ed4491aed820b13861da2d.png#pic_center" alt="a" /></p>
@@ -250,7 +250,7 @@
 </ul>
 <h2 id="内置数据类型"><a class="header" href="#内置数据类型">内置数据类型</a></h2>
 <p>Java语言提供了八种基本类型。六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。</p>
-<p>其中long型数据的&quot;L&quot;理论上不分大小写，但是若写成&quot;l&quot;容易与数字&quot;1&quot;混淆，不容易分辩。所以最好大写。</p>
+<p>其中long型数据的"L"理论上不分大小写，但是若写成"l"容易与数字"1"混淆，不容易分辩。所以最好大写。</p>
 <p><strong>浮点数比较不能用<code>==</code>！！！例如8.1/3和2.7。</strong></p>
 <p>浮点数定义时可以省略一部分内容，但不能省略小数点。</p>
 <pre><code class="language-java">public class helloworld {
@@ -290,55 +290,55 @@
 <pre><code class="language-java">public class PrimitiveTypeTest {  
     public static void main(String[] args) {  
         // byte  
-        System.out.println(&quot;基本类型：byte 二进制位数：&quot; + Byte.SIZE);  
-        System.out.println(&quot;包装类：java.lang.Byte&quot;);  
-        System.out.println(&quot;最小值：Byte.MIN_VALUE=&quot; + Byte.MIN_VALUE);  
-        System.out.println(&quot;最大值：Byte.MAX_VALUE=&quot; + Byte.MAX_VALUE);  
+        System.out.println("基本类型：byte 二进制位数：" + Byte.SIZE);  
+        System.out.println("包装类：java.lang.Byte");  
+        System.out.println("最小值：Byte.MIN_VALUE=" + Byte.MIN_VALUE);  
+        System.out.println("最大值：Byte.MAX_VALUE=" + Byte.MAX_VALUE);  
         System.out.println();  
   
         // short  
-        System.out.println(&quot;基本类型：short 二进制位数：&quot; + Short.SIZE);  
-        System.out.println(&quot;包装类：java.lang.Short&quot;);  
-        System.out.println(&quot;最小值：Short.MIN_VALUE=&quot; + Short.MIN_VALUE);  
-        System.out.println(&quot;最大值：Short.MAX_VALUE=&quot; + Short.MAX_VALUE);  
+        System.out.println("基本类型：short 二进制位数：" + Short.SIZE);  
+        System.out.println("包装类：java.lang.Short");  
+        System.out.println("最小值：Short.MIN_VALUE=" + Short.MIN_VALUE);  
+        System.out.println("最大值：Short.MAX_VALUE=" + Short.MAX_VALUE);  
         System.out.println();  
   
         // int  
-        System.out.println(&quot;基本类型：int 二进制位数：&quot; + Integer.SIZE);  
-        System.out.println(&quot;包装类：java.lang.Integer&quot;);  
-        System.out.println(&quot;最小值：Integer.MIN_VALUE=&quot; + Integer.MIN_VALUE);  
-        System.out.println(&quot;最大值：Integer.MAX_VALUE=&quot; + Integer.MAX_VALUE);  
+        System.out.println("基本类型：int 二进制位数：" + Integer.SIZE);  
+        System.out.println("包装类：java.lang.Integer");  
+        System.out.println("最小值：Integer.MIN_VALUE=" + Integer.MIN_VALUE);  
+        System.out.println("最大值：Integer.MAX_VALUE=" + Integer.MAX_VALUE);  
         System.out.println();  
   
         // long  
-        System.out.println(&quot;基本类型：long 二进制位数：&quot; + Long.SIZE);  
-        System.out.println(&quot;包装类：java.lang.Long&quot;);  
-        System.out.println(&quot;最小值：Long.MIN_VALUE=&quot; + Long.MIN_VALUE);  
-        System.out.println(&quot;最大值：Long.MAX_VALUE=&quot; + Long.MAX_VALUE);  
+        System.out.println("基本类型：long 二进制位数：" + Long.SIZE);  
+        System.out.println("包装类：java.lang.Long");  
+        System.out.println("最小值：Long.MIN_VALUE=" + Long.MIN_VALUE);  
+        System.out.println("最大值：Long.MAX_VALUE=" + Long.MAX_VALUE);  
         System.out.println();  
   
         // float  
-        System.out.println(&quot;基本类型：float 二进制位数：&quot; + Float.SIZE);  
-        System.out.println(&quot;包装类：java.lang.Float&quot;);  
-        System.out.println(&quot;最小值：Float.MIN_VALUE=&quot; + Float.MIN_VALUE);  
-        System.out.println(&quot;最大值：Float.MAX_VALUE=&quot; + Float.MAX_VALUE);  
+        System.out.println("基本类型：float 二进制位数：" + Float.SIZE);  
+        System.out.println("包装类：java.lang.Float");  
+        System.out.println("最小值：Float.MIN_VALUE=" + Float.MIN_VALUE);  
+        System.out.println("最大值：Float.MAX_VALUE=" + Float.MAX_VALUE);  
         System.out.println();  
   
         // double  
-        System.out.println(&quot;基本类型：double 二进制位数：&quot; + Double.SIZE);  
-        System.out.println(&quot;包装类：java.lang.Double&quot;);  
-        System.out.println(&quot;最小值：Double.MIN_VALUE=&quot; + Double.MIN_VALUE);  
-        System.out.println(&quot;最大值：Double.MAX_VALUE=&quot; + Double.MAX_VALUE);  
+        System.out.println("基本类型：double 二进制位数：" + Double.SIZE);  
+        System.out.println("包装类：java.lang.Double");  
+        System.out.println("最小值：Double.MIN_VALUE=" + Double.MIN_VALUE);  
+        System.out.println("最大值：Double.MAX_VALUE=" + Double.MAX_VALUE);  
         System.out.println();  
   
         // char  
-        System.out.println(&quot;基本类型：char 二进制位数：&quot; + Character.SIZE);  
-        System.out.println(&quot;包装类：java.lang.Character&quot;);  
+        System.out.println("基本类型：char 二进制位数：" + Character.SIZE);  
+        System.out.println("包装类：java.lang.Character");  
         // 以数值形式而不是字符形式将Character.MIN_VALUE输出到控制台  
-        System.out.println(&quot;最小值：Character.MIN_VALUE=&quot;  
+        System.out.println("最小值：Character.MIN_VALUE="  
                 + (int) Character.MIN_VALUE);  
         // 以数值形式而不是字符形式将Character.MAX_VALUE输出到控制台  
-        System.out.println(&quot;最大值：Character.MAX_VALUE=&quot;  
+        System.out.println("最大值：Character.MAX_VALUE="  
                 + (int) Character.MAX_VALUE);  
     }  
 }
@@ -379,7 +379,7 @@
 最小值：Character.MIN_VALUE=0
 最大值：Character.MAX_VALUE=65535
 </code></pre>
-<p>float和double的最小值和最大值都是以科学记数法的形式输出的，结尾的&quot;E+数字&quot;表示E之前的数字要乘以10的多少次方。比如3.14E3就是3.14 × 10^3 =3140，3.14E-3 就是 3.14x10^{-3} =0.00314。</p>
+<p>float和double的最小值和最大值都是以科学记数法的形式输出的，结尾的"E+数字"表示E之前的数字要乘以10的多少次方。比如3.14E3就是3.14 × 10^3 =3140，3.14E-3 就是 3.14x10^{-3} =0.00314。</p>
 <p>实际上，JAVA中还存在另外一种基本类型 void，它也有对应的包装类 java.lang.Void，不过我们无法直接对它们进行操作。</p>
 <h3 id="进制转换"><a class="header" href="#进制转换">进制转换</a></h3>
 <pre><code class="language-java">public class helloworld {
@@ -392,11 +392,11 @@
 		int num4 = 0x1010;
 		char c = '漢';
 		
-		System.out.println(&quot;num1 = &quot; + num1);
-		System.out.println(&quot;num2 = &quot; + num2);
-		System.out.println(&quot;num3 = &quot; + num3);
-		System.out.println(&quot;num4 = &quot; + num4);
-		System.out.println(&quot;漢的utf-8编码为： &quot; + (int)c);
+		System.out.println("num1 = " + num1);
+		System.out.println("num2 = " + num2);
+		System.out.println("num3 = " + num3);
+		System.out.println("num4 = " + num4);
+		System.out.println("漢的utf-8编码为： " + (int)c);
 	}
 }
 </code></pre>
@@ -434,15 +434,15 @@ num4 = 4112
     static String str;
  
     public static void main(String[] args) {
-        System.out.println(&quot;Bool :&quot; + bool);
-        System.out.println(&quot;Byte :&quot; + by);
-        System.out.println(&quot;Character:&quot; + ch);
-        System.out.println(&quot;Double :&quot; + d);
-        System.out.println(&quot;Float :&quot; + f);
-        System.out.println(&quot;Integer :&quot; + i);
-        System.out.println(&quot;Long :&quot; + l);
-        System.out.println(&quot;Short :&quot; + sh);
-        System.out.println(&quot;String :&quot; + str);
+        System.out.println("Bool :" + bool);
+        System.out.println("Byte :" + by);
+        System.out.println("Character:" + ch);
+        System.out.println("Double :" + d);
+        System.out.println("Float :" + f);
+        System.out.println("Integer :" + i);
+        System.out.println("Long :" + l);
+        System.out.println("Short :" + sh);
+        System.out.println("String :" + str);
     }
 }
 </code></pre>
@@ -464,7 +464,7 @@ String   :null
 <li>对象、数组都是引用数据类型。</li>
 <li>所有引用类型的默认值都是null。</li>
 <li>一个引用变量可以用来引用任何与之兼容的类型。</li>
-<li>例子：Site site = new Site(&quot;Runoob&quot;)。</li>
+<li>例子：Site site = new Site("Runoob")。</li>
 </ul>
 <h2 id="常量"><a class="header" href="#常量">常量</a></h2>
 <p>常量在程序运行时是不能被修改的。</p>
@@ -483,13 +483,13 @@ int octal = 0144;
 int hexa =  0x64;
 </code></pre>
 <p>和其他语言一样，Java的字符串常量也是包含在两个引号之间的字符序列。下面是字符串型字面量的例子：</p>
-<pre><code class="language-java">&quot;Hello World&quot;
-&quot;two\nlines&quot;
-&quot;\&quot;This is in quotes\&quot;&quot;
+<pre><code class="language-java">"Hello World"
+"two\nlines"
+"\"This is in quotes\""
 </code></pre>
 <p>字符串常量和字符变量都可以包含任何 Unicode 字符。例如：</p>
 <pre><code class="language-java">char a = '\u0001';
-String a = &quot;\u0001&quot;;
+String a = "\u0001";
 </code></pre>
 <p>Java语言支持一些特殊的转义字符序列。</p>
 <div class="table-wrapper"><table><thead><tr><th>符号</th><th>字符含义</th></tr></thead><tbody>
@@ -500,9 +500,9 @@ String a = &quot;\u0001&quot;;
 <tr><td>\0</td><td>空字符 (0x0)</td></tr>
 <tr><td>\s</td><td>空格 (0x20)</td></tr>
 <tr><td>\t</td><td>制表符</td></tr>
-<tr><td>&quot;</td><td>双引号</td></tr>
+<tr><td>"</td><td>双引号</td></tr>
 <tr><td>'</td><td>单引号</td></tr>
-<tr><td>\</td><td>反斜杠</td></tr>
+<tr><td>|反斜杠</td><td></td></tr>
 <tr><td>\ddd</td><td>八进制字符 (ddd)</td></tr>
 <tr><td>\uxxxx</td><td>16进制Unicode字符 (xxxx)</td></tr>
 </tbody></table>
@@ -524,10 +524,10 @@ byte,short,char—&gt; int —&gt; long—&gt; float —&gt; double
 		// TODO Auto-generated method stub
 		char c1='a';//定义一个char类型
         int i1 = c1;//char自动类型转换为int
-        System.out.println(&quot;char自动类型转换为int后的值等于&quot;+i1);
+        System.out.println("char自动类型转换为int后的值等于"+i1);
         char c2 = 'A';//定义一个char类型
         int i2 = c2+1;//char 类型和 int 类型计算
-        System.out.println(&quot;char类型和int计算后的值等于&quot;+i2);
+        System.out.println("char类型和int计算后的值等于"+i2);
 	}
 
 }
@@ -575,7 +575,7 @@ char类型和int计算后的值等于66
 </li>
 <li>
 <ol start="2">
-<li>格式：(type)value中 type是要强制类型转换后的数据类型 </li>
+<li>格式：(type)value中 type是要强制类型转换后的数据类型</li>
 </ol>
 </li>
 <li>3.强制转换符号只对最近的操作数有效，可以用小括号指定强制类型转换范围</li>
@@ -592,10 +592,10 @@ char类型和int计算后的值等于66
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int num1 = 10;
-		String s1 = num1 + &quot;&quot;;
+		String s1 = num1 + "";
 		System.out.println(s1);
 		
-		String s2 = &quot;123&quot;;
+		String s2 = "123";
 		int num2 = Integer.parseInt(s2);
 		System.out.println(num2);
 		double num3 = Double.parseDouble(s2);
@@ -622,9 +622,9 @@ char类型和int计算后的值等于66
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(100 + 98);
-		System.out.println(&quot;100&quot; + 98);
-		System.out.println(100 + 98 + &quot;hello&quot;);
-		System.out.println(&quot;hello&quot; + 100 + 98);
+		System.out.println("100" + 98);
+		System.out.println(100 + 98 + "hello");
+		System.out.println("hello" + 100 + 98);
 	}
 }
 </code></pre>
@@ -673,19 +673,19 @@ hello10098
 		int a = 10;
 	    int b = 20;
 	    int c = 25;
-	    System.out.println(&quot;a + b = &quot; + (a + b) );
-	    System.out.println(&quot;a - b = &quot; + (a - b) );
-	    System.out.println(&quot;a * b = &quot; + (a * b) );
-	    System.out.println(&quot;b / a = &quot; + (b / a) );
-	    System.out.println(&quot;b % a = &quot; + (b % a) );
-	    System.out.println(&quot;c % a = &quot; + (c % a) );
-	    System.out.println(&quot;a++   = &quot; +  (a++) );
-	    System.out.println(&quot;a--   = &quot; +  (a--) );
+	    System.out.println("a + b = " + (a + b) );
+	    System.out.println("a - b = " + (a - b) );
+	    System.out.println("a * b = " + (a * b) );
+	    System.out.println("b / a = " + (b / a) );
+	    System.out.println("b % a = " + (b % a) );
+	    System.out.println("c % a = " + (c % a) );
+	    System.out.println("a++   = " +  (a++) );
+	    System.out.println("a--   = " +  (a--) );
 	    // 查看  d++ 与 ++d 的不同
 	    int d = 25;
-	    System.out.println(&quot;d++   = &quot; +  (d++) );
+	    System.out.println("d++   = " +  (d++) );
 	    d = 25;
-	    System.out.println(&quot;++d   = &quot; +  (++d) );
+	    System.out.println("++d   = " +  (++d) );
 	}
 }
 </code></pre>
@@ -744,12 +744,12 @@ d++   = 25
 		// TODO Auto-generated method stub
 		int a = 10;
 	    int b = 20;
-	    System.out.println(&quot;a == b = &quot; + (a == b) );
-	    System.out.println(&quot;a != b = &quot; + (a != b) );
-	    System.out.println(&quot;a &gt; b = &quot; + (a &gt; b) );
-	    System.out.println(&quot;a &lt; b = &quot; + (a &lt; b) );
-	    System.out.println(&quot;b &gt;= a = &quot; + (b &gt;= a) );
-	    System.out.println(&quot;b &lt;= a = &quot; + (b &lt;= a) );
+	    System.out.println("a == b = " + (a == b) );
+	    System.out.println("a != b = " + (a != b) );
+	    System.out.println("a &gt; b = " + (a &gt; b) );
+	    System.out.println("a &lt; b = " + (a &lt; b) );
+	    System.out.println("b &gt;= a = " + (b &gt;= a) );
+	    System.out.println("b &lt;= a = " + (b &lt;= a) );
 	}
 }
 
@@ -769,7 +769,7 @@ b &lt;= a = false
 </code></pre>
 <p>如果运算符左侧变量所指的对象，是操作符右侧类或接口(class/interface)的一个对象，那么结果为真。</p>
 <p>下面是一个例子：</p>
-<pre><code class="language-java">String name = &quot;James&quot;;
+<pre><code class="language-java">String name = "James";
 boolean result = name instanceof String; // 由于 name 是 String 类型，所以返回真
 </code></pre>
 <p>如果被比较的对象兼容于右侧类型，该运算符仍然返回 true。</p>
@@ -818,25 +818,25 @@ A ^ B = 0011 0001
 	    int b = 13; /* 13 = 0000 1101 */
 	    int c = 0;
 	    c = a &amp; b;       /* 12 = 0000 1100 */
-	    System.out.println(&quot;a &amp; b = &quot; + c );
+	    System.out.println("a &amp; b = " + c );
 	 
 	    c = a | b;       /* 61 = 0011 1101 */
-	    System.out.println(&quot;a | b = &quot; + c );
+	    System.out.println("a | b = " + c );
 	 
 	    c = a ^ b;       /* 49 = 0011 0001 */
-	    System.out.println(&quot;a ^ b = &quot; + c );
+	    System.out.println("a ^ b = " + c );
 	 
 	    c = ~a;          /*-61 = 1100 0011 */
-	    System.out.println(&quot;~a = &quot; + c );
+	    System.out.println("~a = " + c );
 	 
 	    c = a &lt;&lt; 2;     /* 240 = 1111 0000 */
-	    System.out.println(&quot;a &lt;&lt; 2 = &quot; + c );
+	    System.out.println("a &lt;&lt; 2 = " + c );
 	 
 	    c = a &gt;&gt; 2;     /* 15 = 1111 */
-	    System.out.println(&quot;a &gt;&gt; 2  = &quot; + c );
+	    System.out.println("a &gt;&gt; 2  = " + c );
 	  
 	    c = a &gt;&gt;&gt; 2;     /* 15 = 0000 1111 */
-	    System.out.println(&quot;a &gt;&gt;&gt; 2 = &quot; + c );
+	    System.out.println("a &gt;&gt;&gt; 2 = " + c );
 	}
 }
 </code></pre>
@@ -864,9 +864,9 @@ a &gt;&gt;&gt; 2 = 15
 		// TODO Auto-generated method stub
 		boolean a = true;
 	    boolean b = false;
-	    System.out.println(&quot;a &amp;&amp; b = &quot; + (a&amp;&amp;b));
-	    System.out.println(&quot;a || b = &quot; + (a||b) );
-	    System.out.println(&quot;!(a &amp;&amp; b) = &quot; + !(a &amp;&amp; b));
+	    System.out.println("a &amp;&amp; b = " + (a&amp;&amp;b));
+	    System.out.println("a || b = " + (a||b) );
+	    System.out.println("!(a &amp;&amp; b) = " + !(a &amp;&amp; b));
 	}
 }
 
@@ -884,8 +884,8 @@ a || b = true
 		// TODO Auto-generated method stub
 		int a = 5;//定义一个变量；
         boolean b = (a&lt;4)&amp;&amp;(a++&lt;10);
-        System.out.println(&quot;使用短路逻辑运算符的结果为&quot;+b);
-        System.out.println(&quot;a的结果为&quot;+a);
+        System.out.println("使用短路逻辑运算符的结果为"+b);
+        System.out.println("a的结果为"+a);
 	}
 }
 </code></pre>
@@ -904,21 +904,21 @@ a的结果为5
         {
         	x = 11;
         }
-        System.out.println(&quot;x = &quot; + x + &quot; y = &quot; + y );//6,6
+        System.out.println("x = " + x + " y = " + y );//6,6
         x = 5;
         y = 5;
         if(x++ == 6 &amp;&amp; ++y == 6) //逻辑与，短路运算
         {
         	x = 11;
         }
-        System.out.println(&quot;x = &quot; + x + &quot; y = &quot; + y );//6,5
+        System.out.println("x = " + x + " y = " + y );//6,5
         x = 5;
         y = 5;
         if(x++ == 6 | ++y == 6)//位运算
         {
         	x = 11;
         }
-        System.out.println(&quot;x = &quot; + x + &quot; y = &quot; + y );//11,6
+        System.out.println("x = " + x + " y = " + y );//11,6
         
         x = 5;
         y = 5;
@@ -926,7 +926,7 @@ a的结果为5
         {
         	x = 11;
         }
-        System.out.println(&quot;x = &quot; + x + &quot; y = &quot; + y );//11,5
+        System.out.println("x = " + x + " y = " + y );//11,5
 	}
 }
 </code></pre>
@@ -961,33 +961,33 @@ x = 11 y = 6
         int b = 20;
         int c = 0;
         c = a + b;
-        System.out.println(&quot;c = a + b = &quot; + c );
+        System.out.println("c = a + b = " + c );
         c += a ;
-        System.out.println(&quot;c += a  = &quot; + c );
+        System.out.println("c += a  = " + c );
         c -= a ;
-        System.out.println(&quot;c -= a = &quot; + c );
+        System.out.println("c -= a = " + c );
         c *= a ;
-        System.out.println(&quot;c *= a = &quot; + c );
+        System.out.println("c *= a = " + c );
         a = 10;
         c = 15;
         c /= a ;
-        System.out.println(&quot;c /= a = &quot; + c );
+        System.out.println("c /= a = " + c );
         a = 10;
         c = 15;
         c %= a ;
-        System.out.println(&quot;c %= a  = &quot; + c );
+        System.out.println("c %= a  = " + c );
         c &lt;&lt;= 2 ;
-        System.out.println(&quot;c &lt;&lt;= 2 = &quot; + c );
+        System.out.println("c &lt;&lt;= 2 = " + c );
         c &gt;&gt;= 2 ;
-        System.out.println(&quot;c &gt;&gt;= 2 = &quot; + c );
+        System.out.println("c &gt;&gt;= 2 = " + c );
         c &gt;&gt;= 2 ;
-        System.out.println(&quot;c &gt;&gt;= 2 = &quot; + c );
+        System.out.println("c &gt;&gt;= 2 = " + c );
         c &amp;= a ;
-        System.out.println(&quot;c &amp;= a  = &quot; + c );
+        System.out.println("c &amp;= a  = " + c );
         c ^= a ;
-        System.out.println(&quot;c ^= a   = &quot; + c );
+        System.out.println("c ^= a   = " + c );
         c |= a ;
-        System.out.println(&quot;c |= a   = &quot; + c );
+        System.out.println("c |= a   = " + c );
 	}
 }
 </code></pre>
@@ -1018,11 +1018,11 @@ c |= a   = 10
 	    a = 10;
 	    // 如果 a 等于 1 成立，则设置 b 为 20，否则为 30
 	    b = (a == 1) ? 20 : 30;
-	    System.out.println( &quot;Value of b is : &quot; +  b );
+	    System.out.println( "Value of b is : " +  b );
 	 
 	    // 如果 a 等于 10 成立，则设置 b 为 20，否则为 30
 	    b = (a == 10) ? 20 : 30;
-	    System.out.println( &quot;Value of b is : &quot; + b );
+	    System.out.println( "Value of b is : " + b );
 	}
 }
 </code></pre>
@@ -1106,7 +1106,7 @@ Value of b is : 20
       int x = 10;
  
       if( x &lt; 20 ){
-         System.out.print(&quot;这是 if 语句&quot;);
+         System.out.print("这是 if 语句");
       }
    }
 }
@@ -1130,9 +1130,9 @@ Value of b is : 20
       int x = 30;
  
       if( x &lt; 20 ){
-         System.out.print(&quot;这是 if 语句&quot;);
+         System.out.print("这是 if 语句");
       }else{
-         System.out.print(&quot;这是 else 语句&quot;);
+         System.out.print("这是 else 语句");
       }
    }
 }
@@ -1165,13 +1165,13 @@ Value of b is : 20
       int x = 30;
  
       if( x == 10 ){
-         System.out.print(&quot;Value of X is 10&quot;);
+         System.out.print("Value of X is 10");
       }else if( x == 20 ){
-         System.out.print(&quot;Value of X is 20&quot;);
+         System.out.print("Value of X is 20");
       }else if( x == 30 ){
-         System.out.print(&quot;Value of X is 30&quot;);
+         System.out.print("Value of X is 30");
       }else{
-         System.out.print(&quot;这是 else 语句&quot;);
+         System.out.print("这是 else 语句");
       }
    }
 }
@@ -1222,23 +1222,23 @@ public class helloworld {
 		// TODO Auto-generated method stub
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.println(&quot;Please input your score:&quot;);
+		System.out.println("Please input your score:");
 		double score = scanner.nextDouble();
 		if(score &gt;= 8.0){
-			System.out.println(&quot;Please input your gender:&quot;);
+			System.out.println("Please input your gender:");
 			char gender = scanner.next().charAt(0); 
 			if(gender == '男'){
-				System.out.println(&quot;Succeed to join men's group!&quot;);
+				System.out.println("Succeed to join men's group!");
 			}
 			else if(gender == '女'){
-				System.out.println(&quot;Succeed to join women's group!&quot;);
+				System.out.println("Succeed to join women's group!");
 			}
 			else {
-				System.out.println(&quot;You inputed the wrong gender!&quot;);
+				System.out.println("You inputed the wrong gender!");
 			}
 		}
 		else {
-			System.out.println(&quot;You are fired!&quot;);
+			System.out.println("You are fired!");
 		}
 		scanner.close();
 	}
@@ -1286,22 +1286,22 @@ public class SwitchDemo1 {
 
         switch(grade){
             case 'A':
-                System.out.println(&quot;优秀&quot;);
+                System.out.println("优秀");
                 break;
             case 'B':
-                System.out.println(&quot;良好&quot;);
+                System.out.println("良好");
                 break;
             case 'C':
-                System.out.println(&quot;及格&quot;);
+                System.out.println("及格");
                 break;
             case 'D':
-                System.out.println(&quot;再接再厉&quot;);
+                System.out.println("再接再厉");
                 break;
             case 'E':
-                System.out.println(&quot;挂科&quot;);
+                System.out.println("挂科");
                 break;
             default:
-                System.out.println(&quot;未知等级&quot;);
+                System.out.println("未知等级");
 
                 //存在case穿透现象，每写一个case就要添加一个break语句
 
@@ -1320,13 +1320,13 @@ public class SwitchDemo1 {
       int i = 5;
       switch(i){
          case 0:
-            System.out.println(&quot;0&quot;);
+            System.out.println("0");
          case 1:
-            System.out.println(&quot;1&quot;);
+            System.out.println("1");
          case 2:
-            System.out.println(&quot;2&quot;);
+            System.out.println("2");
          default:
-            System.out.println(&quot;default&quot;);
+            System.out.println("default");
       }
    }
 }
@@ -1341,13 +1341,13 @@ public class SwitchDemo1 {
       int i = 1;
       switch(i){
          case 0:
-            System.out.println(&quot;0&quot;);
+            System.out.println("0");
          case 1:
-            System.out.println(&quot;1&quot;);
+            System.out.println("1");
          case 2:
-            System.out.println(&quot;2&quot;);
+            System.out.println("2");
          default:
-            System.out.println(&quot;default&quot;);
+            System.out.println("default");
       }
    }
 }
@@ -1364,15 +1364,15 @@ default
       int i = 1;
       switch(i){
          case 0:
-            System.out.println(&quot;0&quot;);
+            System.out.println("0");
          case 1:
-            System.out.println(&quot;1&quot;);
+            System.out.println("1");
          case 2:
-            System.out.println(&quot;2&quot;);
+            System.out.println("2");
          case 3:
-            System.out.println(&quot;3&quot;); break;
+            System.out.println("3"); break;
          default:
-            System.out.println(&quot;default&quot;);
+            System.out.println("default");
       }
    }
 }
@@ -1387,16 +1387,16 @@ default
 
 public class SwitchDemo2 {
     public static void main(String[] args) {
-        String name= &quot;狂神&quot;;
+        String name= "狂神";
 
         switch (name){
-            case &quot;包子&quot;:
-                System.out.println(&quot;包子&quot;);
-            case &quot;狂神&quot;:
-                System.out.println(&quot;狂神&quot;);
+            case "包子":
+                System.out.println("包子");
+            case "狂神":
+                System.out.println("狂神");
                 break;
             default:
-                System.out.println(&quot;输错了&quot;);
+                System.out.println("输错了");
 
         }
     }
@@ -1424,9 +1424,9 @@ public class SwitchDemo2 {
    public static void main(String[] args) {
       int x = 10;
       while( x &lt; 20 ) {
-         System.out.print(&quot;value of x : &quot; + x );
+         System.out.print("value of x : " + x );
          x++;
-         System.out.print(&quot;\n&quot;);
+         System.out.print("\n");
       }
    }
 }
@@ -1457,9 +1457,9 @@ value of x : 19
       int x = 10;
  
       do{
-         System.out.print(&quot;value of x : &quot; + x );
+         System.out.print("value of x : " + x );
          x++;
-         System.out.print(&quot;\n&quot;);
+         System.out.print("\n");
       }while( x &lt; 20 );
    }
 }
@@ -1497,8 +1497,8 @@ value of x : 19
 		// TODO Auto-generated method stub
 		
 		for(int x = 10, y = 0; x &lt; 15; x = x+1, y++) {
-	         System.out.println(&quot;value of x : &quot; + x );
-	         System.out.println(&quot;value of y : &quot; + y );
+	         System.out.println("value of x : " + x );
+	         System.out.println("value of y : " + y );
 	      }
 	}
 }
@@ -1518,7 +1518,7 @@ value of y : 4
 <p>下面这种写法为死循环：</p>
 <pre><code class="language-java">for(;;)
 {
-	System.out.println(&quot;香水有毒！&quot;);
+	System.out.println("香水有毒！");
 }
 </code></pre>
 <h3 id="java-增强-for-循环"><a class="header" href="#java-增强-for-循环">Java 增强 for 循环</a></h3>
@@ -1541,13 +1541,13 @@ value of y : 4
 		 
 	    for(int x : numbers ){
 	       System.out.print( x );
-	       System.out.print(&quot;,&quot;);
+	       System.out.print(",");
 	    }
-	    System.out.print(&quot;\n&quot;);
-	    String [] names ={&quot;James&quot;, &quot;Larry&quot;, &quot;Tom&quot;, &quot;Lacy&quot;};
+	    System.out.print("\n");
+	    String [] names ={"James", "Larry", "Tom", "Lacy"};
 	    for( String name : names ) {
 	       System.out.print( name );
-	       System.out.print(&quot;,&quot;);
+	       System.out.print(",");
 	    }
 	}
 }
@@ -1564,7 +1564,7 @@ public class ForDemo2 {
     public static void main(String[] args) {
         for (int i = 1; i &lt; 10; i++) {
             for(int j =1; j&lt;=i;j++){
-                System.out.print(&quot;&quot;+j+'*'+i+'='+(i*j)+&quot;\t&quot;);
+                System.out.print(""+j+'*'+i+'='+(i*j)+"\t");
             }
             System.out.println();
         }
@@ -1693,7 +1693,7 @@ public class ForDemo2 {
             break;
          }
          System.out.print( x );
-         System.out.print(&quot;\n&quot;);
+         System.out.print("\n");
       }
    }
 }
@@ -1752,7 +1752,7 @@ public class ForDemo2 {
         continue;
          }
          System.out.print( x );
-         System.out.print(&quot;\n&quot;);
+         System.out.print("\n");
       }
    }
 }
@@ -1845,7 +1845,7 @@ boolean false， String null</p>
       for (int i = 0; i &lt; size; i++) {
          total += myList[i];
       }
-      System.out.println(&quot;总和为： &quot; + total);
+      System.out.println("总和为： " + total);
    }
 }
 </code></pre>
@@ -1885,20 +1885,20 @@ boolean false， String null</p>
  
       // 打印所有数组元素
       for (int i = 0; i &lt; myList.length; i++) {
-         System.out.println(myList[i] + &quot; &quot;);
+         System.out.println(myList[i] + " ");
       }
       // 计算所有元素的总和
       double total = 0;
       for (int i = 0; i &lt; myList.length; i++) {
          total += myList[i];
       }
-      System.out.println(&quot;Total is &quot; + total);
+      System.out.println("Total is " + total);
       // 查找最大元素
       double max = myList[0];
       for (int i = 1; i &lt; myList.length; i++) {
          if (myList[i] &gt; max) max = myList[i];
       }
-      System.out.println(&quot;Max is &quot; + max);
+      System.out.println("Max is " + max);
    }
 }
 </code></pre>
@@ -1943,7 +1943,7 @@ Max is 3.5
 <p>例如，下面的例子就是一个打印 int 数组中元素的方法:</p>
 <pre><code class="language-java">public static void printArray(int[] array) {
   for (int i = 0; i &lt; array.length; i++) {
-    System.out.print(array[i] + &quot; &quot;);
+    System.out.print(array[i] + " ");
   }
 }
 </code></pre>
@@ -1969,7 +1969,7 @@ Max is 3.5
 </code></pre>
 <p>二维数组的声明形式有如下三种：<code>int[][] y;</code>、<code>int[] y[];</code>、<code>int y[][];</code></p>
 <p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/202401151546762.png" alt="" /></p>
-<p>这种赋值方式<code>String[] strs = new String[]{&quot;a&quot;, &quot;b&quot;, &quot;c&quot;};</code>也是允许的。</p>
+<p>这种赋值方式<code>String[] strs = new String[]{"a", "b", "c"};</code>也是允许的。</p>
 <h3 id="多维数组的动态初始化以二维数组为例"><a class="header" href="#多维数组的动态初始化以二维数组为例">多维数组的动态初始化（以二维数组为例）</a></h3>
 <ol>
 <li>直接为每一维分配空间，格式如下：</li>
@@ -1988,14 +1988,14 @@ Max is 3.5
 <pre><code class="language-java">String[][] s = new String[2][];
 s[0] = new String[2];
 s[1] = new String[3];
-s[0][0] = new String(&quot;Good&quot;);
-s[0][1] = new String(&quot;Luck&quot;);
-s[1][0] = new String(&quot;to&quot;);
-s[1][1] = new String(&quot;you&quot;);
-s[1][2] = new String(&quot;!&quot;);
+s[0][0] = new String("Good");
+s[0][1] = new String("Luck");
+s[1][0] = new String("to");
+s[1][1] = new String("you");
+s[1][2] = new String("!");
 </code></pre>
 <p>解析：</p>
-<p><strong><code>s[0]=new String[2]** 和 **s[1]=new String[3]</code></strong> 是为最高维分配引用空间，也就是为最高维限制其能保存数据的最长的长度，然后再为其每个数组元素单独分配空间 <strong>s0=new String(&quot;Good&quot;)</strong> 等操作。</p>
+<p><strong><code>s[0]=new String[2]** 和 **s[1]=new String[3]</code></strong> 是为最高维分配引用空间，也就是为最高维限制其能保存数据的最长的长度，然后再为其每个数组元素单独分配空间 <strong>s0=new String("Good")</strong> 等操作。</p>
 <p>实例：</p>
 <pre><code class="language-java">public class helloworld {
  
@@ -2010,14 +2010,14 @@ s[1][2] = new String(&quot;!&quot;);
 		}
 		for(int i = 0; i &lt; a.length; i++) {
 			for(int j = 0; j &lt; a[i].length; j++) {
-				System.out.print(a[i][j] + &quot; &quot;);
+				System.out.print(a[i][j] + " ");
 			}
 			System.out.print('\n');
 		}
 		int[][] b = {{1}, {1,2,3}};
 		for(int i = 0; i &lt; b.length; i++) {
 			for(int j = 0; j &lt; b[i].length; j++) {
-				System.out.print(b[i][j] + &quot; &quot;);
+				System.out.print(b[i][j] + " ");
 			}
 			System.out.println();
 		}
@@ -2035,7 +2035,7 @@ s[1][2] = new String(&quot;!&quot;);
 		}
 		for(int i = 0; i &lt; c.length; i++) {
 			for(int j = 0; j &lt; c[i].length; j++) {
-				System.out.print(c[i][j] + &quot;\t&quot;);
+				System.out.print(c[i][j] + "\t");
 			}
 			System.out.println();
 		}
@@ -2240,7 +2240,7 @@ public class Demo1 {
 <pre><code class="language-java">int larger = max(30, 40);
 </code></pre>
 <p>如果方法返回值是void，方法调用一定是一条语句。例如，方法println返回void。下面的调用是个语句：</p>
-<pre><code class="language-java">System.out.println(&quot;欢迎访问菜鸟教程！&quot;);
+<pre><code class="language-java">System.out.println("欢迎访问菜鸟教程！");
 </code></pre>
 <h3 id="实例-1"><a class="header" href="#实例-1">实例</a></h3>
 <p>下面的例子演示了如何定义一个方法，以及如何调用它。TestMax.java 文件代码：</p>
@@ -2250,7 +2250,7 @@ public class Demo1 {
       int i = 5;
       int j = 2;
       int k = max(i, j);
-      System.out.println( i + &quot; 和 &quot; + j + &quot; 比较，最大值是：&quot; + k);
+      System.out.println( i + " 和 " + j + " 比较，最大值是：" + k);
    }
  
    /** 返回两个整数变量较大的值 */
@@ -2323,26 +2323,26 @@ public class Demo1 {
     int num1 = 1;
     int num2 = 2;
  
-    System.out.println(&quot;交换前 num1 的值为：&quot; +
-                        num1 + &quot; ，num2 的值为：&quot; + num2);
+    System.out.println("交换前 num1 的值为：" +
+                        num1 + " ，num2 的值为：" + num2);
  
     // 调用swap方法
     swap(num1, num2);
-    System.out.println(&quot;交换后 num1 的值为：&quot; +
-                       num1 + &quot; ，num2 的值为：&quot; + num2);
+    System.out.println("交换后 num1 的值为：" +
+                       num1 + " ，num2 的值为：" + num2);
   }
   /** 交换两个变量的方法 */
   public static void swap(int n1, int n2) {
-    System.out.println(&quot;\t进入 swap 方法&quot;);
-    System.out.println(&quot;\t\t交换前 n1 的值为：&quot; + n1
-                         + &quot;，n2 的值：&quot; + n2);
+    System.out.println("\t进入 swap 方法");
+    System.out.println("\t\t交换前 n1 的值为：" + n1
+                         + "，n2 的值：" + n2);
     // 交换 n1 与 n2的值
     int temp = n1;
     n1 = n2;
     n2 = temp;
  
-    System.out.println(&quot;\t\t交换后 n1 的值为 &quot; + n1
-                         + &quot;，n2 的值：&quot; + n2);
+    System.out.println("\t\t交换后 n1 的值为 " + n1
+                         + "，n2 的值：" + n2);
   }
 }
 </code></pre>
@@ -2392,7 +2392,7 @@ public class Demo2 {
     public static void main(String[] args) {
         //args.length数组长度
         for (int i = 0; i &lt; args.length; i++) {
-            System.out.println(&quot;args[&quot;+i+&quot;]: &quot;+args[i]);
+            System.out.println("args["+i+"]: "+args[i]);
         }
     }
 }
@@ -2430,7 +2430,7 @@ class MyClass {
    public static void main(String args[]) {
       MyClass t1 = new MyClass();
       MyClass t2 = new MyClass();
-      System.out.println(t1.x + &quot; &quot; + t2.x);
+      System.out.println(t1.x + " " + t2.x);
    }
 }
 </code></pre>
@@ -2453,7 +2453,7 @@ class MyClass {
   public static void main(String args[]) {
     MyClass t1 = new MyClass( 10 );
     MyClass t2 = new MyClass( 20 );
-    System.out.println(t1.x + &quot; &quot; + t2.x);
+    System.out.println(t1.x + " " + t2.x);
   }
 }
 </code></pre>
@@ -2491,7 +2491,7 @@ public class Demo3 {
  
     public static void printMax( double... numbers) {
         if (numbers.length == 0) {
-            System.out.println(&quot;No argument passed&quot;);
+            System.out.println("No argument passed");
             return;
         }
  
@@ -2502,7 +2502,7 @@ public class Demo3 {
                 result = numbers[i];
             }
         }
-        System.out.println(&quot;The max value is &quot; + result);
+        System.out.println("The max value is " + result);
     }
 }
 </code></pre>
@@ -2562,12 +2562,12 @@ class Cake extends Object {
   private int id;  
   public Cake(int id) {  
     this.id = id;  
-    System.out.println(&quot;Cake Object &quot; + id + &quot;is created&quot;);  
+    System.out.println("Cake Object " + id + "is created");  
   }  
     
   protected void finalize() throws java.lang.Throwable {  
     super.finalize();  
-    System.out.println(&quot;Cake Object &quot; + id + &quot;is disposed&quot;);  
+    System.out.println("Cake Object " + id + "is disposed");  
   }  
 }
 </code></pre>
@@ -2588,7 +2588,7 @@ Cake Object 2is disposed
 public class Quiz {
 public static void main(String[] args) {
 
-	System.out.println(&quot;请输入手机号&quot;);
+	System.out.println("请输入手机号");
 
     Scanner input=new Scanner(System.in);
 
@@ -2596,7 +2596,7 @@ public static void main(String[] args) {
 	
 	StringBuilder sb = new StringBuilder(str);
 	
-	sb.replace(3,7,&quot;****&quot;);//从0计数，左取，右不取
+	sb.replace(3,7,"****");//从0计数，左取，右不取
 
     System.out.println(sb);
 }
@@ -2615,7 +2615,7 @@ public static void main(String[] args) {
                   int c = sum(a, b);//省略static的话调用报错 error: non-static method sum(int,int) cannot be referenced from a static context即静态方法无法调用自己定义的非静态方法
 
 //解决方法之一是改变非静态方法为静态方法，在sum方法中的int前加static
-                System.out.println(&quot;The sum is: &quot; + c);
+                System.out.println("The sum is: " + c);
           }
 
            public static int sum(int a, int b) {
@@ -2634,7 +2634,7 @@ public static void main(String[] args) {
 
  public static void main(String[] args) {
 
- System.out.println(&quot;使用递归方法计算斐波那契数列&quot;);
+ System.out.println("使用递归方法计算斐波那契数列");
 
  int[] r1 = func(30);//计算斐波那契数列的前30项
 
@@ -2677,7 +2677,7 @@ public static void main(String[] args) {
  static void display(int[] values,int m) {// 输出一个数组中的所有元素，每行输出m个元素
 
 for(int j=1;j&lt;=values.length;j++){
-	System.out.print(values[j-1]+&quot;\t&quot;);
+	System.out.print(values[j-1]+"\t");
 	if(j%6==0){
 		System.out.println();
 	}
@@ -2703,7 +2703,7 @@ for(int j=1;j&lt;=values.length;j++){
 
 		if(n&lt;=0) {
 
-			System.out.println(&quot;不合法的n&quot;);
+			System.out.println("不合法的n");
 
 			return 0;
 
@@ -2743,14 +2743,14 @@ d[i]=(int)(1+Math.random()*100); //随机生成1~100的整数
 
 }
 
-System.out.print(&quot;随机生成的数组：&quot;);
+System.out.print("随机生成的数组：");
 
 printArray(d);
 
 
 arraySort(d);
 
-System.out.print(&quot;从大到小排序后的数组：&quot;);
+System.out.print("从大到小排序后的数组：");
 
 printArray(d);
 
@@ -2761,13 +2761,13 @@ int p=binarySearch(d,target,0,d.length-1);
 
 if(p==-1) {
 
-System.out.println(&quot;没有找到目标值&quot;+target);
+System.out.println("没有找到目标值"+target);
 
 }
 
 else {
 
-System.out.printf(&quot;目标值%d的下标是%d&quot;,target,p);
+System.out.printf("目标值%d的下标是%d",target,p);
 
 }
 
@@ -2777,7 +2777,7 @@ System.out.printf(&quot;目标值%d的下标是%d&quot;,target,p);
 static void printArray(int[] data) { //打印数组
 
               for(int i=0;i&lt;data.length;i++){
-				System.out.print(data[i]+&quot;\t&quot;);  
+				System.out.print(data[i]+"\t");  
 			  }
 
 }
@@ -2828,322 +2828,319 @@ public static int binarySearch(int[] data, int target, int beginIndex, int endIn
 
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="java文件读写"><a class="header" href="#java文件读写">java文件读写</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="前言"><a class="header" href="#前言">前言</a></h1>
+<p>虽然程序员35岁门槛离你还有点远，但也要有点准备才行。大龄程序员往往有两条路，一条是转管理、架构师等高端岗位，还一条就是送外卖、开滴滴等低端岗位。</p>
+<p><strong>古话说：“人无远虑，必有近忧”。居安思危的态度还是要有的。不然真人吃鸡大赛真爆发了，手足无措之下，容易开局就寄了。</strong></p>
+<p>下面写的都是些建议性的内容，希望对你的人生规划有点意义。写成文字，你有空可以多看两遍。</p>
+<p>现在社会环境比较差，已经到了崩溃的前夜了。我们这种底层屁民就得有意识早做准备，比如安排好自己当下的生活工作学习，保持良好的心态，定期参加体育锻炼强身健体，还要学点必备的生存技能。</p>
+<p>我不了解前端的内容，只能给你介绍下前端算法JavaScript-Algorithms和根据截图生成前端代码的项目screenshottocode。有空可以学点后端开发，当好全栈工程师。后端主要需要的计算机网络、Java、数据库。计网要是忘了可以跳着看。Java可以看B站韩顺平<a href="https://www.bilibili.com/video/BV1fh411y7R8">【零基础 快速学Java】韩顺平 零基础30天学会Java</a>。数据库的话用什么学什么就行。下面的CSDIY网站里面有推荐的课程，中国大学Mooc里面也有，自己选择即可。其他的内容如离散数学、操作系统、编译原理属于高阶内容，最好会，这样才能摆脱码农地位，成为高级工程师，当然不会也无妨。这是以前给你写的<a href="https://github.com/ruoling007/ruoling007.github.io/blob/master/%E5%AD%A6%E4%B9%A0%E8%BF%9B%E6%AD%A5%E8%B7%AF%E7%BA%BF%E5%9B%BE.md">学习进步路线图</a>有空还可以看看。</p>
+<p>多看点经济金融的书籍或是课程，了解基本的资产配置道理，规避不必要的风险，才能保住自己辛苦挣的钱。你那挣的都是辛苦钱，不要碰任何投资项目，一碰基本就血本无归了，尤其是避免“杀猪盘”。钱最好分开放，四大行的就行，小银行就不要碰了。可以存定期，不过手里要有一定的流动性。不嫌麻烦的话还可以换点美元、欧元，趁着有额度早点准备。</p>
+<p>多看点历史、管理、心理学的内容，既能理解时代变迁，也能洞察人心，更好地处理人际关系，从而活得游刃有余。情况允许的话，也能在被优化之前转管理岗位。真的不幸被优化了，也不要有什么心理压力，好好过日子。多读书学习，开拓眼界，防止患上精神病，避免被优化后茫然无措。</p>
+<p>时代的波澜之下，我们主动改变一些事情要好过全程被动被推着走。</p>
+<p>周末的时间可以好好玩耍，也可以给自己充充电。最好不要全天打游戏，打游戏也会消耗精力、注意力，加重疲劳感。恢复精力的好方式就是睡觉、冥想、参加体育锻炼等改变注意力注意的方向或是停止注意力的消耗。</p>
+<p>累分两种，心累和体累。心累要注意精力和注意力的恢复，这个可以用听音乐、冥想、做运动或睡觉来解决。体累就靠睡觉解决了。</p>
+<p>不要碰黄赌毒，一般人碰上一辈子就差不多就完蛋了。比起黄赌毒，两点一线的生活闲着打游戏追剧的生活其实是很好的。</p>
+<p>尽量不要去人很多的地方，那种地方更容易成为恐怖分子的袭击目标。现在一年比一年难过，还没有好转的可能，社会怒气值越来越高，容易发生报复社会的事件。各级政府基本上财政都紧张，社会秩序维持功能大不如前，真出了什么事基本上不能指望政府（它们不帮倒忙就不错了）。西北的恐怖分子出再教育营也容易搞点“大新闻”。</p>
+<p>要有自己的可靠的朋友圈子，有人可以良性交流的话可以降低换上精神疾病的风险。</p>
+<p>周末吃饭的时候可以看看油管上的新闻，了解以下现状。但是不要沉迷于其中，吃饭时看看就行，不要参加键政活动。</p>
+<p><strong>现在年轻女人品行大多不行，网上和现实中极端女权分子都很多。闲着多看点知乎上反女权的内容，避免性别战争的“牺牲品”。将来要结婚生孩子，早日认清现状才可能规避掉不必要的风险。避免“被社死”和避免“杀猪盘”、“仙人跳”一样重要。</strong></p>
+<p>关于避免被社工的内容，最好也要懂点。密码要强度要高，不要有重复的。简单密码靠google账户就记录了。也可以用Keepass之类的软件。加强个人隐私保护，不是特别关键的内容不要填自己的个人信息包括手机号。淘宝之类的收件人姓名可以用古代名人的名字。闲着的时候可以看看社工库，看看自己有没有被PWN了。Firefox Monitor之类的查信息泄露的网站也可以偶偶看看。社交网站最好不要重名，不知道叫啥就自动生成或叫momo，也不要发容易被和谐的内容。</p>
+<p>最好能再搞个成考本科学历。公积金、社保之类的能少交就少交，能尽早取就尽早取，等我们老了应该就是真正的新时代了。现在多交也没意义，可以多看看别人的攻略。</p>
+<p>最后附录了书单和剧单，你书荒或剧荒时可以看看。</p>
+<h1 id="资源包"><a class="header" href="#资源包">资源包</a></h1>
+<p>保持好奇心，多尝试点新事物，日子才不会过得很无聊。</p>
+<p>当然写代码这行当就得能钻研，爱折腾。</p>
+<p>学过的东西要有记录、总结、降低复现成本。</p>
+<p>博客最好还是要有一个，可以用来记录学过的内容，上班天天CURD，技术水平没长进的，将来不好混啊！</p>
+<p>搭建博客可以用GitHubPages加Hugo，一般的技术文档可以用mdbook。</p>
+<h2 id="国内ai资源整合网站"><a class="header" href="#国内ai资源整合网站">国内AI资源整合网站</a></h2>
+<p>https://ai-bot.cn/</p>
+<p>要注册好Openai账号，熟练使用ChatGPT、GPT4等辅助写代码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Rosefinch-Midsummer/MyImagesHost03/img/202401222254466.png" alt="" /></p>
+<h2 id="根据截图生成前端代码的项目"><a class="header" href="#根据截图生成前端代码的项目">根据截图生成前端代码的项目</a></h2>
+<p>https://screenshottocode.com/</p>
+<h2 id="csdiy"><a class="header" href="#csdiy">CSDIY</a></h2>
+<p><a href="https://csdiy.wiki/">网址</a></p>
+<p>这是一本计算机的自学指南，也是对自己大学三年自学生涯的一个纪念。</p>
+<p>这同时也是一份献给北大信科学弟学妹们的礼物。如果这本书能对你们的信科生涯有哪怕一丝一毫的帮助，都是对我极大的鼓励和慰藉。</p>
+<p>本书目前包括了以下部分(如果你有其他好的建议，或者想加入贡献者的行列，欢迎邮件 <a href="mailto:zhongyinmin@pku.edu.cn">zhongyinmin@pku.edu.cn</a> 或者在 issue 里提问)：</p>
 <ul>
-<li><a href="%E6%96%87%E4%BB%B6%E7%90%86%E8%AE%BA.html#%E7%BC%96%E7%A8%8B%E9%A2%98">编程题</a></li>
+<li>必学工具：IDE, 翻墙, StackOverflow, Git, GitHub, Vim, LaTeX, GNU Make, 实用工具 ...</li>
+<li>环境配置：PC端以及服务器端开发环境配置、各类运维相关教材及资料 ...</li>
+<li>经典书籍推荐：看过 CSAPP 这本书的同学一定感叹好书的重要，我将列举推荐自己看过的计算机领域的必看好书与资源链接。</li>
+<li><strong>国外高质量 CS 课程汇总</strong>：我将把我上过的所有高质量的国外 CS 课程分门别类进行汇总，并给出相关的自学建议，大部分课程都会有一个独立的仓库维护相关的资源以及我的作业实现。</li>
 </ul>
-<p>1.FileWriter类的某个构造方法声明如下：</p>
-<p>public FileWriter(String name, boolean append) throws FileNotFoundException</p>
-<p>其中参数append的值为true时表示在原文件的尾部添加数据。</p>
-<p>2.下列程序实现的功能是往文件Alphabets.dat中写入从a开始的10个字母，下列代码执行后，文件Alphabets.dat的大小是20字节。</p>
-<pre><code class="language-java">import java.io.*;
-
-public class FileSize{
-	
-	 public static void main(String[] args) {
-		 
-		 File file = new File(&quot;Alphabets.dat&quot;);
-		 
-		 try(DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)))){
-			 for(int i=0;i&lt;10;i++){
-				 dos.writeChar((char)('a'+i));//写入一个char类型数据，占2字节
-			 }
-			 
-		 }catch(IOException e){
-			
-			 e.printStackTrace();
-		 }
-		 
-	 }
-	
-	
-}
-	
-</code></pre>
-<h3 id="编程题"><a class="header" href="#编程题">编程题</a></h3>
-<p>1.抄写并修改课堂案例（写入文本文件（方式2）），完成以下功能：将歌词内容保存到当前目录下的文本文件jinglebells.txt；读取jinglebells.txt中的内容，将前三行输出到控制台。 </p>
-<pre><code class="language-java">import java.io.*;
-
-
-public class SaveSong {
-
-public static void main(String[] args) {
-
-String[] contents = { 
-
-&quot;jingle bells, jingle bells,&quot;,
-
-&quot;jingle all the way!&quot;,
-
-&quot;oh what fun it is to ride&quot;,
-
-&quot;in a one-horse open sleigh.&quot;
-
-};
-
-File file = new File(&quot;jinglebells.txt&quot;);
-
-try(PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
-	for(int i = 0; i &lt; contents.length; i++) {
-	pw.println(contents[i]);//向文件中写入一行
-
-}
-
-}catch(IOException e) {
-
-e.printStackTrace();
-
-}
-
-
-try(BufferedReader bufferedfr = new BufferedReader(new FileReader(file))) {
-
-String s = null;//用于存储一行内容
-
-int i=0;
-
-while((s=bufferedfr.readLine())!=null &amp;&amp; i++&lt;3) {// 逐行读取，最多读3次
-
-System.out.println(s);//输出当前行的内容
-
-}
-
-}catch(IOException e) {
-
-e.printStackTrace();
-
-}
-}
-
-
-}
-
-</code></pre>
-<p>2.（程序填空题）下面程序的功能是从键盘输入一个小于100的数字，计算并输出从该整数到100之间能被7整除的整数的累加和。</p>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class Sum {
-
- public static void main(String[] args) {
-
- System.out.println(&quot;请输入一个小于100的整数：&quot;);
-
- Scanner input = new Scanner(System.in);
-
- int num = input.nextInt();
-
- if (num &gt;= 100) {
-
- System.out.println(&quot;输入的数已超出范围&quot;);
-
- } else {
-
-int sum=0;
-
- for (int i = num; i &lt;= 100; i++) {
-
- if (i%7==0) {
-
- sum += i;
-
- }
-
- }
-
- System.out.println(&quot;和是&quot; + sum);
-
- }
-
- }
-
-}
-
-</code></pre>
-<p>3.（程序填空题）以下程序将热点新闻写入文本文件news.txt中，每行写一条新闻。格式如下图所示。</p>
-<p><img src="https://p.ananas.chaoxing.com/star3/origin/57995e0b9959592cba9c8f4c3c9c9b18.png" alt="r" /></p>
-<pre><code class="language-java">import java.io.*;
-
-
-public class FileOperation {
-
- public static void main(String[] args) {
-
- String[] news = { &quot;香港将禁止所有英国载客航班抵港&quot;, &quot;朴槿惠所在拘留所发生疫情&quot;, &quot;中国新冠疫苗首针将于1月15日接种&quot; };
-
- File file = new File(&quot;news.txt&quot;);
-
-try(PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
-
- for (int i = 0; i &lt; news.length; i++) {
-
- pw.println(i+1+&quot;:&quot;+news[i]);
-
- }
-
- } catch (Exception e) {
-
- e.printStackTrace();
-
- }
-
- }
-
-}
-</code></pre>
-<p>4.（编程题）下列程序完成计算加权成绩并保存成绩到文件的功能，请把下面的程序补充完整。</p>
-<p><img src="https://p.ananas.chaoxing.com/star3/origin/d639f2b19f8ce14cb85e1d491ec37122.png" alt="i" /></p>
-<pre><code class="language-java">import java.io.BufferedOutputStream;
-
-import java.io.BufferedWriter;
-
-import java.io.DataOutputStream;
-
-import java.io.File;
-
-import java.io.FileOutputStream;
-
-import java.io.FileWriter;
-
-import java.io.IOException;
-
-import java.io.PrintWriter;
-
-
-
-public class SaveData {
-
-
-
-public static void main(String[] args) {
-
-// 数组scores记录学生成绩，每行表示一名学生，每列表示一名学生各门课程的成绩
-
-double[][] scores = { { 80, 90, 60 }, { 99, 86.5, 93 }, { 80, 76, 79 } };
-
-
-
-// 每门成绩的权重
-
-double[] w = { 0.6, 0.2, 0.2 };
-
-
-
-// 数组weightedScores记录学生成绩，每行表示一名学生，除最后一列表示一名学生各门课程的成绩，最后一列表示该学生的加权成绩。
-
-double[][] weightedScores = computeWeightedScores(scores, w);
-
-
-
-// 将数组数据按照写入文本文件，每行写入一名同学的成绩，数值之间用逗号隔开。
-
-writeToTextFile(weightedScores, &quot;scores.txt&quot;);
-
-
-
-// 将数组数据按照写入二进制文件，数值之间无需分割，无需换行。
-
-writeToTextFile(weightedScores, &quot;scores.dat&quot;);
-
-}
-
-
-
-static double[][] computeWeightedScores(double[][] scores, double[] w) {
-
-                    //请将方法体补充完整，填入第1空
-   //        for(int i=0;i&lt;3;i++){
-			 
-		//	   for(int j=0;j&lt;3;j++){
-				 
-			//	   weightedScores[i][j]=scores[i][j]+w[i];
-			  // }
-			   
-		   //}
-		   double[][] weightedScores = new double[scores.length][scores[0].length + 1];
-
-		   for (int i = 0; i &lt; scores.length; i++) {
-
-		   double s = 0;
-
- 		   for (int j = 0; j &lt; scores[i].length; j++) {
-
-		  weightedScores[i][j] = scores[i][j];
-
-   		  s += scores[i][j] * w[j]; // 计算加权成绩
-
-}
-
-		  weightedScores[i][scores[i].length] = s;
-
-}
-
-          return weightedScores;
-
-
-
-
-
-}
-
-
-
-static void writeToTextFile(double[][] data, String fname) {
-
-         File file = new File(fname);
-
-		try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
-
-		for (int i = 0; i &lt; data.length; i++) {
-
-		String str = &quot;&quot; + data[i][0];
-
-		for (int j = 1; j &lt; data[i].length; j++) {
-
-		str += &quot;,&quot; + data[i][j]; // 使用逗号分隔数据
-
-}
-
-	pw.println(str);
-
-}
-
-} catch (IOException e) {
-
-	e.printStackTrace();
-
-}
-
-}
-
-
-
-static void writeToBinaryFile(double[][] data, String fname) {
-
-         File file = new File(fname);
-
-		try (DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)))) {
-
-		for (int i = 0; i &lt; data.length; i++) {
-
-		for (int j = 0; j &lt; data[i].length; j++) {
-
-		dos.writeDouble(data[i][j]);
-
-}
-
-}
-
-} catch (IOException e) {
-
-		e.printStackTrace();
-
-}
-
-}
-
-}
-
-</code></pre>
+<p>CS自学指南
+前言
+如何使用这本书
+一个仅供参考的CS学习规划
+必学工具
+好书推荐
+数学基础
+数学进阶
+编程入门
+电子基础
+数据结构与算法
+软件工程
+体系结构
+操作系统
+并行与分布式系统
+计算机系统安全
+计算机网络
+数据库系统
+编译原理
+编程语言设计与分析
+计算机图形学
+Web开发
+数据科学
+人工智能
+机器学习
+机器学习系统
+深度学习
+机器学习进阶
+后记</p>
+<h2 id="计算机科学自学指南"><a class="header" href="#计算机科学自学指南">计算机科学自学指南</a></h2>
+<p>https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md</p>
+<p>大致按照列出的顺序，借助我们所建议的教材或者视频课程（但是最好二者兼用），学习如下的九门科目。目标是先花 100 到 200 个小时学习完每一个科目，然后在你职业生涯中，不时温习其中的精髓🚀。</p>
+<div class="table-wrapper"><table><thead><tr><th>科目</th><th>为何要学？</th><th>最佳书籍</th><th>最佳视频</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md#%E7%BC%96%E7%A8%8B">编程</a></td><td>不要做一个「永远没彻底搞懂」诸如递归等概念的程序员。</td><td><a href="https://book.douban.com/subject/1148282/">《计算机程序的构造和解释》</a></td><td>Brian Harvey’s Berkeley CS 61A</td></tr>
+<tr><td><a href="https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84">计算机系统结构</a></td><td>如果你对于计算机如何工作没有具体的概念，那么你所做出的所有高级抽象都是空中楼阁。</td><td><a href="https://book.douban.com/subject/26912767/">《深入理解计算机系统》</a></td><td>Berkeley CS 61C</td></tr>
+<tr><td><a href="https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md#%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">算法与数据结构</a></td><td>如果你不懂得如何使用栈、队列、树、图等常见数据结构，遇到有难度的问题时，你将束手无策。</td><td><a href="https://book.douban.com/subject/4048566/">《算法设计手册》</a></td><td>Steven Skiena’s lectures</td></tr>
+<tr><td><a href="https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md#%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86">数学知识</a></td><td>计算机科学基本上是应用数学的一个「跑偏的」分支，因此学习数学将会给你带来竞争优势。</td><td><a href="https://book.douban.com/subject/33396340/">《计算机科学中的数学》</a></td><td>Tom Leighton’s MIT 6.042J</td></tr>
+<tr><td><a href="https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">操作系统</a></td><td>你所写的代码，基本上都由操作系统来运行，因此你应当了解其运作的原理。</td><td><a href="https://book.douban.com/subject/33463930/">《操作系统导论》</a></td><td>Berkeley CS 162</td></tr>
+<tr><td><a href="https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C">计算机网络</a></td><td>互联网已然势不可挡：理解工作原理才能解锁全部潜力。</td><td><a href="https://book.douban.com/subject/30280001/">《计算机网络：自顶向下方法》</a></td><td>Stanford CS 144</td></tr>
+<tr><td><a href="https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md#%E6%95%B0%E6%8D%AE%E5%BA%93">数据库</a></td><td>对于多数重要程序，数据是其核心，然而很少人理解数据库系统的工作原理。</td><td><em><a href="https://book.douban.com/subject/2256069/">Readings in Database Systems</a></em> （暂无中译本）</td><td>Joe Hellerstein’s Berkeley CS 186</td></tr>
+<tr><td><a href="https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E4%B8%8E%E7%BC%96%E8%AF%91%E5%99%A8">编程语言与编译器</a></td><td>若你懂得编程语言和编译器如何工作，你就能写出更好的代码，更轻松地学习新的编程语言。</td><td><em><a href="https://craftinginterpreters.com/">Crafting Interpreters</a></em></td><td>Alex Aiken’s course on Lagunita</td></tr>
+<tr><td><a href="https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md#%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F">分布式系统</a></td><td>如今，<strong>多数</strong> 系统都是分布式的。</td><td><a href="https://book.douban.com/subject/30329536/">《数据密集型应用系统设计》</a></td><td>MIT 6.824</td></tr>
+<tr><td>还是太多？</td><td></td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<p>如果花几年时间自学 9 门科目让人望而却步，我们建议你只专注于两本书：<strong>《深入理解计算机系统》</strong> 和 <strong>《数据密集型应用系统设计》</strong>。根据我们的经验，投入到这两本书的时间可以获得极高的回报率，特别适合从事网络应用开发的自学工程师。这两本书也可以作为上面表格中其他科目的纲领。</p>
+<h2 id="前端算法javascript-algorithms"><a class="header" href="#前端算法javascript-algorithms">前端算法JavaScript-Algorithms</a></h2>
+<p>https://github.com/sisterAn/JavaScript-Algorithms</p>
+<p>我是瓶子君，前端进阶博客：<a href="https://github.com/sisterAn/blog">https://github.com/sisterAn/blog</a></p>
+<p><a href="https://www.pzijun.cn/">线上版本阅读更流畅，点击阅读</a></p>
+<p>作为一名前端，虽然在平常开发中很少写算法，但当我们需要深入前端框架、开发语言、开源库时，懂算法将大大提高我们看源码的能力。例如 ：</p>
+<ul>
+<li>virtual-dom diff 算法做了一些约定，后将原先 O(n3) 的时间复杂度降到了O(n) ，核心原理就是一个树的深度优先搜索</li>
+<li>babel 这些就是一些编译原理的 parser 生成抽象语法树的知识，再将抽象语法树进行转换操作生成文件</li>
+<li>浏览器的 history，底层可以使用栈来实现</li>
+<li>webpack 中利用 tree-shaking 优化</li>
+<li>v8 中的调用栈、消息队列等等</li>
+</ul>
+<p>这些就大量使用了算法，看懂了就能更好的了解它们的性能，更高效的解决问题，提升我们的代码质量与思维视野，进阶到更高 Level，赚更多钱💰💰💰。</p>
+<p>所以说，学算法是每个前端进阶必备！⛽️⛽️⛽️</p>
+<p>所以，这里我整理了一份适用于前端的数据结构与算法系列，希望能帮助你从0到1构建完整的数据结构与算法体系（<strong>此处所有的题目均来自真实前端面试</strong>）。</p>
+<p><a href="https://camo.githubusercontent.com/a3d2708b5c9c19ef6625e18ff240afd3975f3e5a367437cb45ce89d02b88553b/687474703a2f2f7265736f757263652e6d757969792e636e2f696d6167652f32303230303631363030303630342e706e67"><img src="https://camo.githubusercontent.com/a3d2708b5c9c19ef6625e18ff240afd3975f3e5a367437cb45ce89d02b88553b/687474703a2f2f7265736f757263652e6d757969792e636e2f696d6167652f32303230303631363030303630342e706e67" alt="" /></a></p>
+<h2 id="数据结构与算法"><a class="header" href="#数据结构与算法">数据结构与算法</a></h2>
+<p>基础班——青岛大学王卓</p>
+<p>https://www.bilibili.com/video/BV1UQ4y1w7A2</p>
+<p>这门课比较简单</p>
+<h2 id="开发者路径"><a class="header" href="#开发者路径">开发者路径</a></h2>
+<p>https://github.com/kamranahmedse/developer-roadmap</p>
+<p>Interactive roadmaps, guides and other educational content to help developers grow in their careers.</p>
+<h2 id="leetcode刷题"><a class="header" href="#leetcode刷题">leetcode刷题</a></h2>
+<p>https://programmercarl.com/</p>
+<p>必读</p>
+<ul>
+<li><strong>介绍</strong>：本站是一套完整的刷题计划，<strong>旨在帮助大家少走弯路，循序渐进学算法</strong>。</li>
+<li><strong>正式出版</strong> ：<a href="https://programmercarl.com/other/publish.html">《代码随想录》 (opens new window)</a>。</li>
+<li><strong>PDF版本</strong> ： <a href="https://programmercarl.com/other/algo_pdf.html">代码随想录PDF下载 (opens new window)</a>。</li>
+<li><strong>算法公开课</strong> : <a href="https://programmercarl.com/other/gongkaike.html">《代码随想录》算法视频公开课(opens new window)</a></li>
+<li><strong>最强八股文：</strong>：<a href="https://www.programmercarl.com/other/kstar_baguwen.html">代码随想录知识星球精华PDF(opens new window)</a></li>
+<li><strong>代码随想录知识星球</strong> : 几千录友在这里学习，<a href="https://programmercarl.com/other/kstar.html">点击这里 (opens new window)</a>，了解详情</li>
+<li><strong>刷题顺序</strong> ： 左侧菜单栏（如果手机端查看则是在左上角）已经将刷题顺序排好了，按照顺序一道一道刷就可以。</li>
+<li><strong>编程语言</strong>：本站统一使用C++语言进行讲解，但已经有Java、Python、Go、JavaScript等等多语言版本，感谢<a href="https://github.com/youngyangyang04/leetcode-master/graphs/contributors">这里的每一位贡献者 (opens new window)</a>，如果你也想贡献代码点亮你的头像，<a href="https://mp.weixin.qq.com/s/tqCxrMEU-ajQumL1i8im9A">点击这里 (opens new window)</a>了解提交代码的方式。</li>
+<li><strong>转载须知</strong> ：以下所有文章皆为我（<a href="https://github.com/youngyangyang04">程序员Carl (opens new window)</a>）的原创。引用本项目文章请注明出处，发现恶意抄袭或搬运，会动用法律武器维护自己的权益。让我们一起维护一个良好的技术创作环境！</li>
+</ul>
+<h2 id="hellogithubgithub优质项目推荐"><a class="header" href="#hellogithubgithub优质项目推荐">hellogithub——github优质项目推荐</a></h2>
+<p>https://hellogithub.com/</p>
+<p>HelloGitHub 是一个发现和分享有趣、入门级开源项目的平台。 希望大家能够在这里找到编程的快乐、 轻松搞定问题的技术方案、 大呼过瘾的开源神器， 顺其自然地开启开源之旅。</p>
+<h2 id="github-中文排行榜"><a class="header" href="#github-中文排行榜">GitHub 中文排行榜</a></h2>
+<p>GitHub上最受欢迎的中文开源项目，按照星标排序</p>
+<p>https://www.github-zh.com/top-china</p>
+<p>29、<a href="https://github.com/MunGell/awesome-for-beginners">Awesome-For-Beginners</a></p>
+<p>Star 5.8w</p>
+<p>Fork 6.6k</p>
+<p>详情</p>
+<p>对初学者友好的开源项目集合。如果你想参与到开源项目的建设，可以在这个集合中寻找项目，祝你早日完成第一个贡献（PR）</p>
+<p>开源书籍</p>
+<p>35、<a href="https://github.com/woai3c/introduction-to-front-end-engineering">Introduction-To-Front-End-Engineering</a></p>
+<p>Star 1.8k</p>
+<p>Fork 202</p>
+<p>详情</p>
+<p>一本小书《带你入门前端工程》。该书是作者对过去两年前端工程化实践的经验和心得总结，<a href="https://woai3c.github.io/introduction-to-front-end-engineering/">在线阅读</a></p>
+<p>7、<a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">You-Dont-Need-JavaScript</a></p>
+<p>Star 1.9w</p>
+<p>Fork 1.3k</p>
+<p>详情</p>
+<p>看似需要 JavaScript 实现的效果，其实仅用到了 CSS 的示例集合。该项目学习意义大于实用价值，更多的时候是为了让你知道原来 CSS 还能这么用</p>
+<h1 id="附加项"><a class="header" href="#附加项">附加项</a></h1>
+<h2 id="颈椎病防治指南"><a class="header" href="#颈椎病防治指南">颈椎病防治指南</a></h2>
+<p>https://www.zhangningle.top/RehabilitationGuide/</p>
+<h2 id="视力恢复贝茨疗法"><a class="header" href="#视力恢复贝茨疗法">视力恢复——贝茨疗法</a></h2>
+<p>多看点视力保护的内容，比如不要疲劳用眼，坐姿要正确、适当时候要远眺等。其他的以前跟你分享过。</p>
+<h2 id="学英语1"><a class="header" href="#学英语1">学英语1</a></h2>
+<p>要成为出色的程序员，英语不能太差！</p>
+<p>专为程序员编写的英语学习指南 v1.2。在线版本请点 -&gt;</p>
+<p>https://github.com/yujiangshui/A-Programmers-Guide-to-English</p>
+<p>专为程序员编写的英语学习指南。</p>
+<p><a href="https://a-programmers-guide-to-english.harryyu.me/">点击这里打开在线版本</a> 排版更好看，也可以<a href="https://github.com/yujiangshui/A-Programmers-Guide-to-English">点击查看 GitHub 源码</a>。</p>
+<blockquote>
+<p>预警：本指南可能会花费你大量时间阅读，建议通过周六上午整块的时间一次性读完，并在下午制定自己的学习策略，然后在周日开始实践一下。</p>
+</blockquote>
+<p><strong>本指南的内容概要和目标人群</strong></p>
+<p>本人上一次正式英语考试大约是五年前大学四级考试，得分 442，大学每学期考试基本是 60 多分过线就好，纯属英语渣底子很差。但是由于一些特殊需求，雅思需要考到 6.5 分及以上，所以自 2018 年 6 月份开始一直在学习英语。在学习过程中，对语言学习从陌生到熟悉，从毫无头绪到了解一些实用的训练方法，从乱看经验经常换方法到总结出自己的学习方法。</p>
+<p>经过四个月断续学习和接近两个月的全职突击备考，在 12 月份考了 PTE 考试（类似雅思的英语水平测试）并拿到 63 分，对应雅思 6.5 中上，满足大部分学校留学要求以及出国技术移民的要求。备考过程十分艰苦，个人感觉远超高考。虽然离十分流畅的跟 Native Speaker 交流还有一段距离，但是相比四级 442 的水平有了几倍的提升。故此编写教程进行阶段性总结，一来方便自己制定下一步训练计划，二来希望可以对同等水平有需求的朋友有所帮助。</p>
+<p>本教程目标人群是<strong>想要花一些时间真正掌握英语的人</strong>，尤其适合英语渣。对于英语渣来说，网上杂七杂八的英语学习技巧和经验不一定会有很多帮助，甚至会误导。比如<a href="https://www.zhihu.com/question/22968875/answer/529514279">这篇回答</a>就说了，如果别人问答主如何学英语，她顶多给一句“多看美剧，培养语感”，好在这篇回答详细说了答主的水平和长期的努力细节，否则会误导一大片低水平英语渣去拼命的看美剧。所以<strong>在英语学习过程中，要注意查看符合自己水平的经验和教程</strong>，否则可能会走弯路。</p>
+<p>如果你在寻找《21 天掌握英语》、《10 天背会 1000 词》、《10 天搞定英语写作》之类的资料，这份指南并不适合你。尤其是语言学习，学习周期都是以月或者年来计的，<strong>你越早明白语言学习没有技巧，就会越少浪费时间和金钱在各种资料和经验上面，走越少的弯路</strong>。</p>
+<p>由于网上各种英语学习技巧的效果跟学习者的水平相关，所以<strong>本指南会深挖语言学习的本质（主要用中文举例）并用程序员易于理解的方式去思考，并提供自己根据本质推演出来的训练方法和经验做参考。重中之重是你要根据本质自己设计适合自己的训练方法，同时可以甄别网上看到学习方法和资料，判断是否适合自己使用。</strong></p>
+<p>需要补充的是，由于本人的水平有限而且也在持续学习，后续会经常完善、升级、更新本指南，<strong>强烈建议 Watch 并时而回来看看</strong>。因此如果转载本指南，请保留出处避免信息过时。如有异议或者建议，也十分欢迎在 Issue 中讨论。还需要注意的是，由于本文是文本形式，不好播放声音，所以用中文来描述一些单词的错误发音，在日常英语学习中应该使用音标而不能使用中文标注发音。</p>
+<h2 id="学英语2"><a class="header" href="#学英语2">学英语2</a></h2>
+<p>An advanced guide to learn English which might benefit you a lot 🎉 . 离谱的英语学习指南/英语学习教程。</p>
+<p><a href="https://byoungd.github.io/English-level-up-tips/" title="https://byoungd.github.io/English-level-up-tips/">byoungd.github.io/English-level-up-tips/</a></p>
+<h2 id="做饭"><a class="header" href="#做饭">做饭</a></h2>
+<p>https://github.com/Anduin2017/HowToCook</p>
+<p>程序员在家做饭方法指南。Programmer's guide about how to cook at home (Chinese only).</p>
+<p><a href="https://cook.aiurs.co/" title="https://cook.aiurs.co">cook.aiurs.co</a></p>
+<h2 id="牛x项目大全集"><a class="header" href="#牛x项目大全集">牛X项目大全集</a></h2>
+<p>https://github.com/sindresorhus/awesome</p>
+<p>Awesome lists about all kinds of interesting topics</p>
+<h2 id="电子书下载"><a class="header" href="#电子书下载">电子书下载</a></h2>
+<p><a href="https://zh.zlibrary-east.se/"><img src="https://zh.zlibrary-east.se/img/logo.zlibrary.png" alt="ZLibary Z-Library" title="Z-Library" /></a></p>
+<p>您通往知识和文化的门户。 每个人都可以使用。</p>
+<p>https://zh.zlibrary-east.se/</p>
+<h2 id="适合个人开发的小项目合集"><a class="header" href="#适合个人开发的小项目合集">适合个人开发的小项目合集</a></h2>
+<p>Curated list of project-based tutorials</p>
+<p>https://github.com/practical-tutorials/project-based-learning</p>
+<p>Master programming by recreating your favorite technologies from scratch.</p>
+<p><a href="https://codecrafters.io/" title="https://codecrafters.io">codecrafters.io</a></p>
+<p>https://github.com/codecrafters-io/build-your-own-x</p>
+<h1 id="闲暇"><a class="header" href="#闲暇">闲暇</a></h1>
+<p>生活要有目标。</p>
+<h2 id="体育锻炼"><a class="header" href="#体育锻炼">体育锻炼</a></h2>
+<p>下载keep软件，买个垫子，在出租屋里也能进行体育锻炼。</p>
+<h2 id="书单"><a class="header" href="#书单">书单</a></h2>
+<p>如果现实中不怎么和人交流，那就要和存在一定时空距离的人交流，不然容易得精神病比如抑郁症之类的。</p>
+<p>这些书基本上都能在Z-Library下载到。</p>
+<p>阅读软件可以用calibre也可以用Koodo Reader。</p>
+<div class="table-wrapper"><table><thead><tr><th>书名</th><th>作者</th></tr></thead><tbody>
+<tr><td>经济学的思维方式</td><td>托马斯·索维尔</td></tr>
+<tr><td>国史大纲</td><td>钱穆</td></tr>
+<tr><td>非暴力沟通</td><td>马歇尔</td></tr>
+<tr><td>富兰克林自传</td><td>富兰克林</td></tr>
+<tr><td>自私的基因</td><td>道金斯</td></tr>
+<tr><td>进化心理学</td><td>大卫</td></tr>
+<tr><td>思考快与慢</td><td>卡尼曼</td></tr>
+<tr><td>网络是怎样连接的</td><td>户根勤</td></tr>
+<tr><td>小狗钱钱</td><td>博多·舍费尔</td></tr>
+<tr><td>黑天鹅</td><td>塔勒布</td></tr>
+<tr><td>浪潮之巅</td><td>吴军</td></tr>
+<tr><td>动物农场</td><td>奥威尔</td></tr>
+<tr><td>史记</td><td>司马迁</td></tr>
+<tr><td>三国演义</td><td>罗贯中</td></tr>
+<tr><td>自控力</td><td>麦格尼格尔</td></tr>
+<tr><td>学习如何学习</td><td>芭芭拉·奥克利</td></tr>
+</tbody></table>
+</div>
+<h2 id="剧单"><a class="header" href="#剧单">剧单</a></h2>
+<p>《是大臣》</p>
+<p>《是首相》</p>
+<p>《银河英雄传说》</p>
+<p>《白色巨塔》</p>
+<p>《非自然死亡》</p>
+<p>《半泽直树》</p>
+<p>《兄弟连》</p>
+<h2 id="非必要课程清单"><a class="header" href="#非必要课程清单">非必要课程清单</a></h2>
+<p>微观经济学、宏观经济学   武汉大学 文建东</p>
+<p>不懂经济学，将来很难守住自己挣的钱</p>
+<p>Machine Learning  Stanford Andrew Ng</p>
+<p>这是网上最简单的机器学习入门课，看看也有所裨益。</p>
+<p>至于提示词工程或是GPT4的高阶用法，网上都能找到，这里全看兴趣了。</p>
+<p>心理学：我知无不言，它妙不可言   华中师范大学  田媛</p>
+<p>了解人类心理，也能更好的了解自己，避免换上精神疾病</p>
+<p>史记、秦始皇 台湾大学 吕世浩</p>
+<p>了解中国历史的一门特别棒的课程，能让我激情澎湃去成为一个更好的人！</p>
+<p>财务分析与决策  清华大学 肖星</p>
+<p>了解财务相关内容的一门特别出色的课，貌似只能在学堂在线上学</p>
+<p>至于高等数学、线性代数、概率论与数理统计、离散数学等有能力就学点，没能力都可以避开。</p>
+<p>不过有时掌握更多的知识也挺有趣的！</p>
+<h2 id="战乱来临自救手册"><a class="header" href="#战乱来临自救手册">战乱来临自救手册</a></h2>
+<h3 id="大崩溃时期的波斯尼亚生存记录"><a class="header" href="#大崩溃时期的波斯尼亚生存记录">大崩溃时期的波斯尼亚生存记录</a></h3>
+<p>又有人聊起这份东西，再转一个到豆瓣吧。<br />
+地狱里的一年：生存在大崩溃时期的波斯尼亚<br />
+By Selco<br />
+我来自波斯尼亚。众所周知，1992年至1995年期间，那儿就是地狱。有整整一年，我在一座有五六千居民的城市里艰难地活着，没有自来水、电和燃气，没有医疗、民防、食品供给，也没有任何形式的法律或政府。那座城市被军队包围了整整一年，围城期间，情况真是糟糕到了极点。城里没有成组织的军队或警察，只有若干自组织的武装人员，各自保卫其家园和家庭。<br />
+一切开始的时候，我们中有些准备还算相对充分，但大多数邻居们家只有够几天吃的食物。有些有手枪，少部分人还有AK-47步枪或霰弹枪。<br />
+过了一两个月，匪徒们开始结伙，横行肆虐。把医院变成了屠宰场。警力彻底消失，八成医院员工逃走。<br />
+我还算走运，我的家在当时算是大的（有15名成员，住在一栋大房子里，有5、6把手枪，3把AK），所以活了下来——至少大多数活了下来。<br />
+每十天，美军会空投一些即食口粮，算是援助被围困的居民，不过那些根本不够。极少数人家里有块小园地，可以种些蔬菜。<br />
+三个月后，关于第一批死于饥饿或寒冷的人的消息四下传开。我们把废弃房屋里所有的门窗都拆了下来，连同地板和家具当作木柴。许多人死于疾病，其中大多数因为恶劣的水质（我家有两人即死于此）。我们喝收集起来的雨水，吃过鸽子甚至是老鼠。<br />
+钱很快变得毫无价值，人们开始以物易物。一个牛肉罐头可以换取占有一个女人个把钟头（令人难以启齿，但这就是现实）。多数卖身的女人是绝望的母亲们。<br />
+武器、弹药、蜡烛、打火机、抗生素、汽油、电池以及食物，我们为了这些东西而战斗，像动物一样。在那种情况下，很多事都变了，很多人变成了怪物，非常的恶心。<br />
+实力由人数决定。独居者即使有武器也几乎毫无悬念地难逃被劫掠并杀死的命运。<br />
+无论如何，当战争结束时，我们松了一口气。在战争中哪方是正义的根本不重要。<br />
+二十年过去了，但一切就像昨天一样历历在目。我学到了不少东西，人生观也变了。我懂得了坏事随时会发生，也不再相信任何政府和权威——因为每次发生前，他们都在声嘶力竭或故作平静地向你保证一切正常，不必担心。如今，我和家人们都时刻处于准备充足、装备精良的状态。我们经历过啊。<br />
+下一次是什么？地震、海啸、内战、外族入侵、恐怖袭击、经济崩溃…… 具体是什么不重要，重要的是总会有下一次的。<br />
+我的经验是：决不能单打独斗；一家人要齐心协力，也要和可靠的朋友并肩作战。</p>
+<ol>
+<li>如何安全的行动？<br />
+城市按街道划分成不同社区。我们所在的街道有15到20户，自发组织了武装巡逻队，每队五人，按周轮值，以提防匪帮和我们的敌人们。<br />
+所有交易都在街面上进行。在五公里外的一整条街上形成了很有组织的市场，但只在夜里进行交易。白天去那儿很危险，沿途的街巷到处都是放冷枪的，你还没等到那儿就会被抢。我只去过两次，都是为了稀缺物品（药品、抗生素）迫不得已才去的。<br />
+汽车在城里基本没用，因为路上到处是残砖瓦砾、报废的车辆、毁坏的房屋等，汽油也非常贵。无论去哪儿，都最好夜里去。既不能一个人去，也不能人太多。两、三个人为宜：全副武装，动作迅速，走在阴影里。别在街面上走，尽量从废墟中穿行，注意隐蔽。<br />
+匪帮规模从10至15人到50人不等，但你、我这样身为人父、甚至祖父的普通人也都抢劫过、杀过人。没什么“好人”和“坏人”，大多数人处于中间，也随时准备落到最坏的极端。</li>
+<li>城里没有树吗？为什么你们要烧门窗家具？<br />
+没错，城里有过不少树：学校、公园里，甚至机场周围。但相比之下还是建筑和房屋更多。而且一旦连用来做饭、取暖的电力、燃气都没有了，那些树在头两个月里就被砍光了。然后我们找到什么就烧什么：家具、木制的门窗、地板，那些也烧得飞快。</li>
+<li>有哪些技能在那种时期最用得上？<br />
+请想象石器时代。我们基本上生活在“那种时期”。物尽其用，无所不用其极。<br />
+打个比方，我当时有一罐液化气，但我从没直接点过，那太贵了。我在上面连了一根自制的喷嘴，给用光的一次性打火机充气。这些打火机很抢手，我用它们换了不少东西。有人带着空打火机来，我给他灌满，作为交换，他给我一罐食物或是一枝蜡烛。<br />
+我是个注册护理员，在那种环境里，医护知识成了我的财富。技多不压身，如果你会修东西，你能过得相当不错。你储备的东西总有吃完用完的时候，但你的一技之长能给你挣来吃的。<br />
+我的忠告：学学修东西吧，那可是能让物品——比如鞋子——甚至是人发挥正常功能的本事。<br />
+再举个例子：我的邻居会制灯油，他从没饿过。</li>
+<li>如果只有三个月，该准备什么？<br />
+三个月？那还是准备逃亡吧。开个玩笑:-D<br />
+好吧，现在我知道，事态会在短时间内迅速恶化，所以我储备了够半年用的食物、卫生用品、电池。目前我住的公寓安全措施还可以，但五公里外的村庄里我还有栋房子作为庇护所，那儿也有半年的储备。那是个小村子，村里有我很多亲戚，大都贮备充分，战争教育了他们。我有四把枪，每把各配有2000发弹药。那栋房子有一个挺大的花园，我掌握了必要的园艺和农艺知识。<br />
+对于危险的直觉很重要。当所有人都跟你说“没事，一切都会好的”，你却基本可以认定：一切就要完蛋了。<br />
+到那时，你必须做好“作恶”的准备，为了保护你的孩子和家庭。<br />
+重申一点：单靠你自己一个人不可能活下来，就算你有枪，有准备。你要是落单，就死定了。我看过好多次了。准备充分的家庭和组队，各方面的知识技能，有了这些，活下来的机会更大。如果你家人不多，那就几家人（最好是亲戚）一起，找个大房子住下。</li>
+<li>该储备那些东西？<br />
+看情况。要是你打算以偷抢为生，那你光准备武器和弹药就行——很多弹药。<br />
+否则的话，多储备些吃的、卫生用品、电池（干电池、蓄电池都要），用来换东西的物件（刀、打火机、打火石、肥皂）。还有便于保存的酒精，比如廉价威士忌就很受欢迎。我猜很多人想用它麻醉自己，不过我们经常用它来消毒。<br />
+很多人死于恶劣的卫生条件。别小看那些不起眼的东西，有的真是多多益善。比如垃圾袋、胶布（电工胶布，用途十分广泛）、厕纸、卫生巾，还有一次性碗、碟、茶杯，不嫌少！我这么说，是因为我们当时完全没有。就我个人而言，卫生用品甚至比食物更重要。你能打下鸽子，能找到可食用的植物，但消毒水可不是天上飞的地上长的。要储备净水药片、消毒水、洗涤剂、漂白粉、肥皂、手套和面罩。还应该储备很多抗生素，并学会使用。要掌握急救知识，学会处理小型伤口、烧伤和枪伤，因为已经没有医院了，而就算你能找到医生，他也未必有药，就算有，你也未必付得起他开的价。<br />
+至于武器，越简单越好。我有一把Glock .45，很好用，但因为型号特殊，弹药不好找，所以我还有两把俄制的7.62毫米TT手枪。我不喜欢AK，不过到了后来几乎人手一把，我也不能例外。<br />
+某些不起眼的小东西也是必需品。一台发电机固然好，但比不上一千个一次性打火机。因为发电机体积大，引人注目，容易惹麻烦，而打火机简单便携，便于交易。<br />
+我们用白铁皮水桶收集雨水，然后储存在大号油桶里，但要记得煮沸消毒。城里有条小河，河水污染很严重，但如果你别无选择……</li>
+<li>金银还有用吗？<br />
+有。我把家里的金子全都换了弹药。<br />
+有时我们也用美元或是德国马克买一些东西，但很少，而且价钱都近乎天文数字：一听炬豆罐头要30到40美元。本国货币很快就变得毫无价值，必需品全靠物物交换获得。</li>
+<li>盐贵吗？<br />
+贵，但比起咖啡和香烟还是差远了。多囤点儿烟、蜡烛、打火机和干电池，又省地方又受欢迎。酒也不错，我囤了不少，几乎可以当货币用。酒的消耗量几乎是和平时期的十倍。</li>
+<li>买枪难吗？<br />
+有很多私藏枪支，就看你拿什么换了。但要记住，局势一开始崩溃时的那几天最为混乱，人们的恐慌也最严重。在那种情况下，你可能连搞抢的工夫都没有，而在一片混乱恐慌中手无寸铁可不是什么好事。<br />
+我个人的例子：有个人想给他的收音机配一块蓄电池，我用蓄电池换了他的霰弹枪。有时我也用弹药换食品，过了几个星期再用食品换弹药，但从不在家交易，也不大量交易，所以没有人知道我有什么，有多少。只要有钱，有空间，就尽可能的储备物资，最终你会明白什么更有用。总的说来，武器和弹药的重要性可以排第一，第二大概是防毒面具和滤毒罐。</li>
+<li>关于安全措施<br />
+我们的防御措施很原始，因为当时准备不甚充分，只能就地取材。屋顶在空袭中炸坏了，窗户也炸碎了，我们就用沙袋、石头或者能找到的随便什么东西把窗户堵住。房屋周围有围墙，墙上的出入口都用建筑废料和垃圾堵上了，然后用一架梯子爬进爬出。我们街上还有一位老兄，他把自己的房子的所有出入口封死，然后在和邻居隔壁的墙上开了个洞，每次出门都是夜里从邻居家的废墟里走，一般人很难发现。<br />
+说来奇怪，但安全措施最好的房子一般最早被攻陷。我们那儿有些房子有围墙、狗、报警器，窗户还用铁条封住。你猜怎么着？暴民们就爱挑这种房子最先抢。抢下抢不下全看房子里有几把枪，有多少人手。<br />
+所以，我认为，有安全措施固然好，但一定记住要保持低调，报警器就算了吧。你的房子最好从外表看上去简陋，不起眼，让人提不起兴趣，内部有大量的枪支弹药，多少都不够。<br />
+目前我住的公寓也安装了防盗门，但只是为了抵挡第一波混乱。过后，我就打算逃离城市，加入我的家人和朋友们（至少我希望如此）。不过我也没有完全的把握，一旦城市被军队包围……<br />
+我经历的那次中，根本没有发生外逃，因为一切突如其来，一夜之间，城市就被军队包围了。如果你问我，军队是从哪儿来的，为什么我们之前从没见过他们，答案很简单：那支军队原本是我方的友军，一天早晨我们醒来，发现他们忽然成了敌人，而且正在封锁所有出城的的路。我后来听朋友说国内别的地方，尤其是他们所在的乡村情况要好的多：有土地，生长着玉米、小麦、果树，还有农场等等，所以他们食物充足，虽然也有糟糕的地方，但比城里已经强太多了。<br />
+我确信，但凡当时我们有机会逃出城，我们一定会出去。但我们没有机会。<br />
+扯远了。接着说安全措施吧。我们轮流观察街上的局势，以防匪帮攻击时毫无准备。确保屋里有五名家庭成员随时准备战斗，街上还有一名隐蔽在掩体里的人，必要时提供火力支援。白天我们尽量呆在家里，以免被人放冷枪。其他人家也采取了这种策略，结果各自的防线拉得很近，导致白天街上基本没有人。许多人死于外出打探消息。我们完全没有消息来源：广播、电视，都没了，只有各种谣传。<br />
+一开始，弱者纷纷倒下，剩下的人，战斗。大多数时间，你没法分辨一个人是敌还是友，除了我的家人和朋友，每个人都是潜在的敌人。话说回来，如果你朋友遇到你和他孩子必须死一个的情况，你说他会选谁？<br />
+在城里不要穿戴什么贵重的东西，一旦被人看见，他们就会杀了你，把东西抢走。也别带太长的枪支，太显眼。<br />
+如果明天局势失控，我也会打扮的破破烂烂的，做出惶惶不可终日状，显得绝望、恐惧，甚至也许哭号两嗓子。我可不会穿上崭新的战术服，一面喊道：“我来了！恶棍们，你们完蛋了！”相反，我会躲到一边，武装好，准备好，一边等待时机一边评估我的能力，和我的朋友们、兄弟们一起。</li>
+<li>医疗卫生<br />
+大多数伤当然是枪伤，如果受伤者能从哪儿找到个大夫，他大概有30%的机会能活下来。不过毕竟不是电影，他们还是死了。有的人甚至死于一点儿小割伤的伤口感染。我有三四种抗生素，不过只是给家里人用的。<br />
+有些死法听上去简直令人难以置信：一般人，特别是儿童，连着拉上几天肚子，没有药，也无法补充失去的水分，离死不远矣。对大多皮肤病和食物中毒人们也无计可施。基本上，我们只能找些当地的草药。如果你受了伤，用酒冲洗一下伤口，然后找点儿抗生素吧。紧急处理伤口我还算在行，但对于长期治疗和预后——无能为力。<br />
+学些医药知识吧，特别是关于抗生素的。上网查，参加培训，紧急护理技术（EMT）、急救之类的。至少得知道如何进行静脉注射，以便使用某些药品和抗生素。你需要贮备：破伤风注射剂、蛇毒处理器械、肾上腺素注射器械（对付各种过敏反应）、去蜱虫器械（蜱虫叮咬引起的疾病能致死）……最好再准备一些复苏器械，比如氧气瓶、简易人工呼吸器……用法都不难学。<br />
+在和平时期，你没有相关执照的话，是不太可能对真人使用这些东西的。不过在非常时期，没有人会要你先出示相关执照的。学会使用方法，然后囤它一大堆医疗器械吧。<br />
+粪便要掩埋。最好有厕纸。我们当时没有，即使有，我大概也用来换别的东西了。<br />
+再强调一下，最必需的东西是枪和弹药。别的东西都可以换，但没有枪，你连换东西的资格都没有。</li>
+</ol>
+<h3 id="战争来临的准备工作平民生存手册"><a class="header" href="#战争来临的准备工作平民生存手册">战争来临的准备工作（平民生存手册）</a></h3>
+<p>必要储备与使用方法 （转） 　　水 　　没有食物，一个人可以生存1-2个月；但是没有水，生命最多只能支撑10天。一个成人在正常情况下日消耗2-3升水，限量供应下一天至少需要500毫升水。（大瓶可乐为1.25升，冰红茶为500毫升，缺乏量具时可代替使用。） 　　水不用在战前储备，可以在战争爆发，确定所处环境即将缺水时储存。届时把家中所有可以存水的大型器皿全部盛满水（黑色、很结实的塑料袋也可以存水，注意把袋口封好，避光储存），并采取定量供应，有机会就外出采水。 　　净水设备 　　当今城镇附近的水源基本上都是被污染的，在特殊时期更为如此，因此净水设备在战时为必须，具体物资为： 　　明矾、漂白粉、纱布口袋、沙、木炭、大小不一的鹅卵石、过滤桶（用烧红的金属条在塑料水桶底部钻孔可代替过滤桶，小心别烫到手）。 　　户外采集的水需要沉淀、过滤、消毒、煮沸才能饮用，以上列出的物资可以满足净水的全部过程，价格便宜，并且在各地都能买到。 　　取水后，先投入明矾粉末搅拌（比例为每升水0.5克或每立方水500克），然后静置沉淀一夜（如果等水用，也可在两小时内目测沉淀过程是否完成）。 　　第二个步骤是过滤。先把沙装进纱布口袋内，放在过滤桶底部，全部盖住出水口，上置大小不一的木炭颗粒，再依小至大安放鹅卵石，倒入沉淀过的水（沙、木炭、鹅卵石都应覆盖5-10厘米）。 　　在完成过滤的水中按每立方水10克的比例加入漂白粉消毒，搅拌溶解后安置10分钟。此时的水相当于自来水，如饮用就应当煮沸。生活用水可以循环使用，不要轻易倒掉。 　　食物 　　所有食物都应在阴凉、干燥、通风处保存，贴上标签、写明储存日期和保质期，先存的先用，并在战时实行定量配给，以吃到半饱为准（不会饿死的）。因为楼主无法预测战争会持续多长时间，所以请各位自行决定储备的种类和数量。 　　盐： 　　盐份为人体所必需，按年纪、身体状况、气温、和劳动强度不同，一个人平均每天消耗10-15克盐，储备时应选择加碘盐。注意，不能干吞盐粒，那会损伤肾脏，应用开水溶解后饮用或做进菜里（如果那时候你还能弄到新鲜食物）。 　　白糖、醋、烧烤用的各种调料粉： 　　白糖为身体提供热量，水一冲就能喝，也是不错的调味品；醋可以为储备的干肉之类食物增加味道（吃起来别有风味），也可以用来消毒和预防疾病；烧烤用的调味料中含盐份和各种香料，可以撒在食物上或者做汤，储备它的目的也就是让战时饭菜的口味看起来并不那么糟糕。 　　芥末： 　　芥末有很好的消毒杀菌止泻作用，买牙膏状的芥末需冷藏，推荐芥末粉。 　　植物油： 　　植物油为身体提供脂肪酸和维生素E等身体必须品，做菜时也必不可少。一个成人平均每月消耗500克植物油，储存时买大瓶装的，避光保存。 　　大米、面粉： 　　大米和面粉分别为南北方的主食，其淀粉含量基本相同，在缺乏其他食物的情况下，每人每天至少需要500克左右。一般保存时间为两年，如果购买时的包装并不密闭，那么就应该把它装进密闭包装或倒进容器中密闭保存（盖上适合的盖子，边缘塞上布，然后用宽度5-10厘米的胶带纸封口）。 　　番薯干、炒米粉： 　　番薯在新鲜时提供的淀粉和大米面粉差不多，晒干后营养更为浓缩，可以代替主食干嚼食用，如果有亲戚在农村，那一定可以弄到。这东西几乎可以无限期保存，但为保险起见，还是买些结实点的密闭塑料袋封存起来。因为是干缩食品，所以每天的用量可适当减少。炒米粉也是速食食品，营养差一点，在紧急情况下可干吃，也可以冲水食用，只是比较容易受潮，注意密闭保存。 　　鸡蛋： 　　鸡蛋价格便宜、营养丰富、易于保存（抹上油，然后置于阴凉干燥处）、做菜方法多且简单，必要时可以生吃，应多储备。 　　葡萄干、去壳的盐腌花生、笋干、霉干菜、紫菜干： 　　这些东西一般城市中的超市都有售，购买时应该选择大袋、封闭包装。其中葡萄干和花生营养丰富，可以当菜，也可以哄小孩。笋干、霉干菜和紫菜干都是用来做汤的，味道不错，且价格便宜，可长时间保存。 　　干肉、鱼干、虾干或虾皮： 　　干肉类首推咸牛肉和牛肉干，它们营养丰富、口味一流、可保存很长时间；鱼干类首推海鱼干，它们种类繁多、价格便宜、容易保存；虾干或虾皮中含有丰富的营养及矿物质，可在做汤时加入。 　　罐头食品： 　　种类繁多，口味不错，保存时间非常长，但是价格昂贵。如有多余的钱，那可以储备一些。 　　维生素片： 　　因为在战时很难弄到新鲜食物，还是把维生素片列为食物一类，而人体在紧张状态下维生素消耗得非常快，因此要把它当作食物那样储存它。楼主推荐的是21金维他，每瓶可以供一个成人一月的消耗量。 　　药品 　　在使用任何药物之前都应看清保质期，并仔细阅读说明书或遵医嘱，切记。 　　高锰酸钾： 　　在水中加入高锰酸钾充分搅拌，呈红色时可以消毒，呈深红色时可以灭菌。注意，加过高锰酸钾的水不能饮用，只能用作消毒剂。 　　浓度2%的碘酒： 　　碘酒用来消毒、治疗皮肤病，在紧急状态下可以净水（饮用水），具体方法为每500毫升水加入5滴，充分摇晃10-20分钟。 　　抗生素： 　　青霉素、四环素、头孢菌素： 　　抗生素绝不能乱用，其副作用和危害与它们的疗效一样显著，以上所列为常用抗生素的几个大类，在使用前必须遵医嘱或仔细阅读说明书。 　　抗疟疾药、抗痢疾药： 　　在战时我们的生存环境将比现在糟糕百倍，一些非常少见的传染病可能会大肆传播，因此这些药品必须储备。抗疟疾药可以用来预防和治疗，抗痢疾药有预防和治疗两类，它们的种类非常多，药店一般都有售。再说一遍，使用前必须遵医嘱或仔细阅读说明书，在无法准确判断疾病种类时不要乱用药，那只会使情况更糟糕。 　　胃药、止痛药： 　　我们在和平时期吃惯了新鲜可口的饭菜，到了战时身体可能无法立即适应品种单一、存储多时的食物，储备些胃药，可以给身体更多的适应时间。还有，除非到绝对必要的时候，否则不要使用止痛药，它会使医生无法准确判断病情，对身体也有一定的损害，慎用。 　　防治皮肤病类药： 　　在缺水、脏乱环境下患皮肤病的可能性较大，楼主准备的是皮炎平和达克宁，都不错，买两支储存起来。 　　止血药、纱布、消毒棉、绷带： 　　止血药推荐云南白药，其他辅料都可在药店以很便宜的价格买到。要说明的是药品可以买到，但各种护理知识却是买不到的，限于篇幅，本文不做介绍，请自行在互联网上搜索、并学习相关知识，或者有能力的兄弟站出来，再写一篇关于战时护理的文章，谢谢。 　　燃料 　　燃烧会消耗大量氧气，并释放二氧化碳和一氧化碳，所以使用任何燃料都应在窗口或其它通风处。 　　煤、木炭、金属罐装的固体酒精： 　　煤气和天然气是常用燃料，但无法大量储备，也不安全，而煤弄湿了晒干还能燃烧，且价格便宜；木炭无污染，可直接烧烤食物，还要用作过滤，应多备些；固体酒精是在紧急状态下的燃料，非到万不得已不要使用它（在野外可以捡树枝作燃料，用火要小心，临走时熄灭火堆，最好再带走木炭）。 　　其他装备 　　本文是为普通平民准备的，所考虑的就是如何以最少的资金换取最大的安全与生存机会，以下列举的物资一般家里都有，如果购买，价格也比较便宜，并可应付大部分突发事件。 　　口罩、和密闭程度非常高的游泳眼镜： 　　这些装备可以帮助你在大火中分辨道路，免于浓烟和粉尘的袭击，也可以在短时间内作为紧急防毒面具使用。具体制作方法是两三个口罩叠套，当中放上木炭颗粒、沙土、甚至大量剥开的香烟过滤嘴，用水浸湿，缝上边缘；游泳眼镜周围垫上少许浸过水的脱脂棉。需要说明的是这样简陋的装备防护性是非常差的，楼主没有做过相应实验，现场人员必须尽快抵达安全地带。 PS：鉴于2020新冠状病毒事件：大家每年可储备100-200只口罩。成本也就几十元到100多元（在疫情过后，产量充足时储备，每年小投资，比买保险可靠很多）</p>
+<p>使用5号电池的AM、FM收音机： 　　要小一点、带耳机的。当电视电话互联网全部中断之时，可能只有收音机才能为你提供消息。需要小心的是在战时会有无数敌台冒充我国zf发送假消息，届时注意分辨。 (SONY大法的700元左右）</p>
+<p>PS：此处可一并购买手摇式发电机（1000元左右的可靠性适用性更高）与5号电池充电套装（电池容量尽量买最大款，减少充电次数）。保障设备供电也是特殊时期生命保障的重要措施。 　　口哨： 　　挂在胸前。被埋在废墟下或者其他需要援救时可以用很少的力气引起他人的注意，也可以作为简单的通讯工具。 　　针线、鱼钩： 　　针线的用处非常大，从缝合伤口到补衣服帐篷都要用到它们，储备时应选择不同大小的针，线应包括棉纱线和尼龙制的鱼线（非常柔韧，还可用于捕鱼）。 　　使用5号电池的小手电筒： 　　小手电筒轻便、可随身携带，用作照明与发送信号，电池可与收音机互换，这样只需储备一种电池（不要忘了储备电池）。 　　肥皂、牙膏牙刷、毛巾： 　　肥皂用于日常清洁，也可以洗去化学制剂和沾染核辐射的尘土。注意，为保护环境，即使在战时也应远离水源使用。 　　可随身携带的铲子： 　　在化学战或核战附近可以立即挖坑，并把挖出来的土盖在身上。在野外可用它上厕所——挖个坑，方便后用土盖上。 　　被单、夹子、绳子： 　　被单应挑选全棉的，夹子和绳子的强度要高一点，并至少学会3种打绳结的方法，用它们可以制作吊床、遮阳篷或雨篷，被单撕碎可以当绷带。综合用途很多。 　　火柴、打火机、放大镜、蜡烛： 　　以上物品都是用来引火的，用火柴或打火机点着蜡烛，然后再用蜡烛点火，蜡烛应该多备些，还要用作照明，注意节约使用。 防风打火机比普通的可靠性更高一些。 　　一大瓶50度以上的烈性白酒： 　　在缺水状态下可以为伤口和器皿消毒，必要时也可以当燃料和引火物使用。 　　防水帐篷、毛毯、睡袋： 　　房屋被毁或撤退时使用。毛毯应该每户人家都有，防水帐篷在超市里卖300元左右，普通人家应该负担得起，战前就应练习搭建帐篷。在天气寒冷、无法携带被子的情况下（体积重量都太大），睡袋是个很好的选择，但是价格和帐篷一样昂贵，如果资金不足，那还是拿出备用的衣服，和衣而睡吧。 　　雨衣： 　　雨衣比雨伞好，使用时双手都可以干活，也可以用作挡雨布或接雨水。 　　救生圈： 　　多买几个，在桥梁被za断或紧急渡河用，不仅是人可以用，在手推车上捆几个，并配合牵引绳的帮助也可以让它安然渡河。 　　手套、鞋： 　　应准备三种手套：防寒手套（气温寒冷时使用）、线织手套（干粗活时使用）、橡胶手套（面对污染物品或其他紧急状况下使用）。三双鞋：球鞋（用于长途跋涉）、拖鞋（在夏季或过浅滩时使用）、大一号的雨鞋（天气寒冷且下雨时使用，垫上厚鞋垫，多穿几双袜子或塞入保暖物）。 　　指南针、地图： 　　撤退时的必须品，但要事先学会使用。 　　袖珍工具箱： 　　在战时你可能需要自行维修各种物品或房屋，工具箱是必不可少的。 　　刀、小型多用途组合刀具： 　　需要一柄长度在20厘米左右、带刀鞘的不锈钢刀，用途很多，在战时应随身携带，最好是做个坚固的挂带，当右手自然下垂时正好可以握住刀柄（如果你习惯使用右手），方便随时拔刀。可随身携带小型多用途组合刀具是必不可少的，德国双立人和瑞士军刀是极品，可惜价格太高了，挑选质量好些的国产刀具，性价比也不错的。 　　笔记本、笔： 　　要小一点，可随身携带的。写下拥有的所有物资，每天记录使用情况和剩余。 　　便携式烧烤炉、小号铁锅、铝制饭盒、汤勺： 　　身处野外时有这些装备可以省不少事情，价格也不贵。 　　质地坚固的塑料袋： 　　用途广泛（比如充气后不慎落水时可当救生圈、还可以用作储水），应多储备。 　　带包装的消毒纸巾： 　　用途很多（保洁、引火、止血、保暖），注意节约使用。 　　登山包、超市用的手推车、防水帆布： 　　这是撤退时的必备品。登山包应挑选重量轻、强度高的，即使价格贵一些也是值得的。超市里的手推车价格便宜、载重量大（有效负载在150公斤以上）、结构简单，且轮子是实芯的，就算被钉子什么的戳破了也可以照常使用，撤退时用硬纸板做内衬，挡住底部和边缘，装入物品后用帆布覆盖，并用绳子捆扎严实。 　　以上列举的所有物资（包括供应三口之家一年的粮食燃料药品在内），大约共花费5000元左右，一般家庭应该都能负担，但是那些挣扎在生存线上的同胞，希望战时的zf可以凭票分配食物和其他生活必须品，尽可能让更多人可以在这场战争中生存下去。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="面向对象理论"><a class="header" href="#面向对象理论">面向对象理论</a></h1>
 <pre><code>* [区分类和对象](#区分类和对象)
 </code></pre>
@@ -3260,7 +3257,7 @@ static void writeToBinaryFile(double[][] data, String fname) {
 	
     
     void showPrompt(){
-	      System.out.println(&quot;Welcome&quot;);	
+	      System.out.println("Welcome");	
 	}
 	
 	void insertMoney(int amount){
@@ -3272,7 +3269,7 @@ static void writeToBinaryFile(double[][] data, String fname) {
 	}
 	void getFood(){
 		if(balance&gt;=price){
-			 System.out.println(&quot;Here you are.&quot;);	
+			 System.out.println("Here you are.");	
 			balance = balance-price;
 			total=total+price;
 		}
@@ -3319,7 +3316,7 @@ Here you are.
 
 public class Student {
     public static void say() {
-        System.out.println(&quot;学生说话了!!&quot;);
+        System.out.println("学生说话了!!");
     }
 }
 </code></pre>
@@ -3340,7 +3337,7 @@ public class Demo2 {
 
 public class Student {
     public void say() {
-        System.out.println(&quot;学生说话了!!&quot;);
+        System.out.println("学生说话了!!");
     }
 }
 </code></pre>
@@ -3389,7 +3386,7 @@ public class Student {
 
     //方法
     public void study() {
-        System.out.println(this.name+&quot;在学习!!&quot;);
+        System.out.println(this.name+"在学习!!");
     }
 }
 </code></pre>
@@ -3402,7 +3399,7 @@ public class Application {
         //student对象是Student类的一个具体实例
         Student student = new Student();
         System.out.println(student.name);
-        student.name = &quot;小豹子&quot;;//需要用&quot;&quot;
+        student.name = "小豹子";//需要用""
         System.out.println(student.name);
     }
 }
@@ -3430,7 +3427,7 @@ public class Person {
     //1.使用new关键字，本质上是调用构造器
     //2.用来初始化值
     public Person(){
-        this.name = &quot;RM&quot;;
+        this.name = "RM";
 
     }
 }
@@ -3472,7 +3469,7 @@ public class Person {
 public class Application {
     public static void main(String[] args) {
         //new 实例化了一个对象
-        Person person = new Person(&quot;kuangshen&quot;);
+        Person person = new Person("kuangshen");
         System.out.println(person.name);
     }
 }
@@ -3551,7 +3548,7 @@ public class Application {
     public static void main(String[] args) {
 
         Student student = new Student();
-        student.setName(&quot;RM&quot;);
+        student.setName("RM");
         System.out.println(student.getName());
     }
 }
@@ -3605,7 +3602,7 @@ public class Application {
     public static void main(String[] args) {
 
         Student student = new Student();
-        student.setName(&quot;RM&quot;);
+        student.setName("RM");
         System.out.println(student.getName());
         student.setAge(999);
         System.out.println(student.getAge());
@@ -3624,7 +3621,7 @@ public class Application {
 
 public class Person {
     public void say(){
-        System.out.println(&quot;川普说话了！&quot;);
+        System.out.println("川普说话了！");
     }
 }
 
@@ -3671,13 +3668,13 @@ public class Application {
 <pre><code class="language-java">package oop;
 
 public class Person {
-    protected String name = &quot;kuangshen&quot;;
+    protected String name = "kuangshen";
 }
 </code></pre>
 <pre><code class="language-java">package oop;
 
 public class Student extends Person {
-    private  String name = &quot;RM&quot;;
+    private  String name = "RM";
 
     public void test(String name){
         System.out.println(name);//传入的参数如孔夫子
@@ -3697,7 +3694,7 @@ public class Application {
 
         Student student = new Student();
 
-        student.test(&quot;孔夫子&quot;);
+        student.test("孔夫子");
 
     }
 }
@@ -3710,20 +3707,20 @@ kuangshen
 <pre><code class="language-java">package oop;
 
 public class Person {
-    protected String name = &quot;kuangshen&quot;;
+    protected String name = "kuangshen";
 
     public void print(){
-        System.out.println(&quot;Person&quot;);
+        System.out.println("Person");
     }
 }
 </code></pre>
 <pre><code class="language-java">package oop;
 
 public class Student extends Person {
-    private  String name = &quot;RM&quot;;
+    private  String name = "RM";
 
     public void print(){
-        System.out.println(&quot;Student&quot;);
+        System.out.println("Student");
     }
 
     public void test(){
@@ -3759,13 +3756,13 @@ Person
 public class Person {
 
     public Person() {
-        System.out.println(&quot;Person无参执行了！&quot;);
+        System.out.println("Person无参执行了！");
     }
 
-    protected String name = &quot;kuangshen&quot;;
+    protected String name = "kuangshen";
 
     public void print(){
-        System.out.println(&quot;Person&quot;);
+        System.out.println("Person");
     }
 }
 </code></pre>
@@ -3776,13 +3773,13 @@ public class Student extends Person {
     public Student() {
         //这里存在隐藏代码super();，调用了父类的无参构造
         //super();//Call to 'super()' must be first statement in constructor body
-        System.out.println(&quot;Student无参执行了！&quot;);
+        System.out.println("Student无参执行了！");
     }
 
-    private  String name = &quot;RM&quot;;
+    private  String name = "RM";
 
     public void print(){
-        System.out.println(&quot;Student&quot;);
+        System.out.println("Student");
     }
 
     public void test(){
@@ -3825,7 +3822,7 @@ Student无参执行了！
 
 public class B {
     public  static void test(){
-        System.out.println(&quot;B=&gt;test&quot;);
+        System.out.println("B=&gt;test");
     }
 }
 </code></pre>
@@ -3833,7 +3830,7 @@ public class B {
 
 public class A extends B{
     public static void test() {
-        System.out.println(&quot;A=&gt;test&quot;);
+        System.out.println("A=&gt;test");
     }
 }
 </code></pre>
@@ -3860,7 +3857,7 @@ B=&gt;test
 
 public class B {
     public  void test(){
-        System.out.println(&quot;B=&gt;test&quot;);
+        System.out.println("B=&gt;test");
     }
 }
 </code></pre>
@@ -3870,7 +3867,7 @@ public class A extends B{
     @Override//重写@代表有功能的注释
     public void test() {
         //super.test();
-        System.out.println(&quot;A=&gt;test&quot;);
+        System.out.println("A=&gt;test");
 
     }
 }
@@ -3916,7 +3913,7 @@ Object s3 = new Student();
 public class Person {
 
     public void run(){
-        System.out.println(&quot;Run&quot;);
+        System.out.println("Run");
     }
 }
 </code></pre>
@@ -3926,10 +3923,10 @@ public class Student extends Person {
 
     @Override
     public void run() {
-        System.out.println(&quot;Son&quot;);
+        System.out.println("Son");
     }
     public void eat(){
-        System.out.println(&quot;Eat&quot;);
+        System.out.println("Eat");
     }
 }
 </code></pre>
@@ -3964,7 +3961,7 @@ Eat
 public class Person {
 
     public void run(){
-        System.out.println(&quot;Run&quot;);
+        System.out.println("Run");
     }
 }
 </code></pre>
@@ -3974,10 +3971,10 @@ public class Student extends Person {
 
     @Override
     public void run() {
-        System.out.println(&quot;Son&quot;);
+        System.out.println("Son");
     }
     public void eat(){
-        System.out.println(&quot;Eat&quot;);
+        System.out.println("Eat");
     }
 }
 </code></pre>
@@ -4006,7 +4003,7 @@ public class Application {
         System.out.println(object instanceof Teacher);//false
         System.out.println(object instanceof String);//false
 
-        System.out.println(&quot;=====================&quot;);
+        System.out.println("=====================");
 
         Person person = new Student();
 
@@ -4016,7 +4013,7 @@ public class Application {
         System.out.println(person instanceof Teacher);//false
         //System.out.println(person instanceof String);//编译报错
 
-        System.out.println(&quot;=====================&quot;);
+        System.out.println("=====================");
 
 
         Student student = new Student();
@@ -4043,7 +4040,7 @@ public class Application {
 public class Person {
 
     public void run(){
-        System.out.println(&quot;run&quot;);
+        System.out.println("run");
     }
 }
 </code></pre>
@@ -4052,7 +4049,7 @@ public class Person {
 public class Student extends Person {
 
     public void go() {
-        System.out.println(&quot;go&quot;);
+        System.out.println("go");
     }
 }
 </code></pre>
@@ -4089,7 +4086,7 @@ public class Student  {
     
     public void go() {
         
-        System.out.println(&quot;go&quot;);
+        System.out.println("go");
     }
 
     public static void main(String[] args) {
@@ -4117,7 +4114,7 @@ public class Student  {
 
     public static void go() {
 
-        System.out.println(&quot;go&quot;);
+        System.out.println("go");
     }
 
     public static void main(String[] args) {
@@ -4132,14 +4129,14 @@ public class Student  {
 public class Person {
 
     {
-        System.out.println(&quot;匿名代码块&quot;);
+        System.out.println("匿名代码块");
     }
     
     static{
-        System.out.println(&quot;静态代码块&quot;);
+        System.out.println("静态代码块");
     }
     public Person(){
-        System.out.println(&quot;构造方法&quot;);
+        System.out.println("构造方法");
     }
 
     public static void main(String[] args) {
@@ -4158,18 +4155,18 @@ public class Person {
 public class Person {
 
     {
-        System.out.println(&quot;匿名代码块&quot;);//可以用来赋初值
+        System.out.println("匿名代码块");//可以用来赋初值
     }
     static{
-        System.out.println(&quot;静态代码块&quot;);//和类一起加载，第一个执行，且只执行一次
+        System.out.println("静态代码块");//和类一起加载，第一个执行，且只执行一次
     }
     public Person(){
-        System.out.println(&quot;构造方法&quot;);
+        System.out.println("构造方法");
     }
 
     public static void main(String[] args) {
         Person person1 = new Person();
-        System.out.println(&quot;=====================&quot;);
+        System.out.println("=====================");
         Person person2 = new Person();
 
     }
@@ -4217,7 +4214,7 @@ public abstract class Action {
     //特点3：抽象方法必须在抽象类中
     //抽象的抽象：约束～
     public static void main(String[] args) {
-        System.out.println(&quot;有构造器吗？&quot;);
+        System.out.println("有构造器吗？");
     }
 }
 </code></pre>
@@ -4236,7 +4233,7 @@ public abstract class Action {
     public abstract void doSomething();
 
     public static void main(String[] args) {
-        System.out.println(&quot;有构造器吗？&quot;);
+        System.out.println("有构造器吗？");
     }
 }
 </code></pre>
@@ -4352,11 +4349,11 @@ class A{
 public class Outer {
     private int id;
     public void out(){
-        System.out.println(&quot;这是外部类的方法&quot;);
+        System.out.println("这是外部类的方法");
     }
     public class Inner{
         public void in(){
-            System.out.println(&quot;这是内部类的方法&quot;);
+            System.out.println("这是内部类的方法");
         }
     }
 }
@@ -4381,11 +4378,11 @@ public class Application{
 public class Outer {
     private int id = 10;
     public void out(){
-        System.out.println(&quot;这是外部类的方法&quot;);
+        System.out.println("这是外部类的方法");
     }
     public class Inner{
         public void in(){
-            System.out.println(&quot;这是内部类的方法&quot;);
+            System.out.println("这是内部类的方法");
         }
         //获得外部类的私有属性
         public void getID(){
@@ -4414,11 +4411,11 @@ public class Application{
 public class Outer {
     private  int id = 10;
     public void out(){
-        System.out.println(&quot;这是外部类的方法&quot;);
+        System.out.println("这是外部类的方法");
     }
     public static class Inner{
         public void in(){
-            System.out.println(&quot;这是内部类的方法&quot;);
+            System.out.println("这是内部类的方法");
         }
         //获得外部类的私有属性
         public void getID(){
@@ -4433,11 +4430,11 @@ public class Outer {
 public class Outer {
     private static int id = 10;
     public void out(){
-        System.out.println(&quot;这是外部类的方法&quot;);
+        System.out.println("这是外部类的方法");
     }
     public static class Inner{
         public void in(){
-            System.out.println(&quot;这是内部类的方法&quot;);
+            System.out.println("这是内部类的方法");
         }
         //获得外部类的私有属性
         public void getID(){
@@ -4477,7 +4474,7 @@ public class Test {
 
 class Apple{
     public void eat(){
-        System.out.println(&quot;1&quot;);
+        System.out.println("1");
     }
 }
 
@@ -4499,7 +4496,7 @@ public class Test {
 
 class Apple{
     public void eat(){
-        System.out.println(&quot;1&quot;);
+        System.out.println("1");
     }
 }
 interface UserService1{
@@ -4514,9 +4511,9 @@ interface UserService1{
 <pre><code class="language-java">public class GC1 {
 	public static void main(String[] args) {
 		MyCircle c = new MyCircle(2.0);
-		System.out.println(&quot;圆面积:&quot; + c.CalculateArea());
+		System.out.println("圆面积:" + c.CalculateArea());
 		MyRectangle r = new MyRectangle(2.0, 3.0);
-		System.out.println(&quot;矩形面积:&quot; + r.CalculateArea());//*******
+		System.out.println("矩形面积:" + r.CalculateArea());//*******
 	}
 }
 
@@ -4566,7 +4563,7 @@ public class Person {
 	
 public  void printInfo() {
 
- System.out.println(&quot;姓名：&quot;+this.name);
+ System.out.println("姓名："+this.name);
 
  } 
 
@@ -4583,7 +4580,7 @@ class EmployeeManagement {
 
  public static void main(String[] args) {
 
- Employee e=new Employee(&quot;Jack&quot;,6134.78);
+ Employee e=new Employee("Jack",6134.78);
 
  e.printInfo();
 
@@ -4611,13 +4608,13 @@ class Employee extends Person{
 
 public void printInfo() {
 
- System.out.println(&quot;姓名：&quot;+this.name+&quot; 工资：&quot;+this.salary);
+ System.out.println("姓名："+this.name+" 工资："+this.salary);
 
  }
 
 }
 </code></pre>
-<p>3.（程序填空题）下列程序中定义了抽象类Person和它的两个子类Worker和Student，分别创建Worker和Person的对象，显示两个对象的描述信息，程序的运行结果如下图所示。 </p>
+<p>3.（程序填空题）下列程序中定义了抽象类Person和它的两个子类Worker和Student，分别创建Worker和Person的对象，显示两个对象的描述信息，程序的运行结果如下图所示。</p>
 <p><img src="https://p.ananas.chaoxing.com/star3/origin/07fd49c2e7f5f0ff7cfe9a51ab6c0c7e.png" alt="img" /></p>
 <pre><code class="language-java">public class PersonManagement {
 
@@ -4625,15 +4622,15 @@ public static void main(String[] args) {
 
 Person[] people=new Person[2];
 
-people[0]= new Worker(&quot;老张&quot;,30000.0);
+people[0]= new Worker("老张",30000.0);
 
-people[1]=new Student(&quot;小王&quot;,&quot;计算机&quot;);
+people[1]=new Student("小王","计算机");
 
 for(int i=0;i&lt;people.length;i++) {
 
 Person p=people[i];
 
-System.out.println(p.getName()+&quot;,&quot;+p.getDescription());
+System.out.println(p.getName()+","+p.getDescription());
 
 }
 
@@ -4682,7 +4679,7 @@ salary=s;
 
 public String getDescription() {
 
-return &quot;工人，年薪是 &quot;+salary+&quot;元&quot;;
+return "工人，年薪是 "+salary+"元";
 
 }
 
@@ -4705,7 +4702,7 @@ major=m;
 
 public String getDescription() {
 
-return &quot;学生，专业是&quot;+major;
+return "学生，专业是"+major;
 
 }
 
@@ -4764,7 +4761,7 @@ class Volunteer
 
          //在此处定义方法体（填入第3空）
 
-                return this.name+&quot;\t线上工作时长：&quot;+this.onlineHours+&quot;\t线下工作时长&quot;+this.offlineHours+&quot;总评分：&quot;+this.score;
+                return this.name+"\t线上工作时长："+this.onlineHours+"\t线下工作时长"+this.offlineHours+"总评分："+this.score;
 
         }
 
@@ -4774,19 +4771,19 @@ class Volunteer
 
                  if (this.score&gt;v1.score){
 
-                         System.out.println(this.name+&quot;的评分较高&quot;);
+                         System.out.println(this.name+"的评分较高");
 
                  }
 
                  else if (this.score&lt;v1.score) {
 
-                         System.out.println(this.name+&quot;的评分较高&quot;);
+                         System.out.println(this.name+"的评分较高");
 
                  }
 
                  else {
 
-                         System.out.println(this.name+&quot;和&quot;+v1.name+&quot;的评分相同&quot;);
+                         System.out.println(this.name+"和"+v1.name+"的评分相同");
 
                  }
 
@@ -4799,10 +4796,10 @@ class Volunteer
          //在此处定义方法体（填入第4空）
 		if(this.score&gt;=20){
 		
-			System.out.println(this.name+&quot;获得优秀志愿者称号&quot;);
+			System.out.println(this.name+"获得优秀志愿者称号");
 		}else{
 			
-			System.out.println(this.name+&quot;暂未入选优秀志愿者称号&quot;);
+			System.out.println(this.name+"暂未入选优秀志愿者称号");
 			
 		}
  
@@ -4819,7 +4816,7 @@ public class BC2 {
 
         public static void main(String[] args) {
 
-                 Volunteer v1=new Volunteer(&quot;小白鹭1号&quot;,10,15);
+                 Volunteer v1=new Volunteer("小白鹭1号",10,15);
 
                  v1.calScore();
 
@@ -4829,7 +4826,7 @@ public class BC2 {
 
                  v1.isExcellentVolunteer();
 
-                 Volunteer v2=new Volunteer(&quot;小白鹭6号&quot;,5,5);
+                 Volunteer v2=new Volunteer("小白鹭6号",5,5);
 
                  v2.calScore();
 
@@ -4931,21 +4928,21 @@ isPaid=paid;//这点不会知道补啥
 
  public String toString() {//这个通常有什么用呢？，好像是个函数
 
- String orderInfo = &quot;New Order: \n&quot;;
+ String orderInfo = "New Order: \n";
 
- orderInfo += numCoffees + &quot; Coffees $&quot; + numCoffees * 3 + &quot;\n&quot;;
+ orderInfo += numCoffees + " Coffees $" + numCoffees * 3 + "\n";
 
- orderInfo += numCakes + &quot; Cakes $&quot; + numCakes * 4 + &quot;\n&quot;;
+ orderInfo += numCakes + " Cakes $" + numCakes * 4 + "\n";
 
- orderInfo += &quot; Total $&quot; + getTotal() + &quot; &quot;;
+ orderInfo += " Total $" + getTotal() + " ";
 
  if (isPaid)
 
- orderInfo += &quot; has been paid \n&quot;;
+ orderInfo += " has been paid \n";
 
  else
 
- orderInfo += &quot; not paid \n&quot;;
+ orderInfo += " not paid \n";
  return orderInfo;
 
 
@@ -4960,7 +4957,7 @@ public static void main(String[] args) {
 
 Rectangle r=new Rectangle(3.0,5.0);
 
-System.out.println(&quot;周长是&quot;+r.girth());
+System.out.println("周长是"+r.girth());
 
 }
 
@@ -5035,7 +5032,7 @@ class InactivatedVaccine extends Vaccine{//灭活疫苗
 
     void vaccinate() {
 
-        System.out.println(&quot;该灭活疫苗的生产厂商是&quot;+manufacturer+&quot;，接种剂次：&quot;+n);
+        System.out.println("该灭活疫苗的生产厂商是"+manufacturer+"，接种剂次："+n);
 
     }
 
@@ -5055,7 +5052,7 @@ class AdenovirusVectorVaccine extends Vaccine{//腺病毒载体疫苗
 
     void vaccinate() {
 
-        System.out.println(&quot;该腺病毒载体疫苗的生产厂商是&quot;+manufacturer+&quot;，只需接种1剂。&quot;);
+        System.out.println("该腺病毒载体疫苗的生产厂商是"+manufacturer+"，只需接种1剂。");
 
     }
 
@@ -5067,15 +5064,15 @@ public class TK2 {
 
     public static void main(String[] args) {
 
-        InactivatedVaccine v1=new InactivatedVaccine(&quot;北京生物&quot;,2);
+        InactivatedVaccine v1=new InactivatedVaccine("北京生物",2);
 
         v1.vaccinate();
 
-        InactivatedVaccine v2=new InactivatedVaccine(&quot;科兴&quot;,2);
+        InactivatedVaccine v2=new InactivatedVaccine("科兴",2);
 
         v2.vaccinate();
 
-        AdenovirusVectorVaccine v3=new AdenovirusVectorVaccine(&quot;康希诺&quot;);
+        AdenovirusVectorVaccine v3=new AdenovirusVectorVaccine("康希诺");
 
         v3.vaccinate();
 
@@ -5102,7 +5099,7 @@ Person.setID(444);
 
 
 
- p1 = new Person(&quot;John&quot;); // p1赋初值
+ p1 = new Person("John"); // p1赋初值
 
  p1.changeAge(2); // p1调用changeAge方法
 
@@ -5111,7 +5108,7 @@ Person.setID(444);
 
 
  //请将下面缺失的三行代码填入第二个空
- p2 = new Person(&quot;Fred&quot;); // p1赋初值
+ p2 = new Person("Fred"); // p1赋初值
 
  p2.changeAge(2); // p1调用changeAge方法
 
@@ -5120,7 +5117,7 @@ Person.setID(444);
 
 
  //请将下面缺失的三行代码填入第三个空
- p3 = new Person(&quot;Elma&quot;); // p1赋初值
+ p3 = new Person("Elma"); // p1赋初值
 
  p3.changeAge(2); // p1调用changeAge方法
 
@@ -5179,7 +5176,7 @@ class Person {
 
  public String toString() {
 
- return &quot;Name: &quot; + name + &quot; Age: &quot; + age + &quot; ID: &quot; + id;
+ return "Name: " + name + " Age: " + age + " ID: " + id;
 
  }
 
@@ -5241,13 +5238,13 @@ public class TC2 {
 
     public static void main(String[] args) {
 
-       Haluo h=new Haluo(&quot;20210001&quot;,2251.2,402);    
+       Haluo h=new Haluo("20210001",2251.2,402);    
 
-       System.out.println(&quot;平均每天行驶里程:&quot;+ h.getDisPerday() +&quot;公里&quot;);
+       System.out.println("平均每天行驶里程:"+ h.getDisPerday() +"公里");
 
        h.setPrice(1.8);
 
-       System.out.println(&quot;平均每天骑行费用:&quot;+h.getDailyFee()+&quot;元&quot;);
+       System.out.println("平均每天骑行费用:"+h.getDailyFee()+"元");
 
     }
 
@@ -5300,12 +5297,12 @@ public class Son extends Father{
 	}
 	
 	public void methodA(){
-		System.out.println(&quot;AAA&quot;);
+		System.out.println("AAA");
 	}
 	
 	public void methodB(){
 		this.methodA();//methodA();
-		System.out.println(&quot;BBB&quot;);
+		System.out.println("BBB");
 	}
 	
 	
@@ -5333,7 +5330,7 @@ AAA
 BBB
 
 </code></pre>
-<p>3.(填空题, 20分)（编程题）根据鸢尾花的花瓣长度和宽度来判断它的类别。Iris类的成员变量和成员方法的说明见程序中的注释。已知两朵鸢尾花，第一朵花瓣长1.6cm，花瓣宽0.6cm，类别为&quot;山鸢尾&quot;，第二朵花瓣长5.8cm，花瓣宽3.1cm，类别为&quot;变色鸢尾&quot;；现要判断一朵新的鸢尾花类别，其方法如下：若它距离第一朵鸢尾花更近，则它的类别为&quot;山鸢尾&quot;，如果它距离第二朵鸢尾花更近，其类别就是&quot;变色鸢尾&quot;（如果距离相等，类别设置为&quot;山鸢尾&quot;）。两朵鸢尾花之间的距离计算公式如下：</p>
+<p>3.(填空题, 20分)（编程题）根据鸢尾花的花瓣长度和宽度来判断它的类别。Iris类的成员变量和成员方法的说明见程序中的注释。已知两朵鸢尾花，第一朵花瓣长1.6cm，花瓣宽0.6cm，类别为"山鸢尾"，第二朵花瓣长5.8cm，花瓣宽3.1cm，类别为"变色鸢尾"；现要判断一朵新的鸢尾花类别，其方法如下：若它距离第一朵鸢尾花更近，则它的类别为"山鸢尾"，如果它距离第二朵鸢尾花更近，其类别就是"变色鸢尾"（如果距离相等，类别设置为"山鸢尾"）。两朵鸢尾花之间的距离计算公式如下：</p>
 <p><img src="https://p.ananas.chaoxing.com/star3/origin/6912459a56fd6a8718e674cf97cc4cbd.png" alt="r" /></p>
 <p>其中：plen1，pwid1分别为其中一朵鸢尾花的花瓣长度和花瓣宽度，plen2，pwid2为另一朵鸢尾花的花瓣长度和花瓣宽度。程序的运行结果如下图所示：</p>
 <p><img src="https://p.ananas.chaoxing.com/star3/origin/bbf40b814edfc712fa791bc75e791638.png" alt="r" /></p>
@@ -5373,7 +5370,7 @@ BBB
 
                public String  toString() {          //生成并返回对象的相关信息
 
-                              String s=&quot;花瓣长：&quot;+plen+&quot; 花瓣宽：&quot;+pwid+&quot; &quot;+&quot; 类别是：&quot;+target;
+                              String s="花瓣长："+plen+" 花瓣宽："+pwid+" "+" 类别是："+target;
                                return s; 
 
                }
@@ -5390,18 +5387,18 @@ BBB
 
 public class TC2 {
 
-               static Iris iris1=new Iris(1.6,0.6,&quot;山鸢尾&quot;);
+               static Iris iris1=new Iris(1.6,0.6,"山鸢尾");
 
-               static Iris iris2=new Iris(5.8,3.1,&quot;变色鸢尾&quot;);
+               static Iris iris2=new Iris(5.8,3.1,"变色鸢尾");
 
               
 
                public  static String classify(Iris irisnew) {//判断irisnew的类别
 
                     if(irisnew.distance(iris1&lt;=irisnew.distance(iris2)){
-								   return &quot;山鸢尾&quot;;
+								   return "山鸢尾";
 				    }else{
-								   return  &quot;变色鸢尾&quot;;
+								   return  "变色鸢尾";
 							   }
 
                }
@@ -5430,7 +5427,7 @@ public class TC2 {
 <pre><code class="language-java">//类中
 public String  toString() {          //生成并返回对象的相关信息
 
-                              String s=&quot;花瓣长：&quot;+plen+&quot; 花瓣宽：&quot;+pwid+&quot; &quot;+&quot; 类别是：&quot;+target;
+                              String s="花瓣长："+plen+" 花瓣宽："+pwid+" "+" 类别是："+target;
                                return s; 
 
                }
@@ -5452,9 +5449,9 @@ System.out.println(testSample2.toString());
 
  Student student2;
 
- student1 = new Student(&quot;张楠&quot;, 70, 85);
+ student1 = new Student("张楠", 70, 85);
 
- student2 = new Student(&quot;李浩&quot;, 80, 90);
+ student2 = new Student("李浩", 80, 90);
 
  student1.displayInfo();
 
@@ -5504,7 +5501,7 @@ class Student {
 
  examMark = exam;
 
- System.out.println(name + &quot;\'s exam mark changed to &quot; + examMark);
+ System.out.println(name + "\'s exam mark changed to " + examMark);
 
  }
 
@@ -5520,7 +5517,7 @@ class Student {
 
  public void displayInfo() {
 
-     System.out.println(name + &quot; got &quot; + testMark + &quot; in the test and &quot; + examMark + &quot; in the exam&quot;);
+     System.out.println(name + " got " + testMark + " in the test and " + examMark + " in the exam");
 
    }
 
@@ -5530,17 +5527,17 @@ class Student {
 
      if (examMark &gt; other.examMark) 
 
-       System.out.println(name + &quot; did better than &quot; + other.name);
+       System.out.println(name + " did better than " + other.name);
 
      else
 
-       System.out.println(name + &quot; did worse than &quot; + other.name);
+       System.out.println(name + " did worse than " + other.name);
 
    }
 
  }
 </code></pre>
-<p>5.(填空题, 15分)（编程题）创建Melon类，包含初始值为0的静态变量totalNum、私有实例变量weight。编写Melon类的内容，完成以下功能： </p>
+<p>5.(填空题, 15分)（编程题）创建Melon类，包含初始值为0的静态变量totalNum、私有实例变量weight。编写Melon类的内容，完成以下功能：</p>
 <p>每当创建一个新的Melon对象，totalNum增加1。</p>
 <p>为Melon类编写实例方法void reduce(){}，每次调用reduce方法，totalNum的值减少1。为私有实例变量weight声明一对访问器方法，分别是int getWeight(){ }和void setWeight(int w){ }，实现对私有实例变量weight的读取和修改，编写这两个方法的方法体。</p>
 <p>测试Melon的功能。创建公共类TestMelon，包含main方法，在main方法中完成下面的功能测试。依次创建四个Melon对象m1、m2、m3、m4后，输出totalNum的值。依次调用m1和m2的reduce方法后，输出totalNum的值。</p>
@@ -5592,14 +5589,14 @@ class Melon{
 }
 </code></pre>
 <p>6.(填空题, 15分)（编程题）学校图书馆需要设计一个图书信息系统来管理藏书。假设一个简单的图书信息系统需要完成书籍、输出书籍信息、比较书籍的功能。请创建两个类Book和TestBook完成上述功能，输出结果如下：</p>
-<p><img src="https://p.ananas.chaoxing.com/star3/origin/8fc1043509126b67819ec4c2d93962fb.png" alt="img" /> </p>
+<p><img src="https://p.ananas.chaoxing.com/star3/origin/8fc1043509126b67819ec4c2d93962fb.png" alt="img" /></p>
 <p>编程要求：创建两个类Book和TestBook，其中TestBook是主类。</p>
 <p>Book的属性有书名、作者（假设只有一位作者）、出版年份，行为有打印图书信息、比较图书信息。</p>
 <p>在Book类中声明实例变量记录各个属性信息，成员变量的名称分别是name、author、publishYear。</p>
 <p>在Book类声明两个实例方法，一个实例方法的功能是打印图书信息；另一个实例方法的功能是比较两本图书，如果书名、作者和出版年份都一样，这两本书是同一本书。</p>
 <p>第一个实例方法的方法头是 void display(){ //请添加方法体 }</p>
 <p>第二个实例方法的方法头是boolean compareBook(Book another){ //请添加方法体 }</p>
-<p>在Book类中用静态变量copyCounter记录书的数目。 </p>
+<p>在Book类中用静态变量copyCounter记录书的数目。</p>
 <p>TestBook类中包含main方法，用于创建图书。</p>
 <p>完整代码：</p>
 <p>Book.java</p>
@@ -5621,9 +5618,9 @@ class Melon{
 	}
 	
 	void display(){
-		System.out.print(&quot;《&quot;+name+&quot;》，&quot;);
-		System.out.print(&quot;作者：&quot;+author+&quot;，&quot;);
-		System.out.print(&quot;出版年份：&quot;+publishYear+'\n');
+		System.out.print("《"+name+"》，");
+		System.out.print("作者："+author+"，");
+		System.out.print("出版年份："+publishYear+'\n');
 	}
 	
 	boolean compareBook(Book another){
@@ -5643,16 +5640,16 @@ class Melon{
 <pre><code class="language-java">public class TestBook{
 	
 	public static void main(String[] args) {
-		Book book1 = new Book(&quot;红楼梦&quot;,&quot;曹雪芹&quot;,1791);
+		Book book1 = new Book("红楼梦","曹雪芹",1791);
 		book1.display();
-		Book book2 = new Book(&quot;边城&quot;,&quot;沈从文&quot;,1934);
+		Book book2 = new Book("边城","沈从文",1934);
 		book2.display();
 		
-		String str = book1.compareBook(book2)?&quot;&quot;:&quot;不&quot;;
+		String str = book1.compareBook(book2)?"":"不";
 		
-		System.out.println(&quot;这两本书&quot;+str+&quot;是同一本书&quot;);
+		System.out.println("这两本书"+str+"是同一本书");
 		
-		System.out.println(&quot;一共有&quot;+Book.copyCounter+&quot;本书&quot;);
+		System.out.println("一共有"+Book.copyCounter+"本书");
 	}
 	
 }
