@@ -7,3 +7,7 @@ title = "Java语言程序设计"
 [preprocessor.toc]
 command = "mdbook-toc"
 renderer = ["html"]
+
+[output.html]
+additional-js = ["pangu.js", "pangu.min.js"]
+
